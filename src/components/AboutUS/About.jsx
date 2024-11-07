@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useState, useEffect } from 'react';
 
@@ -10,191 +9,89 @@ function About() {
   }, []);
 
   return (
-    <div>
+    <div className="transition-opacity duration-500" style={{ opacity }}>
       {/* About Us Section */}
-      <section
-        className="about-us-container"
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          opacity: opacity,
-          background: '#4A9BD3',
-          fontFamily: "'Montserrat Alternates', sans-serif",
-          color: '#333333',
-          transition: 'opacity 0.5s ease-in-out',
-          padding: '20px',
-        }}
-      >
-        <h1 style={{ fontSize: '6vw', margin: '10px 0', color: '#ffffff', textAlign: 'center' }}>
-          About Us
-        </h1>
-        <p style={{
-          textAlign: 'center',
-          fontSize: '2.5vw',
-          maxWidth: '90%',
-          lineHeight: '1.5',
-          color: '#ffffff',
-        }}>
-          We specialize in creating tailored solutions that help brands grow in the fast-paced digital world.
+      <section className="w-full flex flex-col bold items-center justify-center bg-blue-500 text-white font-sans py-10">
+        <h1 className="text-4xl md:text-6xl text-center mb-4 font-bold">
+          About US
+        </h1>                                             
+        <p className="text-xl md:text-2xl text-center max-w-4xl leading-relaxed">
+        We specialize in creating tailored solutions that help brands grow in the fast-paced digital world.
         </p>
       </section>
 
-      {/* Detailed Information Section */}
-      <section
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          maxWidth: '1200px',
-          width: '100%',
-          padding: '20px',
-          backgroundColor: '#ffffff',
-          borderRadius: '8px',
-          marginTop: '40px',
-        }}
-      >
-        <div style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'flex-start',
-          width: '100%',
-          gap: '20px',
-          flexWrap: 'wrap',  // Wraps content on smaller screens
-        }}>
-          {/* Text Content */}
-          <div style={{
-            width: '100%',
-            maxWidth: '600px',  // Restrict width on larger screens
-            display: 'flex',
-            flexDirection: 'column',
-            marginBottom: '20px', // Add space below in mobile view
-          }}>
-            <div style={{ fontSize: '4.5vw', fontWeight: 'bold', color: '#333333', textAlign: 'center' }}>
-              DRIVING A BETTER WAY OF DOING MARKETING
-            </div>
-            <div style={{
-              fontSize: '2.5vw',
-              fontWeight: '300',
-              color: '#333333',
-              lineHeight: '1.6',
-              marginTop: '10px',
-              textAlign: 'center',
-            }}>
-              <p>
-                Marketiq Junction is your trusted digital marketing partner. We specialize in creating tailored solutions
-                that help brands grow in the fast-paced digital world.
-              </p>
-              <p style={{ fontWeight: 'bold' }}>What Sets Us Apart?</p>
-              <ul style={{ paddingLeft: '20px', textAlign: 'left' }}>
-                <li><strong>Affordability:</strong> Quality services at a fraction of the cost.</li>
-                <li><strong>Customization:</strong> Strategies tailored to meet your unique business needs.</li>
-                <li><strong>Full-Spectrum Services:</strong> Comprehensive solutions to enhance your online presence.</li>
-              </ul>
-            </div>
-            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-              <button className="text-white font-bold w-40 p-2 m-2 bg-black">Learn more</button>
-              <button className="text-white font-bold w-40 p-2 m-2 bg-black">Get in touch</button>
-            </div>
-          </div>
-          {/* Image Section */}
-          <div style={{
-            width: '100%',
-            maxWidth: '500px',
-            display: 'flex',
-            justifyContent: 'center',
-          }}>
-            <img src="/images/aboutus/main.png" alt="Marketiq Junction" style={{
-              width: '100%',
-              maxWidth: '500px',
-              height: 'auto',
-              borderRadius: '8px',
-            }} />
-          </div>
-        </div>
-      </section>
+{/* Detailed Information Section */}
+<section className="flex flex-col md:flex-row items-center justify-center max-w-6xl mx-auto bg-white rounded-lg shadow-lg mt-10 p-8 gap-8">
+  {/* Text Content */}
+  <div className="flex flex-col items-start max-w-lg mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center md:text-left">
+      What Sets Us Apart?
+    </h2>
+    <ul className="list-disc pl-5 space-y-2 text-gray-700 text-lg text-center md:text-left">
+      <li>
+        <strong>Affordability:</strong> Quality services at a fraction of the cost.
+      </li>
+      <li>
+        <strong>Customization:</strong> We understand every business is unique, and we create strategies to match your specific needs.
+      </li>
+      <li>
+        <strong>Full-Spectrum Services:</strong> From web design to analytics, we offer comprehensive solutions to enhance your online presence.
+      </li>
+    </ul>
+    <div className="flex flex-wrap gap-4 mt-6 justify-center md:justify-start">
+      <button className="bg-black text-white font-semibold py-2 px-6 rounded-lg">
+        Learn More
+      </button>
+      <button className="bg-black text-white font-semibold py-2 px-6 rounded-lg">
+        Get In Touch
+      </button>
+    </div>
+  </div>
+  {/* Image Section */}
+  <div className="w-full max-w-md flex justify-center mx-auto">
+    <img
+      src="/images/aboutus/main.png"
+      alt="Marketiq Junction"
+      className="w-full rounded-lg shadow-lg"
+    />
+  </div>
+</section>
+
 
       {/* Save Time & Effort Section */}
-      <section
-        style={{
-          width: '100%',
-          textAlign: 'center',
-          background: '#4A9BD3',
-          color: '#333333',
-          padding: '20px',
-          fontFamily: "'Montserrat Alternates', sans-serif",
-          color: '#ffffff',
-        }}
-      >
-        <h1 style={{ fontSize: '6vw', margin: '10px 0' }}>
-          Save Time & Effort With the Digital Inside
+      <section className="w-full text-center bg-blue-500 text-white py-10 font-sans">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4">
+          Save Time & Effort With Digital Inside
         </h1>
-        <p style={{
-          fontSize: '2.5vw',
-          maxWidth: '90%',
-          margin: '0 auto',
-        }}>
+        <p className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
           Streamline your business operations with smart digital marketing solutions.
         </p>
-        <button className="text-black font-bold w-40 p-2 m-2 bg-white" style={{ marginTop: '20px' }}>Contact Us</button>
+        <button className="mt-6 bg-white text-black font-bold py-2 px-6 rounded-lg">
+          Contact Us
+        </button>
       </section>
 
       {/* Mission, Vision, and Goals Section */}
-      <section style={{
-        maxWidth: '1200px',
-        margin: '40px auto',
-        textAlign: 'center',
-      }}>
-        <div style={{
-          fontSize: '5vw',
-          fontWeight: 'bold',
-          color: '#333333',
-          marginBottom: '20px',
-        }}>
+      <section className="max-w-7xl mx-auto text-center mt-10 p-8">
+        <h2 className="text-4xl font-bold text-gray-800 mb-6">
           Exclusive Digital Agency To Provide Solution
-        </div>
-        <p style={{
-          fontSize: '2.5vw',
-          maxWidth: '90%',
-          margin: '0 auto',
-          lineHeight: '1.5',
-        }}>
+        </h2>
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 leading-relaxed">
           Our specialized team focuses on providing personalized strategies that align with your business goals.
         </p>
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',  // Wraps boxes on smaller screens
-          justifyContent: 'space-around',
-          marginTop: '20px',
-        }}>
-          {/* Mission, Vision, and Goals Boxes */}
+        <div className="flex flex-col md:flex-row justify-around gap-6">
           {['Mission', 'Vision', 'Goals'].map((item, idx) => (
-            <div key={idx} style={{
-              background: '#50C3C687',
-              padding: '20px',
-              width: '300px',
-              height: '100px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'start',
-              margin: '10px 0',
-            }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                backgroundColor: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginRight: '10px',
-              }}>
-                <img src={`/images/aboutus/icon${idx+1}.png`} alt={`${item} Icon`} style={{ width: '24px', height: '24px' }} />
+            <div key={idx} className="bg-blue-200 p-6 rounded-lg flex items-center max-w-xs">
+              <div className="bg-white w-12 h-12 flex items-center justify-center rounded-full mr-4">
+                <img
+                  src={`/images/aboutus/icon${idx + 1}.png`}
+                  alt={`${item} Icon`}
+                  className="w-6 h-6"
+                />
               </div>
-              <div style={{ textAlign: 'left', fontWeight: 'bold' }}>
-                <p>{item} of Our</p>
-                <p>Company</p>
+              <div className="text-left">
+                <p className="font-bold text-gray-800">{item} of Our</p>
+                <p className="text-gray-800">Company</p>
               </div>
             </div>
           ))}
@@ -205,7 +102,3 @@ function About() {
 }
 
 export default About;
-
-
-
-     
