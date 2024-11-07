@@ -89,6 +89,9 @@ const Navbar = () => {
             Who We Are
           </h5>
           <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
+            About us
+          </h5>
+          <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
             Contact
           </h5>
         </div>
