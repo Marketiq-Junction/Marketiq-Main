@@ -4,7 +4,10 @@ import About from '@/components/AboutUS/About';
 import Mission from '@/components/Mission/Mission';
 import ValuesCulture from '@/components/ValuesCulture/ValuesCulture';
 import Footer from '@/components/Footer/Footer';
-import Ourap from '@/components/Ourap/Ourap';
+
+import Approachsection from '@/components/Approachsection/Approachsection';
+
+import CardSection from '@/components/Approachsection/CardSection';
 
 function Page() {
   return (
@@ -13,7 +16,9 @@ function Page() {
       <About />
       <Mission />
       <ValuesCulture /> 
-      <Ourap /> 
+  
+      <Approachsection/>
+      <CardSection/>
       <Footer />
     </>
   );
