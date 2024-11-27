@@ -5,7 +5,7 @@ function Mission() {
   const [opacity, setOpacity] = useState(0);
 
   useEffect(() => {
-    setOpacity(1); // Fading effect on load
+    setOpacity(1); 
   }, []);
 
   return (

@@ -16,7 +16,6 @@ function Page() {
       <About />
       <Mission />
       <ValuesCulture /> 
-  
       <Approachsection/>
       <CardSection/>
       <Footer />
