@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-function Contact() {
+function AboutUS() {
   return (
     <div className="flex flex-col md:flex-row items-center bg-blue-400 py-16 px-8 md:px-16 lg:px-32">
       <div className="md:w-1/2 text-white">
@@ -17,4 +17,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default AboutUS;

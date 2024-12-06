@@ -62,12 +62,14 @@ const Navbar = () => {
               Home
             </h5>
           </Link>
-          <div className="relative flex items-center gap-1 cursor-pointer" onClick={(e) => e.stopPropagation()}>
-            <h5 onClick={toggleDropdown} className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3]">
-              Our Services
-            </h5>
-            <BsChevronDown className="text-[1.1vw] font-bold" />
-            {dropdownOpen && (
+            <Link href="/marketingsolution" passHref>
+                <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
+                    Marketing Solution
+                </h5>
+            </Link>
+      
+            {/* <BsChevronDown className="text-[1.1vw] font-bold" /> */}
+            {/* {dropdownOpen && (
               <div className="absolute top-[100%] left-[70%] border-2 border-black transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
                 <ul className="py-2">
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Service 1</li>
@@ -75,19 +77,19 @@ const Navbar = () => {
                   <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Service 3</li>
                 </ul>
               </div>
-            )}
-          </div>
-          <Link href="/about" passHref>
+            )} */}
+          {/* </div> */}
+          {/* <Link href="/about" passHref>
             <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
               Who We Are
             </h5>
-          </Link>
-          <Link href="/about-us" passHref>
+          </Link> */}
+          <Link href="/aboutus" passHref>
             <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
               About us
             </h5>
           </Link>
-          <Link href="/contact" passHref>
+          <Link href="/contactus" passHref>
             <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
               Contact
             </h5>

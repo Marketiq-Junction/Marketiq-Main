@@ -1,5 +1,5 @@
 import React from 'react';
-import About from '@/components/AboutUS/About';
+import About from '@/components/AboutUS/AboutUS';
 import Mission from '@/components/AboutUS/Mission';
 
 function Mission() {

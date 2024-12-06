@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
-import About from '@/components/AboutUS/About';
+import About from '@/components/AboutUS/AboutUS';
 import Mission from '@/components/Mission/Mission';
 import ValuesCulture from '@/components/ValuesCulture/ValuesCulture';
 import Footer from '@/components/Footer/Footer';
