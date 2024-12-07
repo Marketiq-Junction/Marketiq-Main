@@ -54,9 +54,9 @@ const Advertising = () => {
         key={service.id}
         className={`text-left p-4 border-l-4 ${
           activeService === service.id
-            ? "border-[3px] border-[#A2DFE1] bg-[#A2DFE1] text-black"
+            ? "border-[3px] border-[#A2DFE1] bg-[#4A9BD3] text-black"
             : "border-gray-200 bg-[#A2DFE1] text-black"
-        } hover:bg-[#4A9BD3] hover:text-black transition`}
+        } hover:bg-[#A2DFE1] hover:text-black transition`}
         onClick={() => setActiveService(service.id)}
       >
         {service.title}
