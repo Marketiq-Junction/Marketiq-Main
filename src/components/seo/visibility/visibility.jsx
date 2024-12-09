@@ -1,0 +1,104 @@
+import { useState } from "react";
+import Image from "next/image";
+
+const Visibility = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
+  return (
+    <section className="bg-blue-400 text-white p-12 md:p-20 max-w-8xl mx-auto my-12">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-8 lg:space-y-0">
+        {/* Left Section: Text Content */}
+        <div className="lg:w-3/5 space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            Meet pure visibility
+          </h2>
+          <p className="text-base md:text-lg leading-relaxed">
+            We focus on creating transparency and accessibility for your brand
+            in the digital world, making sure your audience not only finds you
+            but also engages meaningfully with your content. By leveraging
+            advanced SEO practices, data-driven insights, and tailored marketing
+            strategies, we help your brand stand out across search engines,
+            social platforms, and beyond. With a commitment to measurable
+            growth and user-focused design, Pure Visibility ensures your brand's
+            online footprint is both robust and sustainable.
+          </p>
+          <h3 className="text-2xl font-semibold">Our Mission</h3>
+          <p className="text-base md:text-lg leading-relaxed">
+            Our mission is to empower businesses of all sizes by providing
+            affordable and effective digital marketing solutions. We strive to
+            help our clients enhance their online presence, connect with their
+            target audience, and achieve measurable growth through tailored
+            strategies in SEO, web design, social media management, and more.
+          </p>
+          <h3 className="text-2xl font-semibold">Our Purpose</h3>
+          <p className="text-base md:text-lg leading-relaxed">
+            Our purpose is to empower brands by crafting digital solutions that
+            foster genuine connections and drive sustainable growth. We aim to
+            make the digital landscape accessible, effective, and transparent
+            for all our clients, regardless of size or industry.
+          </p>
+        </div>
+
+        {/* Right Section: Video Thumbnail */}
+        <div className="lg:w-2/5 flex justify-center relative">
+          <Image
+            src="/images/visibility-thumbnail.png" // Replace with your actual image path
+            alt="Video Thumbnail"
+            width={400}
+            height={300}
+            className="rounded-lg shadow-lg"
+          />
+          {/* Play Button */}
+          <div
+            className="absolute inset-0 flex items-center justify-center cursor-pointer"
+            onClick={openModal}
+          >
+            <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-purple-700 transition">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-8 w-8 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M14.752 11.168l-5.197-3.074a1 1 0 00-1.555.832v6.148a1 1 0 001.555.832l5.197-3.074a1 1 0 000-1.664z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Modal for Video */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg w-11/12 md:w-3/4 lg:w-1/2">
+            <div className="relative">
+              <button
+                className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2"
+                onClick={closeModal}
+              >
+                ✕
+              </button>
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID"
+                title="Video"
+                className="w-full h-64 md:h-96"
+                allow="autoplay; fullscreen"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default Visibility;

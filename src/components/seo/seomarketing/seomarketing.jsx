@@ -1,0 +1,51 @@
+import Image from "next/image";
+
+const SEOMarketing = () => {
+  return (
+    <section className="flex flex-col lg:flex-row items-center justify-between bg-white text-black p-12 md:p-20 max-w-8xl mx-auto space-y-8 lg:space-y-0">
+      {/* Left Section: Image */}
+      <div className="lg:w-1/2 flex justify-start">
+        <Image
+          src="/seomarketing.png" // Replace with the correct image path
+          alt="SEO Marketing Illustration"
+          width={500}
+          height={300}
+          className="rounded-lg"
+        />
+      </div>
+
+      {/* Right Section: Text Content */}
+      <div className="lg:w-1/2 space-y-6">
+        <h2 className="text-3xl md:text-4xl font-bold">
+          An SEO Marketing Company That Gets It
+        </h2>
+        <p className="text-base md:text-lg leading-relaxed">
+          Let’s face it. You know what you need but you just don’t know how to
+          get it. Our SEO specialists hear that over and over from SEO clients
+          who contact Thrive Internet Marketing Agency.
+        </p>
+        <p className="text-base md:text-lg leading-relaxed">
+          You’re likely here because of one or more of the following reasons:
+        </p>
+        <ul className="list-disc pl-6 text-base md:text-lg leading-relaxed space-y-2">
+          <li>Your website isn’t being found online.</li>
+          <li>
+            Your website traffic has diminished recently and you don’t know why.
+          </li>
+          <li>
+            You’re starting a new website and want to ramp up new business
+            quickly.
+          </li>
+        </ul>
+        <p className="text-base md:text-lg leading-relaxed">
+          If any of these four pain points ring a bell, rest assured, you’ve
+          come to the right SEO company. There’s a reason why Thrive is
+          currently serving hundreds of SEO clients and providing optimization
+          solutions to answer Google’s ever-changing algorithm.
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default SEOMarketing;
