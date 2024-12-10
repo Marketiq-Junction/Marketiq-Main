@@ -1,8 +1,8 @@
-"use client";
+'use client';
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
-import { BsArrowRight, BsHouse, BsBriefcase, BsInfoCircle, BsTelephone, BsChevronDown } from "react-icons/bs";
+import { BsArrowRight, BsHouse, BsBriefcase, BsInfoCircle, BsTelephone } from "react-icons/bs";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -51,7 +51,7 @@ const Navbar = () => {
             className="w-[150px] h-[75px] md:w-[200px] md:h-[100px]"
           />
           <span className="absolute bottom-[16%] -right-[30%] text-gray-600 text-md font-bold">
-           Since : 2011
+            Since : 2011
           </span>
         </div>
 
@@ -62,34 +62,17 @@ const Navbar = () => {
               Home
             </h5>
           </Link>
-            <Link href="/marketingsolution" passHref>
-                <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
-                    Marketing Solution
-                </h5>
-            </Link>
-      
-            {/* <BsChevronDown className="text-[1.1vw] font-bold" /> */}
-            {/* {dropdownOpen && (
-              <div className="absolute top-[100%] left-[70%] border-2 border-black transform -translate-x-1/2 mt-2 w-48 bg-white shadow-lg rounded-md z-10">
-                <ul className="py-2">
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Service 1</li>
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Service 2</li>
-                  <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer">Service 3</li>
-                </ul>
-              </div>
-            )} */}
-          {/* </div> */}
-          {/* <Link href="/about" passHref>
+          <Link href="/marketingsolution" passHref>
             <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
-              Who We Are
-            </h5>
-          </Link> */}
-          <Link href="/aboutus" passHref>
-            <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
-              About us
+              Marketing Solution
             </h5>
           </Link>
-          <Link href="/contactus" passHref>
+          <Link href="/aboutus" passHref>
+            <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
+              About Us
+            </h5>
+          </Link>
+          <Link href="/Contactus" passHref>
             <h5 className="text-[1.1vw] font-syne-bold font-semibold hover:text-[#4A9BD3] cursor-pointer">
               Contact
             </h5>
@@ -107,7 +90,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Bottom Navbar */}
+      {/* Mobile Navbar */}
       <div className="md:hidden fixed bottom-0 left-0 w-full bg-gradient-to-r from-[#E3F2FD] to-[#4A9BD3] shadow-lg rounded-t-xl">
         <div className="flex justify-around items-center py-3">
           <Link href="/" passHref>
@@ -118,6 +101,7 @@ const Navbar = () => {
               <span className="mt-2 text-sm text-gray-700 font-medium">Home</span>
             </div>
           </Link>
+
           <div className="flex flex-col items-center cursor-pointer relative" onClick={(e) => e.stopPropagation()}>
             <div
               className="w-10 h-10 bg-gradient-to-r from-[#4A9BD3] to-[#1976D2] rounded-full flex items-center justify-center transition-transform transform hover:scale-110"
@@ -136,7 +120,8 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <Link href="/About" passHref>
+
+          <Link href="/aboutus" passHref>
             <div className="flex flex-col items-center cursor-pointer">
               <div className="w-10 h-10 bg-gradient-to-r from-[#4A9BD3] to-[#1976D2] rounded-full flex items-center justify-center transition-transform transform hover:scale-110">
                 <BsInfoCircle className="text-2xl text-white" />
@@ -144,7 +129,8 @@ const Navbar = () => {
               <span className="mt-2 text-sm text-gray-700 font-medium">About</span>
             </div>
           </Link>
-          <Link href="/Contact" passHref>
+
+          <Link href="/Contactus" passHref>
             <div className="flex flex-col items-center cursor-pointer">
               <div className="w-10 h-10 bg-gradient-to-r from-[#4A9BD3] to-[#1976D2] rounded-full flex items-center justify-center transition-transform transform hover:scale-110">
                 <BsTelephone className="text-2xl text-white" />
@@ -159,3 +145,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

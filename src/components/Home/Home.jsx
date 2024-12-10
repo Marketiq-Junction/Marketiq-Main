@@ -1,16 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import WhatWeDoSection from "../WhatWeDo/WhatWeDoSection";
-import ServiceSection from "../WhatWeDo/Service/ServiceSection";
+import WhatWeDoSection from "./WhatWeDo/WhatWeDoSection";
+import ServiceSection from "./Service/ServiceSection";
 import Hero from "./Hero/Hero";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
-import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
+import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import FreeConsultationSection from "../Consultation/FreeConsultationSection";
+import FreeConsultationSection from "./Consultation/FreeConsultationSection";
 import Footer from "../Footer/Footer";
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);

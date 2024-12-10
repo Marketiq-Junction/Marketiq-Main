@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
 import Contact1 from '@/components/Contactus/Contact1';
