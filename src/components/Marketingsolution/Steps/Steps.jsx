@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -59,7 +59,7 @@ const Steps = () => {
         {/* Steps Timeline */}
         <div className="relative flex flex-wrap justify-center items-start">
           {/* Horizontal Line */}
-          <div className="absolute inset-0 top-1/2 transform -translate-y-1/2 h-1 bg-[#4A9BD3] w-full max-w-6xl mx-auto z-0"></div>
+          <div className="absolute inset-0 top-1/2 transform -translate-y-1/2 h-1 bg-[#4A9BD3] w-full max-w-6xl mx-auto z-0 lg:block hidden"></div>
 
           {steps.map((step) => {
             const isOdd = step.id % 2 !== 0;
