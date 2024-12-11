@@ -2,12 +2,12 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <section className="whychoose us w-full h-full flex flex-col lg:flex-row">
+    <section className=" w-full h-[75%] flex flex-col lg:flex-row">
       <div className="w-full lg:w-1/2 h-auto lg:h-full flex items-center justify-center">
         <div className="w-3/4 md:w-1/2 lg:w-[50%] h-auto lg:h-[50%]">
           <img
             src="/images/rb_2148901520.png"
-            className="w-full h-auto lg:h-full object-cover"
+            className="w-[65%] h-[80%] lg:h-full object-cover"
             alt="Why Choose Us Image"
           />
         </div>

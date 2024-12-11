@@ -54,24 +54,24 @@ const DigitalAgency = () => {
           }`}
           onClick={() => setActiveCard("mission")}
         >
-          <RocketLaunchIcon className="text-3xl md:text-4xl mb-2" />
+          <RocketLaunchIcon className="text-3xl md:text-4xl mb-2 animate-pulse" />
           <div className="text-lg md:text-2xl font-bold">
             Mission Of Our Company
           </div>
         </div>
         <div
-          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-200 text-blue-600 p-6 rounded-lg shadow-lg transition-transform transform ${
+          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-400 text-white p-6 rounded-lg shadow-lg transition-transform transform ${
             activeCard === "vision" ? "scale-105" : ""
           }`}
           onClick={() => setActiveCard("vision")}
         >
-          <VisibilityIcon className="text-3xl md:text-4xl mb-2" />
+          <VisibilityIcon className="text-3xl md:text-4xl mb-2 animate-pulse" />
           <div className="text-lg md:text-2xl font-bold">
             Vision Of Our Company
           </div>
         </div>
         <div
-          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-300 text-blue-700 p-6 rounded-lg shadow-lg transition-transform transform ${
+          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-400 text-white p-6 rounded-lg shadow-lg transition-transform transform ${
             activeCard === "goals" ? "scale-105" : ""
           }`}
           onClick={() => setActiveCard("goals")}

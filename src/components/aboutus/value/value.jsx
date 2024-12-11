@@ -102,12 +102,12 @@ const ValuesAndCulture = () => {
 
           {/* Logo */}
           <motion.div
-            className="bg-white border-4 border-blue-500 rounded-full shadow-lg flex items-center justify-center w-52 h-52"
+            className="bg-white border-4 border-green-200 rounded-full shadow-lg flex items-center justify-center w-52 h-52"
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <img src="/logo.png" alt="Logo" className="w-28 h-28" />
+            <img src="/loggo.jpg" alt="Logo" className="w-28 h-28" />
           </motion.div>
 
           <motion.div
