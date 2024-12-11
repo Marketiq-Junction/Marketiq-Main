@@ -1,6 +1,6 @@
 "use client";
 
-const hero = () => {
+const Hero = () => {
   return (
     <section className="flex flex-row justify-center items-center py-12 bg-blue-400">
       <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10">
@@ -29,7 +29,7 @@ const hero = () => {
           <img
             src="/images/youtube/s1.png"
             alt="Google My Business Illustration"
-            className="max-w-full h-auto rounded-lg shadow-md"
+            className="max-w-full h-auto"
           />
         </div>
       </div>
@@ -37,4 +37,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;

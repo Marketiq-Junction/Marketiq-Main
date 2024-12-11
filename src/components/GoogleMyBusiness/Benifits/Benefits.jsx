@@ -81,7 +81,7 @@ const Benefits = () => {
             {/* Header */}
             <div className="flex items-center justify-start mb-4">
               <div className="text-2xl font-bold text-blue-500">{benefit.id}</div>
-              <div className="ml-2 h-2 w-8 bg-blue-500"></div>
+              {/* <div className="ml-2 h-2 w-8 bg-blue-500"></div> */}
             </div>
             
             {/* Title */}

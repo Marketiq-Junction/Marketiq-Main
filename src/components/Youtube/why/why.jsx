@@ -1,11 +1,12 @@
 import React from "react";
+import { FaGlobe, FaChartLine, FaArrowsAlt, FaPencilAlt, FaComments, FaChartPie } from "react-icons/fa";
 
-const why = () => {
+const Why = () => {
   return (
     <div className="max-w-6xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-center mb-6">Why Choose Us</h2>
       <p className="text-center text-gray-600 mb-12">
-        Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultricies. 
+        Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultricies.
         Urna vulputate non non nisl amet commodo.
       </p>
       <div className="flex flex-wrap justify-between items-center gap-6">
@@ -15,19 +16,19 @@ const why = () => {
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="mr-4 text-blue-500">
-                <i className="fas fa-globe"></i>
+                <FaGlobe />
               </span>
               We enhance your content’s visibility using targeted keywords, effective video descriptions, and relevant tags.
             </li>
             <li className="flex items-start">
               <span className="mr-4 text-green-500">
-                <i className="fas fa-chart-line"></i>
+                <FaChartLine />
               </span>
               Our SEO strategy improves channel rankings, making your content easier for audiences to find.
             </li>
             <li className="flex items-start">
               <span className="mr-4 text-purple-500">
-                <i className="fas fa-arrows-alt"></i>
+                <FaArrowsAlt />
               </span>
               Organic SEO ensures consistent reach and audience engagement without reliance on paid ads.
             </li>
@@ -49,19 +50,19 @@ const why = () => {
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="mr-4 text-blue-500">
-                <i className="fas fa-pencil-alt"></i>
+                <FaPencilAlt />
               </span>
               We design organic methods to create content that resonates with your audience, based on trends.
             </li>
             <li className="flex items-start">
               <span className="mr-4 text-green-500">
-                <i className="fas fa-comments"></i>
+                <FaComments />
               </span>
               Through comment interaction, prompts, and end screens, we foster genuine viewer engagement.
             </li>
             <li className="flex items-start">
               <span className="mr-4 text-purple-500">
-                <i className="fas fa-chart-pie"></i>
+                <FaChartPie />
               </span>
               We continuously monitor your channel's performance and optimize based on organic metrics.
             </li>
@@ -72,4 +73,4 @@ const why = () => {
   );
 };
 
-export default why;
+export default Why;

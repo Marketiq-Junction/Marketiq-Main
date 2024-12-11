@@ -13,7 +13,7 @@ import Steps from "@/components/Marketingsolution/Steps/Steps";
 import Databaner from "@/components/Marketingsolution/Databaner/Databaner";
 import Clienthero from "@/components/Marketingsolution/Clientstory/Clienthero";
 import Request from "@/components/Marketingsolution/Request/Request";
-import Ourservices from "@/components/Marketingsolution/Ourservices/Ourservices"
+import Ourservices from "@/components/Marketingsolution/Ourservices/Ourservices";
 
 
 
