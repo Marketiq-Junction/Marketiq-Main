@@ -31,11 +31,11 @@ const Hero = () => {
 
       {/* Right Section: Image */}
       <div className="lg:w-[40%] w-full flex items-center justify-center mt-16 lg:mt-0 mb-16">
-        <div className="w-[90%] lg:w-[70%] h-[30vh] lg:h-[60vh]">
+        <div className="w-[95%] lg:w-[70%] h-[40vh] lg:h-[60vh]">
           <img
-            src="/images/hero/1.jpg"
+            src="/hero17.png"
             alt="Hero Image"
-            className="w-full h-full object-cover rounded-lg mt-10"
+            className="w-full h-full object-cover rounded-lg mt-10 animate-pulse"
           />
         </div>
       </div>

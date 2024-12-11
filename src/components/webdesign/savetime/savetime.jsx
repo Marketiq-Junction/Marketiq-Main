@@ -7,7 +7,7 @@ const SaveTime = () => {
         {/* Left Side - Image */}
         <div className="md:w-1/2 flex justify-center mb-8 md:mb-0">
           <img
-            src="/seohero22.png"
+            src="/time.png"
             alt="Save Time Illustration"
             className=" h-auto"
           />
