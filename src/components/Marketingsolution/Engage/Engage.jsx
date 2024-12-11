@@ -7,7 +7,7 @@ const Engage =()=>{
           {/* Left Content (Image) */}
           <div className="flex-1 flex justify-center">
             <img
-              src="/images/socialmedia/two.png"
+              src="/images/socialmedia/two1.png"
               alt="Engage and Inspire"
               className="max-w-full h-auto"
             />

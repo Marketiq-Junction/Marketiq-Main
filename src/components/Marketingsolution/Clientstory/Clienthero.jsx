@@ -21,11 +21,11 @@ const Clienthero = () => {
     <section className="bg-white py-12">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6">
         {/* Left Image Section */}
-        <div className="lg:w-1/2 mb-10 lg:mb-0">
+        <div className="flex-1 flex justify-center">
           <img
             src="/images/socialmedia/four.png" // Replace with your image path
             alt="Analytics Visualization"
-            className="w-full h-auto object-contain"
+            className="w-3/4 max-w-xs h-auto object-contain"
           />
         </div>
 

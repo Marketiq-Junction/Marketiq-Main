@@ -25,7 +25,7 @@ const Profile = () => {
         {/* Right Side Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="/images/GoogleMyBusiness/two1.png"
+            src="/images/GoogleMyBusiness/two.png"
             alt="Profile Optimization"
             className="w-full max-w-md md:max-w-lg h-auto"
           />

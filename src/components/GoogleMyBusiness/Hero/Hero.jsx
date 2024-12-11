@@ -33,7 +33,7 @@ const Hero = () => {
           <img
             src="/images/GoogleMyBusiness/first1.png"
             alt="Google My Business Illustration"
-            className="max-w-full h-auto rounded-lg shadow-md"
+            className="max-w-full h-auto"
           />
         </div>
       </div>

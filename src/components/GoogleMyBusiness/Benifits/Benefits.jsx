@@ -60,7 +60,6 @@ const Benefits = () => {
 
   return (
     <section className="py-12 bg-gray-50">
-
       {/* Header */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-900 mb-2">Benefits</h2>
@@ -74,16 +73,13 @@ const Benefits = () => {
         {benefits.map((benefit, index) => (
           <div
             key={benefit.id}
-            className={`p-6 rounded-lg shadow-lg bg-[#A2DFE1] hover:bg-white transition-colors duration-300 ${
-              index === 1 ? "relative -top-4 lg:-top-8" : "" // Middle card elevation
-            }`}
+            className={`p-6 rounded-lg shadow-lg bg-[#A2DFE1] hover:bg-white transform transition-all duration-300 hover:-translate-y-4`}
           >
             {/* Header */}
             <div className="flex items-center justify-start mb-4">
               <div className="text-2xl font-bold text-blue-500">{benefit.id}</div>
-              {/* <div className="ml-2 h-2 w-8 bg-blue-500"></div> */}
             </div>
-            
+
             {/* Title */}
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               {benefit.title}

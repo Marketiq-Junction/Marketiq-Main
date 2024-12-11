@@ -12,16 +12,18 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-white leading-relaxed mb-6">
           At Marketiq Junction, our YouTube management services are designed to establish, optimize, and grow your brand’s online presence on the world’s second-largest search engine. We offer a comprehensive range of services to ensure your channel not only reaches a wide audience but also engages viewers and drives measurable results.
           </p>
-          <div className="relative w-full md:w-[500px]">
-            <input
-              type="text"
-              placeholder="Enter Your Website"
-              className="w-full py-4 px-5 pr-36 border border-gray-300 rounded-md text-gray-700"
-            />
-            <button className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600">
-              Request A Quote
-            </button>
-          </div>
+          <div className="relative w-full max-w-md mx-auto flex flex-col sm:flex-row sm:items-center sm:gap-2">
+  <input
+    type="text"
+    placeholder="Enter Your Website"
+    className="w-full py-4 px-5 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+  />
+  <button className="mt-2 w-full sm:mt-0 sm:ml-2 bg-teal-500 text-white h-10px-4 py-2 rounded-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400 focus:outline-none">
+    Request A Quote
+  </button>
+</div>
+
+
         </div>
 
         {/* Right Side Image */}

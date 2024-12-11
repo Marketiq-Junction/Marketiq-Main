@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import Navbar from '@/components/Navbar/Navbar';
+import Footer from "@/components/Footer/Footer";
 import Hero from  '@/components/Youtube/Hero1/Hero';
 import Why from '@/components/Youtube/Why/Why';
 import Benefits from '@/components/Youtube/Benefits/Benefits';
@@ -16,6 +17,7 @@ function page ()
         <Benefits />
         <Services />
         <Ourprocess />
+        <Footer />
         </>
     )
 }

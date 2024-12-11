@@ -35,15 +35,15 @@ function ContactForm() {
         </p>
         <form className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Name" className="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500" />
-            <input type="email" placeholder="Email" className="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500" />
+            <input type="text" placeholder="Name" className="border text-black placeholder:text-black border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500 bg-[#A2DFE1]" />
+            <input type="email" placeholder="Email" className="border text-black placeholder:text-black border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500 bg-[#A2DFE1]" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" placeholder="Phone" className="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500" />
-            <input type="text" placeholder="Website" className="border border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500" />
+            <input type="text" placeholder="Phone" className="border text-black placeholder:text-black border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500 bg-[#A2DFE1]" />
+            <input type="text" placeholder="Website" className="border text-black placeholder:text-black border-gray-300 p-3 rounded-md w-full focus:outline-none focus:border-teal-500 bg-[#A2DFE1]" />
           </div>
-          <textarea placeholder="Message" className="border border-gray-300 p-3 rounded-md w-full h-32 focus:outline-none focus:border-teal-500"></textarea>
-          <button className="bg-teal-500 text-white font-bold py-3 px-6 rounded-md w-full md:w-auto hover:bg-teal-600 transition duration-200">
+          <textarea placeholder="Message" className="border text-black placeholder:text-black border-gray-300 p-3 rounded-md w-full h-32 focus:outline-none focus:border-teal-500 bg-[#A2DFE1]"></textarea>
+          <button className="bg-teal-500 text-white font-bold py-3 px-6 rounded-md w-full md:w-50 hover:bg-teal-600 transition duration-200">
             Send Message
           </button>
         </form>
