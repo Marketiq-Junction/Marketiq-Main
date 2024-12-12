@@ -6,10 +6,8 @@ const Process = () => {
       {/* Header Section */}
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4">Our Process</h2>
-        <p className="text-lg text-gray-600">
-          We recognize the importance of having a strong local presence, which
-          is why our Google My Business (GMB) services are designed to help you
-          maximize your visibility and connect with customers in your area.
+        <p className="text-[#000000]">
+        we recognize the importance of having a strong local presence, which is why our Google My Business (GMB) services are designed to <br /> help you maximize your visibility and connect with customers in your area. With a well-optimized GMB profile, you can attract more local <br /> clients and drive traffic to your business.
         </p>
       </div>
 

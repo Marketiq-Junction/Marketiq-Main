@@ -16,7 +16,7 @@ const Engage =()=>{
           {/* Right Content (Text and Buttons) */}
           <div className="flex-1">
             <h2 className="text-4xl font-bold text-black leading-snug mb-6">
-              Let’s Engage and Inspire Together
+              Let’s Engage and Inspire <br /> Together
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-8">
               "Let’s Engage and Inspire Together" is a powerful call to action that
@@ -34,12 +34,12 @@ const Engage =()=>{
               empower each other to reach new heights.
             </p>
             <div className="flex gap-4">
-              <button className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition text-lg font-semibold">
-                View Pricing
-              </button>
-              <button className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition text-lg font-semibold">
-                Get In Touch
-              </button>
+            <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3   transition">
+            View Pricing
+          </button>
+          <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3   transition">
+            Get In Touch
+          </button>
             </div>
           </div>
         </div>

@@ -24,9 +24,11 @@ const Drive = () => {
             Let us transform your social media presence into a powerful
             revenue-generating tool!
           </p>
-          <button className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">
-            Get In Touch
+          <div className="text-start">
+          <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3   transition">
+            Get in touch
           </button>
+        </div>
         </div>
 
         {/* Right Image */}

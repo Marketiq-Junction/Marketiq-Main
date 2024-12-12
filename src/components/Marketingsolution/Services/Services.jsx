@@ -72,11 +72,11 @@ const Services = () => {
           Why Choose Us
         </h3>
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-10 text-center">
-          We are specialized in the following services
+          We are specialized in the <br /> following services
         </h1>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {cards.map((card) => (
             <div
               key={card.id}
@@ -96,7 +96,7 @@ const Services = () => {
               <div className="border-t border-gray-300 my-4"></div>
 
               {/* Title */}
-              <h2 className="font-semibold text-lg md:text-xl text-blue-500 group-hover:text-black">
+              <h2 className="font-semibold text-lg md:text-xl text-[#4A9BD3] group-hover:text-black">
                 {card.title}
               </h2>
             </div>

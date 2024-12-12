@@ -2,19 +2,15 @@
 
 const Hero = () => {
   return (
-    <section className="flex flex-row justify-center items-center py-12 bg-blue-400">
+    <section className="flex flex-row justify-center items-center py-12 bg-[#4A9BD3]">
       <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10">
         {/* Left Side Content */}
         <div className="flex-1 flex flex-col justify-center ml-6 px-6 md:px-0">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Google My Business Management
+          <h1 className="text-4xl md:text-3xl font-bold text-white mb-4">
+            Google My Business <br />Management
           </h1>
-          <p className="text-lg md:text-xl text-white leading-relaxed mb-6">
-            We recognize the importance of having a strong local presence,
-            which is why our Google My Business (GMB) services are designed to
-            help you maximize your visibility and connect with customers in
-            your area. With a well-optimized GMB profile, you can attract more
-            local clients and drive traffic to your business.
+          <p className="text-white leading-relaxed mb-6">
+            we recognize the importance of having a strong local presence, which is <br /> why our Google My Business (GMB) services are designed to help you <br /> maximize your visibility and connect with customers in your area. With a <br />  well-optimized GMB profile, you can attract more local clients and drive traffic to your business.
           </p>
           <div className="relative w-full md:w-[500px]">
             <input

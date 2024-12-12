@@ -1,85 +1,66 @@
-import React, { useState } from "react";
-import { FaCogs, FaEdit, FaChartLine } from "react-icons/fa";
-import { motion } from "framer-motion";
+"use client";
+import React from "react";
+import { FaCogs, FaLightbulb, FaChartBar } from "react-icons/fa";
 
 const Ourprocess = () => {
-  const [activeCard, setActiveCard] = useState(null); // Track which card is clicked
-
-  const steps = [
+  const processSteps = [
     {
-      id: 1,
       title: "Channel Setup and Optimization",
       description:
-        "We begin by setting up your YouTube channel with a compelling design, relevant keywords, and optimized descriptions. This includes creating visually appealing banners, thumbnails, and an informative 'About' section to enhance your channel's appeal and discoverability.",
+        "We begin by setting up <br /> your YouTube channel with <br /> a compelling design, <br /> relevant keywords, and <br /> optimized descriptions.This <br /> includes creating visually <br />appealing banners,<br /> thumbnails, and an <br /> informative 'About' section <br /> to enhance your channel’s <br /> appeal and discoverability.",
       icon: <FaCogs />,
     },
     {
-      id: 2,
-      title: "Content Strategy and Planning",
+      title: "Tailored Content Strategy",
       description:
-        "Our team collaborates with you to create a tailored content strategy that aligns with your target audience's interests and trending topics. This process involves planning video topics, formats, and a consistent publishing schedule to maximize engagement and growth.",
-      icon: <FaEdit />,
+        "Our team collaborates with <br /> you to create a tailored <br /> content strategy that aligns <br /> with your target audience's <br /> interests and trending <br /> topics.This process involves <br /> planning video topics, <br />formats, and a consistent <br /> publishing schedule to <br /> maximize engagement and <br /> growth.",
+      icon: <FaLightbulb />,
     },
     {
-      id: 3,
       title: "Performance Monitoring and Analytics",
       description:
-        "We continuously monitor your channel's performance through detailed analytics. Our reporting includes insights on viewer engagement, retention rates, and demographics, allowing us to make informed adjustments to your content strategy for sustained growth and improved ROI.",
-      icon: <FaChartLine />,
+        "We continuously monitor <br /> your channel’s performance <br />through detailed analytics.<br />Our reporting includes <br /> insights on viewer <br /> engagement, retention <br /> rates, and demographics, <br /> allowing us to make <br />informed adjustments to <br /> your content strategy for <br /> sustained growth and <br /> improved ROI.",
+      icon: <FaChartBar />,
     },
   ];
 
   return (
-    <section className="py-12 bg-[#4A9BD3] mt-10">
-      <h1 className="text-3xl font-bold text-center text-white mb-8">
-        Our Process
-      </h1>
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 px-4">
-  {steps.map((step) => (
-    <motion.div
-      key={step.id}
-      className={`p-6 rounded-lg shadow-md w-full lg:w-1/3 text-center transition transform ${
-        activeCard === step.id
-          ? "bg-[#4A9BD3] text-white"
-          : "bg-[#A2DFE1] text-gray-800 hover:bg-[black] hover:text-white hover:shadow-lg"
-      }`}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.3 }}
-      onClick={() => setActiveCard(step.id)}
-    >
-      <div className="flex items-center justify-center mb-4">
-        <motion.div
-          className={`text-4xl ${
-            activeCard === step.id ? "text-white" : "text-[#4A9BD3]"
-          } mr-4 transition-colors duration-300`}
-          animate={{ rotate: activeCard === step.id ? 360 : 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {step.icon}
-        </motion.div>
-        <h3 className="text-xl font-semibold">{step.title}</h3>
-      </div>
-      <p className="text-sm">{step.description}</p>
-    </motion.div>
-  ))}
-</div>
+    <section className="py-16 bg-[#4A9BD3]">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#FFFFFF] mb-12">
+          Our Process
+        </h2>
 
-      <div className="flex justify-center gap-4 mt-8">
-        <motion.button
-          className="px-6 py-2 bg-black text-blue-500 font-semibold rounded-lg shadow hover:bg-white hover:text-black"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Contact Us
-        </motion.button>
-        <motion.button
-          className="px-6 py-2 bg-white border border-blue-500 text-blue-500 font-semibold rounded-lg shadow hover:bg-black hover:text-white"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          Get A Quote
-        </motion.button>
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-12 md:space-y-0 md:space-x-12 text-center">
+          {processSteps.map((step, index) => (
+            <div key={index} className="flex-1">
+              {/* Icon */}
+              <div className="flex justify-center items-center w-16 h-16 mx-auto bg-[#A2DFE1] text-white mb-6">
+                {React.cloneElement(step.icon, {
+                  className: "text-2xl text-[#4A9BD3]",
+                })}
+              </div>
+              {/* Title */}
+              <h3 className="text-lg font-bold text-[#FFFFFF] mb-4">
+                {step.title}
+              </h3>
+              {/* Description */}
+              <p
+                className="text-sm text-[#000000]"
+                dangerouslySetInnerHTML={{ __html: step.description }}
+              ></p>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex justify-center mt-12 space-x-4">
+          <button className="bg-[#4A9BD3] border-2 border-[#FFFFFF] text-[#000000] px-6 py-3">
+            Contact Us
+          </button>
+          <button className="bg-[#4A9BD3] border-2 border-[#FFFFFF] text-[#000000] px-6 py-3 ">
+            Get A Quote
+          </button>
+        </div>
       </div>
     </section>
   );

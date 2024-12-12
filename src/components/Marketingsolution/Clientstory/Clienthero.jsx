@@ -32,7 +32,7 @@ const Clienthero = () => {
         {/* Right Content Section */}
         <div className="lg:w-1/2 lg:pl-10">
           <h2 className="text-4xl font-bold text-black mb-4">
-            We make the Client the hero of our story.
+            We make the Client the hero <br /> of our story.
           </h2>
           <p className="text-gray-600 mb-6">
             Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultrices urna 
@@ -49,16 +49,16 @@ const Clienthero = () => {
               {section.metrics.map((metric, i) => (
                 <div key={i} className="mb-4">
                   <div className="flex justify-between mb-1">
-                    <span className="text-blue-600 font-semibold">
+                    <span className="text-[#3863F5]">
                       {metric.label}
                     </span>
-                    <span className="text-blue-600 font-semibold">
+                    <span className="text-[#3863F5]">
                       {metric.value}%
                     </span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="w-full bg-gray-200 rounded-full h-1">
                     <div
-                      className="bg-blue-500 h-3 rounded-full"
+                      className="bg-[#3863F5] h-1 rounded-full"
                       style={{ width: `${metric.value}%` }}
                     ></div>
                   </div>
@@ -72,10 +72,10 @@ const Clienthero = () => {
 
           {/* Buttons */}
           <div className="flex gap-4">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition">
+            <button className="bg-[#4A9BD3] text-white px-6 py-3 ">
               Discover More
             </button>
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition">
+            <button className="bg-[#4A9BD3] text-white px-6 py-3">
               Book A Meeting
             </button>
           </div>

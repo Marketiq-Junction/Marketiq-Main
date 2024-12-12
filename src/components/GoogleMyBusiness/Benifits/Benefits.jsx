@@ -62,8 +62,8 @@ const Benefits = () => {
     <section className="py-12 bg-gray-50">
       {/* Header */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">Benefits</h2>
-        <p className="text-lg text-gray-600">
+        <h2 className="text-4xl font-bold text-[#000000] mb-2">Benefits</h2>
+        <p className="text-lg text-[#000000]">
           Your Reputation, Your Strength: Build It Wisely!
         </p>
       </div>

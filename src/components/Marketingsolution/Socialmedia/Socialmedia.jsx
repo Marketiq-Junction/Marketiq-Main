@@ -13,8 +13,7 @@ function Socialmedia() {
         Social Media Marketing
       </h2>
       <p className="text-lg mb-8 text-white font-poppins font-normal leading-8">
-        Ensuring the best return on investment for your bespoke SEO Campaign
-        requirement.
+        Ensuring the best return on investment for your bespoke SEO <br /> Campaign requirement.
       </p>
       {/* Quote Request Form */}
       <div className="flex flex-col gap-4 max-w-lg">
@@ -22,28 +21,28 @@ function Socialmedia() {
           <input
             type="text"
             placeholder="Select Platform"
-            className="p-3 border rounded w-full"
+            className="p-3 w-full"
           />
           <input
             type="text"
             placeholder="Enter URL"
-            className="p-3 border rounded w-full"
+            className="p-3 w-full"
           />
         </div>
         <div className="grid grid-cols-2 gap-4">
           <input
             type="email"
             placeholder="Email"
-            className="p-3 border rounded w-full"
+            className="p-3 w-full"
           />
           <input
             type="number"
             placeholder="Phone Number"
-            className="p-3 border rounded w-full"
+            className="p-3 w-full"
           />
         </div>
         <div className="text-center">
-          <button className="bg-blue-500 text-white px-8 py-3 rounded hover:bg-blue-600 transition text-lg font-bold">
+          <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3   transition">
             Request A Free Quote
           </button>
         </div>

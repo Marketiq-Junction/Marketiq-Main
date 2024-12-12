@@ -5,14 +5,14 @@ const Why = () => {
   return (
     <div className="max-w-6xl mx-auto p-6">
       <h2 className="text-3xl font-bold text-center mb-6">Why Choose Us</h2>
-      <p className="text-center text-gray-600 mb-12">
-        Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultricies.
-        Urna vulputate non non nisl amet commodo.
+      <p className="text-[#000000] mb-12">
+      Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultrices Urna vulputate non non nisl amet commodo. Sollicitudin. Leo mi curabitur <br />euismod orci. Ridiculus sem. Torquent. Ornare euismod, per nullam, ligula morbi natoque nibh faucibus vitae sapien. 
+
       </p>
       <div className="flex flex-wrap justify-between items-center gap-6">
         {/* Left Content */}
         <div className="flex-1 min-w-[300px]">
-          <h3 className="text-xl font-semibold mb-4">Organic YouTube SEO Optimization</h3>
+          <h3 className="text-xl font-semibold mb-4 text-[#000000]">Organic YouTube SEO Optimization</h3>
           <ul className="space-y-4">
             <li className="flex items-start">
               <span className="mr-4 text-blue-500">

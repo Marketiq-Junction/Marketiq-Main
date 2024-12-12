@@ -32,7 +32,7 @@ const Page = () => {
     <Clienthero />
     <Request />
     {/* <Ourservices /> */}
-    <WhyUs />
+    {/* <WhyUs /> */}
       <Footer />
     </>
   );

@@ -1,42 +1,50 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  SpeakerphoneIcon,
+  ChatAltIcon,
+  CurrencyDollarIcon,
+  ChartBarIcon,
+  ChartPieIcon,
+  UserCircleIcon,
+} from "@heroicons/react/outline";
 
 const Benefits = () => {
   const benefits = [
     {
       title: "Increased Brand Awareness",
-      icon: "fas fa-bullhorn",
+      icon: <SpeakerphoneIcon className="h-8 w-8 text-white" />,
       description:
         "Social media platforms allow businesses to reach a wider audience, digitally improving brand visibility and recognition. Regularly engaging with users helps maintain a strong online presence.",
     },
     {
       title: "Enhanced Customer Engagement",
-      icon: "fas fa-comments",
+      icon: <ChatAltIcon className="h-8 w-8 text-white" />,
       description:
         "Social media facilitates direct interaction with customers, enabling businesses to respond to inquiries, gather feedback, and build relationships, which fosters loyalty and trust.",
     },
     {
       title: "Cost-Effective Marketing",
-      icon: "fas fa-money-bill-wave",
+      icon: <CurrencyDollarIcon className="h-8 w-8 text-white" />,
       description:
         "Compared to traditional advertising, social media marketing is more affordable and can yield higher returns on investment (ROI). Businesses can reach their target audience without significant expenditure.",
     },
     {
       title: "Increased Website Traffic",
-      icon: "fas fa-chart-line",
+      icon: <ChartBarIcon className="h-8 w-8 text-white" />,
       description:
         "By sharing content and links on social media, businesses can drive traffic to their websites, enhancing lead generation and potential conversions.",
     },
     {
       title: "Access to Analytics",
-      icon: "fas fa-chart-pie",
+      icon: <ChartPieIcon className="h-8 w-8 text-white" />,
       description:
         "Social media platforms provide valuable insights and analytics, helping businesses assess their performance, understand audience behavior, and refine their strategies for better results.",
     },
     {
       title: "Improved Customer Insights",
-      icon: "fas fa-user-check",
+      icon: <UserCircleIcon className="h-8 w-8 text-white" />,
       description:
         "Social media provides valuable data about customer preferences and behaviors. Businesses can analyze this information to tailor their products and services to better meet customer needs.",
     },
@@ -46,10 +54,13 @@ const Benefits = () => {
     <div className="py-10 bg-white">
       {/* Title Section */}
       <div className="text-center mb-10 px-4 sm:px-6 lg:px-12">
-        <h2 className="text-4xl font-bold text-black">Benefits of Social Media Marketing</h2>
+        <h2 className="text-4xl font-bold text-black">
+          Benefits of Social Media Marketing
+        </h2>
         <p className="text-gray-500 mt-4">
-          Discover the impactful benefits of social media marketing in increasing brand awareness,
-          improving engagement, and driving results effectively.
+          Discover the impactful benefits of social media marketing in
+          increasing brand awareness, <br /> improving engagement, and driving
+          results effectively.
         </p>
       </div>
 
@@ -58,28 +69,27 @@ const Benefits = () => {
         {benefits.map((item, index) => (
           <motion.div
             key={index}
-            className="p-6 bg-[#4A9BD3] text-white rounded-lg shadow-md flex flex-col items-center transform transition-transform duration-300 hover:-translate-y-4 min-h-[280px]"
-            whileHover={{ y: -10 }} // Move up 10px on hover
+            className="relative bg-[#4A9BD3] text-white rounded-lg shadow-md p-6 flex flex-col items-center min-h-[240px] hover:shadow-xl transition transform duration-300 hover:-translate-y-2 mt-10"
+            whileHover={{ y: -10 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            {/* Icon */}
-            <div className="w-16 h-16 bg-[#A2DFE1] rounded-full flex items-center justify-center mb-4">
-              <i className={`${item.icon} text-[#4A9BD3] text-2xl`} aria-hidden="true"></i>
+            {/* Icon at the Very Top */}
+            <div className="absolute -top-8 w-16 h-16 bg-[#A2DFE1] rounded-full flex items-center justify-center">
+              {item.icon}
             </div>
             {/* Title */}
-            <h3 className="font-bold text-lg mb-2 text-center">{item.title}</h3>
+            <h3 className="mt-10 font-bold text-lg text-center">{item.title}</h3>
             {/* Description */}
-            <p className="text-sm text-white text-center">{item.description}</p>
+            <p className="text-sm text-white text-center mt-4">
+              {item.description}
+            </p>
           </motion.div>
         ))}
       </div>
 
       {/* Call-to-Action */}
-      <div className="text-center mt-10 px-4">
-        <button
-          className="px-6 py-3 bg-black text-white font-bold rounded-lg hover:bg-gray-800 transition"
-          aria-label="Request A Quote"
-        >
+      <div className="text-center mt-4">
+        <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 transition">
           Request A Quote
         </button>
       </div>
