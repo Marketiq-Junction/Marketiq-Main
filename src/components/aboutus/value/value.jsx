@@ -13,146 +13,126 @@ const ValuesAndCulture = () => {
   const values = [
     {
       title: "Gratitude",
-      description:
-        "We lead with an attitude of thankfulness and humility and find ways to express our gratitude to those around us every day. We embrace giving back, impacting the world for a greater good.",
-      icon: <FavoriteIcon className="text-blue-500 text-6xl" />,
+      description: "Thankfulness and humility drive us every day.",
+      icon: <FavoriteIcon className="text-blue-500 text-5xl" />,
     },
     {
       title: "Respect",
-      description:
-        "We operate with positive assumptions and give the benefit of the doubt, choosing to see the best in ourselves and others. We respect others at all times and refrain from gossip or reacting with anger.",
-      icon: <GroupIcon className="text-blue-500 text-6xl" />,
+      description: "We see the best in ourselves and others.",
+      icon: <GroupIcon className="text-blue-500 text-5xl" />,
     },
     {
       title: "Work Ethic",
-      description:
-        "We give our best effort and have high-performance expectations. We are organized, proactive, and work with a sense of urgency. We emphasize work-life balance where we work hard but prioritize time off for our well-being.",
-      icon: <WorkIcon className="text-blue-500 text-6xl" />,
+      description: "We work smart, stay balanced, and deliver results.",
+      icon: <WorkIcon className="text-blue-500 text-5xl" />,
     },
     {
       title: "Ownership",
-      description:
-        "We take personal responsibility for our actions and commit to responsible stewardship over company and client resources. We apologize when we make mistakes and work to make things right. We can do hard things.",
-      icon: <PsychologyIcon className="text-blue-500 text-6xl" />,
+      description: "We own our actions and make things right.",
+      icon: <PsychologyIcon className="text-blue-500 text-5xl" />,
     },
     {
       title: "Think Bigger",
-      description:
-        "We strive for continuous improvement and believe that better never stops! We embrace change, adapt, and overcome.",
-      icon: <AutoAwesomeIcon className="text-blue-500 text-6xl" />,
+      description: "We embrace change and strive for growth.",
+      icon: <AutoAwesomeIcon className="text-blue-500 text-5xl" />,
     },
     {
       title: "Honesty",
-      description:
-        "We seek to build trust and mutual respect by acting with integrity and doing the right thing no matter how difficult.",
-      icon: <CheckCircleIcon className="text-blue-500 text-6xl" />,
+      description: "Integrity and trust guide our every move.",
+      icon: <CheckCircleIcon className="text-blue-500 text-5xl" />,
     },
   ];
 
   return (
-    <div className="bg-white px-6 lg:px-20 py-12">
+    <div className="bg-gradient-to-b from-blue-50 to-white px-6 lg:px-16 py-12">
       {/* Header Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-3xl lg:text-5xl font-bold mb-4">
-          Values and Culture
+      <motion.div
+        className="text-center mb-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 mb-4">
+          Our Values & Culture
         </h1>
-        <p className="text-lg lg:text-xl text-gray-700">
-          Our values define the way we work and interact, both with our clients
-          and within our team. They are the foundation of our company culture,
-          guiding us toward delivering exceptional results and fostering strong,
-          collaborative relationships.
+        <p className="text-lg lg:text-xl text-gray-600">
+          The heart of who we are and how we thrive together.
         </p>
-      </div>
+      </motion.div>
 
-      {/* Main Section */}
-      <div className="flex flex-col items-center gap-8">
-        {/* First Row */}
-        <div className="flex flex-col lg:flex-row justify-center gap-8 w-full max-w-[85rem]">
-          {values.slice(0, 2).map((value, index) => (
+      {/* Content Section */}
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+        {/* Left Column */}
+        <div className="flex flex-col gap-6">
+          {values.slice(0, 3).map((value, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-blue-100 p-6 rounded-lg shadow-lg w-full lg:w-[60%] h-[250px]"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300"
+              whileHover={{ scale: 1.1, rotate: 1 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
             >
               {value.icon}
-              <h2 className="text-xl font-semibold mt-4">{value.title}</h2>
-              <p className="text-base text-gray-700 text-center mt-2">
-                {value.description}
-              </p>
+              <h2 className="text-2xl font-semibold mt-4 text-gray-800">
+                {value.title}
+              </h2>
+              <p className="text-gray-600 mt-2">{value.description}</p>
             </motion.div>
           ))}
         </div>
 
-        {/* Second Row - Center Logo */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 w-full max-w-[85rem]">
-          <motion.div
-            className="flex flex-col items-center bg-blue-100 p-6 rounded-lg shadow-lg w-full lg:w-[60%] h-[250px]"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {values[2].icon}
-            <h2 className="text-xl font-semibold mt-4">{values[2].title}</h2>
-            <p className="text-base text-gray-700 text-center mt-2">
-              {values[2].description}
-            </p>
-          </motion.div>
+        {/* Center Logo */}
+        <motion.div
+          className="bg-white border-4 border-blue-200 rounded-full shadow-lg flex items-center justify-center w-60 h-60"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img
+            src="/loggo.jpg"
+            alt="Logo"
+            className="w-40 h-40 object-cover"
+          />
+        </motion.div>
 
-          {/* Logo */}
-          <motion.div
-            className="bg-white border-4 border-green-200 rounded-full shadow-lg flex items-center justify-center w-52 h-52"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            <img src="/loggo.jpg" alt="Logo" className="w-28 h-28" />
-          </motion.div>
-
-          <motion.div
-            className="flex flex-col items-center bg-blue-100 p-6 rounded-lg shadow-lg w-full lg:w-[60%] h-[250px]"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            {values[3].icon}
-            <h2 className="text-xl font-semibold mt-4">{values[3].title}</h2>
-            <p className="text-base text-gray-700 text-center mt-2">
-              {values[3].description}
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Third Row */}
-        <div className="flex flex-col lg:flex-row justify-center gap-8 w-full max-w-[85rem]">
-          {values.slice(4, 6).map((value, index) => (
+        {/* Right Column */}
+        <div className="flex flex-col gap-6">
+          {values.slice(3, 6).map((value, index) => (
             <motion.div
               key={index}
-              className="flex flex-col items-center bg-blue-100 p-6 rounded-lg shadow-lg w-full lg:w-[60%] h-[250px]"
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300"
+              whileHover={{ scale: 1.1, rotate: 1 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 50 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.2 }}
             >
               {value.icon}
-              <h2 className="text-xl font-semibold mt-4">{value.title}</h2>
-              <p className="text-base text-gray-700 text-center mt-2">
-                {value.description}
-              </p>
+              <h2 className="text-2xl font-semibold mt-4 text-gray-800">
+                {value.title}
+              </h2>
+              <p className="text-gray-600 mt-2">{value.description}</p>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Footer Buttons */}
-      <div className="mt-12 flex justify-center gap-6">
-        <button className="bg-black text-white px-8 py-4 text-lg rounded shadow hover:bg-gray-800 transition">
+      {/* CTA Buttons */}
+      <motion.div
+        className="mt-12 flex justify-center gap-6"
+        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <button className="bg-blue-600 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-blue-700 transition">
           Request A Quote
         </button>
-        <button className="bg-black text-white px-8 py-4 text-lg rounded shadow hover:bg-gray-800 transition">
+        <button className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition">
           Get In Touch
         </button>
-      </div>
+      </motion.div>
     </div>
   );
 };

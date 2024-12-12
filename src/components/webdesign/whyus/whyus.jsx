@@ -1,7 +1,7 @@
 import React from "react";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import SocialMediaIcon from "@mui/icons-material/Public";
-import WebIcon from "@mui/icons-material/Web";
+import WebIcon from "@mui/icons-material/Web";  
 import BusinessIcon from "@mui/icons-material/BusinessCenter";
 import SeoIcon from "@mui/icons-material/Search";
 import AnalyticsIcon from "@mui/icons-material/Insights";
@@ -41,10 +41,10 @@ const services = [
 
 const WhyUs = () => {
   return (
-    <section className="bg-blue-500 py-16">
+    <section className="bg-[#4A9BD3] py-16">
       <div className="container mx-auto px-6 lg:px-16 text-center">
         {/* Heading Section */}
-        <h2 className="text-4xl font-bold text-white mb-4">Why Choose Us</h2>
+        <h2 className="text-4xl font-bold text-black mb-4">Our Services</h2>
         <p className="text-lg text-white mb-10">
           Our affordable services enable businesses of all sizes to access
           professional digital marketing without stretching their budgets.
@@ -55,7 +55,7 @@ const WhyUs = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-[30px] shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+              className="bg-white p-6 rounded-br-3xl rounded-tl-3xl border-4 border-black shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
             >
               <div className="flex justify-center mb-4">
                 {service.icon}
