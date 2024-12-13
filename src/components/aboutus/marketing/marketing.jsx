@@ -24,10 +24,10 @@ const MarketingSection = () => {
           </li>
         </ul>
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <button className="bg-black text-white px-6 py-3 text-lg rounded shadow hover:bg-gray-800 transition">
+          <button className="bg-black text-white px-6 py-3 text-lg shadow hover:bg-gray-800 transition">
             Learn More
           </button>
-          <button className="bg-black text-white px-6 py-3 text-lg rounded shadow hover:bg-gray-800 transition">
+          <button className="bg-black text-white px-6 py-3 text-lg shadow hover:bg-gray-800 transition">
             Get In Touch
           </button>
         </div>

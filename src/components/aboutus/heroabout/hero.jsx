@@ -1,6 +1,4 @@
 import React from 'react';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import TargetIcon from '@mui/icons-material/Adjust';
 
 const Hero = () => {
   return (
@@ -16,21 +14,21 @@ const Hero = () => {
         </p>
       </div>
 
-      {/* Icons Section */}
-      <div className="absolute left-4 bottom-0 sm:left-8 md:left-12 lg:left-16 animate-pulse">
-        <RocketLaunchIcon
-          style={{
-            fontSize: '60px', // Default size
-          }}
-          className="sm:!text-[100px] md:!text-[120px] lg:!text-[100px]" // Responsive font sizes
+      {/* Left Image Section */}
+      <div className="absolute left-4 bottom-0 sm:left-8 md:left-12 lg:left-16">
+        <img
+          src="/abouthero1.png" // Replace with your left image path
+          alt="Rocket"
+          className="w-[60px] sm:w-[100px] md:w-[120px] lg:w-[100px]"
         />
       </div>
-      <div className="absolute right-4 bottom-0 sm:right-8 md:right-12 lg:right-16 animate-pulse">
-        <TargetIcon
-          style={{
-            fontSize: '60px', // Default size
-          }}
-          className="sm:!text-[100px] md:!text-[120px] lg:!text-[100px]" // Responsive font sizes
+
+      {/* Right Image Section */}
+      <div className="absolute right-4 bottom-0 sm:right-8 md:right-12 lg:right-16">
+        <img
+          src="/abouthero2.png" // Replace with your right image path
+          alt="Target"
+          className="w-[60px] sm:w-[100px] md:w-[120px] lg:w-[100px]"
         />
       </div>
     </div>

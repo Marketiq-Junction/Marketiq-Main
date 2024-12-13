@@ -35,13 +35,13 @@ const DigitalAgency = () => {
       {/* Header */}
       <div className="text-center mb-10">
         <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">
-          Exclusive Digital Agency To Provide Solution
+          Exclusive Digital Agency To <br /> Provide Solution
         </h1>
         <p className="text-base md:text-lg lg:text-xl text-gray-700">
           Our specialized team focuses on providing personalized strategies that
-          align with your business goals, ensuring that your digital marketing
-          efforts deliver the best outcomes. Partner with us for exclusive
-          access to cutting-edge digital tools and expertise designed to solve
+          align with your <br /> business goals, ensuring that your digital marketing
+          efforts deliver the best outcomes.<br /> Partner with us for exclusive
+          access to cutting-edge digital tools and expertise <br /> designed to solve
           your business challenges!
         </p>
       </div>
@@ -49,42 +49,60 @@ const DigitalAgency = () => {
       {/* Cards */}
       <div className="flex flex-col md:flex-row justify-center gap-6 mb-12">
         <div
-          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-400 text-white p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "mission" ? "scale-105" : ""
+          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+            activeCard === "mission"
+              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
           }`}
           onClick={() => setActiveCard("mission")}
         >
-          <RocketLaunchIcon className="text-3xl md:text-4xl mb-2 animate-pulse" />
+          <div
+            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
+          >
+            <RocketLaunchIcon className="text-3xl text-[#4A9BD3]" />
+          </div>
           <div className="text-lg md:text-2xl font-bold">
-            Mission Of Our Company
+            Mission Of Our <br /> Company
           </div>
         </div>
         <div
-          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-400 text-white p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "vision" ? "scale-105" : ""
+          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+            activeCard === "vision"
+              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
           }`}
           onClick={() => setActiveCard("vision")}
         >
-          <VisibilityIcon className="text-3xl md:text-4xl mb-2 animate-pulse" />
+          <div
+            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
+          >
+            <VisibilityIcon className="text-3xl text-[#4A9BD3]" />
+          </div>
           <div className="text-lg md:text-2xl font-bold">
-            Vision Of Our Company
+            Vision Of Our <br /> Company
           </div>
         </div>
         <div
-          className={`cursor-pointer flex flex-col items-center justify-center bg-blue-400 text-white p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "goals" ? "scale-105" : ""
+          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+            activeCard === "goals"
+              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
           }`}
           onClick={() => setActiveCard("goals")}
         >
-          <CenterFocusStrongIcon className="text-3xl md:text-4xl mb-2 animate-pulse" />
+          <div
+            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
+          >
+            <CenterFocusStrongIcon className="text-3xl text-[#4A9BD3]" />
+          </div>
           <div className="text-lg md:text-2xl font-bold">
-            Goals of Marketiq Junction
+            Goals of <br /> Marketiq Junction
           </div>
         </div>
       </div>
 
       {/* Active Content Section */}
-      <div className="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6">
+      <div className="bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center gap-6 border-2 border-black">
         {/* Text Section */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
