@@ -1,7 +1,6 @@
-"use client"
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
-// import arrowImage from '/public/farrowImage.png'; // Replace with your image path
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Databaner = () => {
   const [stats, setStats] = useState({
@@ -12,98 +11,84 @@ const Databaner = () => {
   });
 
   useEffect(() => {
-    let countInterval;
-    const animateNumbers = () => {
-      const duration = 2000; // Animation duration in milliseconds
-      const increment = (endValue) => endValue / (duration / 100);
+    const duration = 2000; // Animation duration in milliseconds
+    const frameTime = 100; // Interval between updates
+    const steps = duration / frameTime;
 
-      let currentHours = 0;
-      let currentExperts = 0;
-      let currentReviews = 0;
-      let currentCaseStudies = 0;
-
-      countInterval = setInterval(() => {
-        currentHours += increment(2700000);
-        currentExperts += increment(250);
-        currentReviews += increment(1000);
-        currentCaseStudies += increment(600);
-
-        if (currentHours >= 2700000) currentHours = 2700000;
-        if (currentExperts >= 250) currentExperts = 250;
-        if (currentReviews >= 1000) currentReviews = 1000;
-        if (currentCaseStudies >= 600) currentCaseStudies = 600;
-
-        setStats({
-          hours: Math.floor(currentHours),
-          experts: Math.floor(currentExperts),
-          reviews: Math.floor(currentReviews),
-          caseStudies: Math.floor(currentCaseStudies),
-        });
-
-        if (
-          currentHours === 2700000 &&
-          currentExperts === 250 &&
-          currentReviews === 1000 &&
-          currentCaseStudies === 600
-        ) {
-          clearInterval(countInterval);
-        }
-      }, 100);
+    const targetStats = {
+      hours: 27,
+      experts: 250,
+      reviews: 1000,
+      caseStudies: 600,
     };
 
-    animateNumbers();
-    return () => clearInterval(countInterval);
+    const increments = Object.fromEntries(
+      Object.entries(targetStats).map(([key, value]) => [key, value / steps])
+    );
+
+    let currentStats = { ...stats };
+    const interval = setInterval(() => {
+      currentStats = Object.fromEntries(
+        Object.entries(currentStats).map(([key, value]) => [
+          key,
+          Math.min(value + increments[key], targetStats[key]),
+        ])
+      );
+
+      setStats({
+        hours: Math.floor(currentStats.hours),
+        experts: Math.floor(currentStats.experts),
+        reviews: Math.floor(currentStats.reviews),
+        caseStudies: Math.floor(currentStats.caseStudies),
+      });
+
+      if (
+        Object.keys(currentStats).every(
+          (key) => currentStats[key] >= targetStats[key]
+        )
+      ) {
+        clearInterval(interval);
+      }
+    }, frameTime);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="bg-[#50C3C6]  mt-12 py-12 relative">
-      <div className="container mx-auto flex flex-col md:flex-row  justify-around items-center">
-        {/* Arrow Image Hidden on Small Screens */}
-        <div className="absolute left-0 bottom-0 w-1/12 md:w-1/16 hidden md:block">
-          <Image
-            src={'/A+.svg'}
-            alt="Arrow"
-            layout="responsive"
-            width={100}
-            height={50}
-            className="object-contain"
-          />
-        </div>
-
-        {/* Stats Section with Animation */}
-        <div className="text-center mb-6 md:mb-0">
-          <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">
-            2.7 M
-          </h3>
-          <p className="font-syne text-white mt-2">Digital Marketing Hours</p>
-        </div>
-
-        <div className="text-center mb-6 md:mb-0">
-          <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">
-            {stats.experts}+
-          </h3>
-          <p className="font-syne text-white mt-2">Marketing Experts</p>
-        </div>
-
-        <div className="text-center mb-6 md:mb-0">
-          <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">
-            {stats.reviews}+
-          </h3>
-          <p className="font-syne text-white mt-2">4 Stars Up Reviews</p>
-        </div>
-
-        <div className="text-center">
-          <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">
-            {stats.caseStudies}+
-          </h3>
-          <p className="font-syne text-white mt-2">Case Studies</p>
-        </div>
+    <section className="bg-[#50C3C6] mt-12 py-12 relative">
+      <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
+        {/* Stats Section */}
+        {[
+          { label: "Digital Marketing Hours", value: `${stats.hours}M` },
+          { label: "Marketing Experts", value: `${stats.experts}+` },
+          { label: "4 Stars Up Reviews", value: `${stats.reviews}+` },
+          { label: "Case Studies", value: `${stats.caseStudies}+` },
+        ].map(({ label, value }, index) => (
+          <div key={index} className="text-center mb-6 md:mb-0">
+            <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">
+              {value}
+            </h3>
+            <p className="font-syne text-white mt-2">{label}</p>
+          </div>
+        ))}
+      </div>
+      {/* Arrow Image */}
+      <div className="absolute left-0 bottom-0 w-1/6 md:w-1/10 hidden md:block mt-10">
+        <Image
+          src="/images/socialmedia/data.png"
+          alt="Arrow"
+          layout="responsive"
+          width={200}
+          height={100}
+          className="object-contain"
+        />
       </div>
     </section>
   );
 };
 
 export default Databaner;
+
 
 
 // "use client";

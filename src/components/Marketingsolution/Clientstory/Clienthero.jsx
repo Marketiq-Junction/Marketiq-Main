@@ -8,12 +8,12 @@ const Clienthero = () => {
       category: "After Social Media Strategy Implementation",
       metrics: [
         { label: "Impressions", value: 57 },
-        { label: "Engagement", value: 100 },
+        { label: "Engagement", value: 90 },
       ],
     },
     {
       category: "After Taking Over Content Development",
-      metrics: [{ label: "Click Through Rate", value: 100 }],
+      metrics: [{ label: "Click Through Rate", value: 90 }],
     },
   ];
 
