@@ -37,6 +37,11 @@ const services = [
 const Advertising = () => {
   const [activeService, setActiveService] = useState(services[0].id);
 
+  const reorderedServices = [
+    services.find((service) => service.id === activeService),
+    ...services.filter((service) => service.id !== activeService),
+  ];
+
   return (
     <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-12">
       {/* Heading */}
@@ -74,18 +79,36 @@ const Advertising = () => {
         </div>
 
         {/* Details Section */}
-        <div className="flex-1 bg-white p-8 shadow-md rounded overflow-y-auto max-h-[400px] scrollbar-thin scrollbar-thumb-[#4A9BD3] scrollbar-track-[#A2DFE1]">
-          {services
-            .filter((service) => service.id === activeService)
-            .map((service) => (
-              <div key={service.id}>
-                <h3 className="text-2xl font-bold text-[#4A9BD3] mb-4 flex items-center gap-2">
-                  <span className="text-3xl">{service.icon}</span>
-                  {service.title}
-                </h3>
-                <p className="text-lg text-gray-600">{service.description}</p>
-              </div>
-            ))}
+        <div className="flex-1 bg-white p-8 shadow-md rounded overflow-y-auto max-h-[400px] scrollbar-thin scrollbar-thumb-[#A2DFE1] scrollbar-track-gray-200 space-y-6">
+          <style jsx>{`
+            /* Custom scrollbar styles */
+            .scrollbar-thin::-webkit-scrollbar {
+              width: 8px;
+            }
+
+            .scrollbar-thin::-webkit-scrollbar-thumb {
+              background-color: #A2DFE1;
+              border-radius: 4px;
+            }
+
+            .scrollbar-thin::-webkit-scrollbar-track {
+              background-color: #f0f0f0;
+            }
+          `}</style>
+          {reorderedServices.map((service) => (
+            <div
+              key={service.id}
+              className={`p-4 rounded ${
+                activeService === service.id ? "bg-[#F0F8FF] shadow" : ""
+              }`}
+            >
+              <h3 className="text-2xl font-bold text-[#4A9BD3] mb-4 flex items-center gap-2">
+                <span className="text-3xl">{service.icon}</span>
+                {service.title}
+              </h3>
+              <p className="text-lg text-gray-600">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -93,3 +116,5 @@ const Advertising = () => {
 };
 
 export default Advertising;
+
+
