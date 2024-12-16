@@ -1,3 +1,4 @@
+// "use client";
 "use client";
 
 import React, { useState } from "react";
@@ -57,8 +58,12 @@ const Advertising = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col lg:flex-row gap-8">
+     
+
+      
+      <div className="flex flex-col lg:flex-row gap-8 z-50">
         {/* Sidebar */}
+
         <div className="flex flex-col gap-4 w-full lg:w-1/3 overflow-x-auto">
           <div className="flex lg:flex-col gap-4">
             {services.map((service) => (
@@ -66,9 +71,9 @@ const Advertising = () => {
                 key={service.id}
                 className={`flex items-center gap-4 text-left p-4 border-l-4 ${
                   activeService === service.id
-                    ? "border-[#A2DFE1] bg-[#4A9BD3] text-black"
+                    ? "border-[#A2DFE1] bg-[#A2DFE1] text-black"
                     : "border-gray-200 bg-[#4A9BD3] text-black"
-                } hover:bg-[#A2DFE1] hover:text-black transition duration-150`}
+                }  hover:text-black transition duration-150`}
                 onClick={() => setActiveService(service.id)}
               >
                 <span className="text-sm">{service.icon}</span>
@@ -77,6 +82,7 @@ const Advertising = () => {
             ))}
           </div>
         </div>
+        
 
         {/* Details Section */}
         <div className="flex-1 bg-white p-8 shadow-md rounded overflow-y-auto max-h-[400px] scrollbar-thin scrollbar-thumb-[#A2DFE1] scrollbar-track-gray-200 space-y-6">
@@ -87,7 +93,7 @@ const Advertising = () => {
             }
 
             .scrollbar-thin::-webkit-scrollbar-thumb {
-              background-color: #A2DFE1;
+              background-color: #a2dfe1;
               border-radius: 4px;
             }
 
@@ -116,5 +122,4 @@ const Advertising = () => {
 };
 
 export default Advertising;
-
 

@@ -1,39 +1,6 @@
 "use client";
 
 const Steps = () => {
-  const steps = [
-    {
-      id: 1,
-      title: "Establish Objectives",
-      description:
-        "Set clear objectives to guide your social media strategy. Ensure these goals are specific, measurable, and aligned with your business goals.",
-    },
-    {
-      id: 2,
-      title: "Editorial Calendar",
-      description:
-        "Organize and schedule your content with an editorial calendar. It helps maintain consistency and aligns with marketing goals.",
-    },
-    {
-      id: 3,
-      title: "Writing & Editing",
-      description:
-        "Create clear and engaging content through effective writing and editing. Tailor messages to resonate with your audience.",
-    },
-    {
-      id: 4,
-      title: "Graphic Design",
-      description:
-        "Design visually compelling content that enhances brand identity and captures attention effectively.",
-    },
-    {
-      id: 5,
-      title: "Publication & Promotion",
-      description:
-        "Ensure your content reaches the right audience with strategic distribution and impactful promotion.",
-    },
-  ];
-
   return (
     <div className="bg-white py-12 px-6 md:px-12 lg:px-24">
       {/* Title Section */}
@@ -44,95 +11,13 @@ const Steps = () => {
         <p className="text-gray-600 text-base md:text-lg">
           Follow these steps to create an impactful marketing strategy.
         </p>
-      </div>
-
-      {/* Triangle Shape Section */}
-      <div className="relative flex flex-col items-center">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8">
-          {/* Row 1: Step 1 */}
-          <div className="flex flex-col items-center">
-            <div className="bg-[#4A9BD3] text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md">
-              1
-            </div>
-            <div className="bg-white shadow-md rounded-lg p-6 max-w-xs text-center">
-              <h3 className="text-[#4A9BD3] font-bold text-lg mb-2">
-                Establish Objectives
-              </h3>
-              <p className="text-gray-600 text-sm">
-                Set clear objectives to guide your social media strategy. Ensure
-                these goals are specific, measurable, and aligned with your
-                business goals.
-              </p>
-            </div>
-          </div>
-
-          {/* Row 2: Steps 2 and 3 */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Step 2 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#4A9BD3] text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md">
-                2
-              </div>
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-xs text-center">
-                <h3 className="text-[#4A9BD3] font-bold text-lg mb-2">
-                  Editorial Calendar
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Organize and schedule your content with an editorial calendar.
-                  It helps maintain consistency and aligns with marketing goals.
-                </p>
-              </div>
-            </div>
-            {/* Step 3 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#4A9BD3] text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md">
-                3
-              </div>
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-xs text-center">
-                <h3 className="text-[#4A9BD3] font-bold text-lg mb-2">
-                  Writing & Editing
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Create clear and engaging content through effective writing
-                  and editing. Tailor messages to resonate with your audience.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Row 3: Steps 4 and 5 */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            {/* Step 4 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#4A9BD3] text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md">
-                4
-              </div>
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-xs text-center">
-                <h3 className="text-[#4A9BD3] font-bold text-lg mb-2">
-                  Graphic Design
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Design visually compelling content that enhances brand
-                  identity and captures attention effectively.
-                </p>
-              </div>
-            </div>
-            {/* Step 5 */}
-            <div className="flex flex-col items-center">
-              <div className="bg-[#4A9BD3] text-white w-14 h-14 rounded-full flex items-center justify-center font-bold text-lg mb-4 shadow-md">
-                5
-              </div>
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-xs text-center">
-                <h3 className="text-[#4A9BD3] font-bold text-lg mb-2">
-                  Publication & Promotion
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Ensure your content reaches the right audience with strategic
-                  distribution and impactful promotion.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* Image Section */}
+        <div>
+          <img 
+            src="/images/socialmedia/step.png" 
+            alt="Steps to Marketing Product" 
+            className="h-25" // Centers the image
+          />
         </div>
       </div>
     </div>
@@ -140,6 +25,7 @@ const Steps = () => {
 };
 
 export default Steps;
+
 
 
 
