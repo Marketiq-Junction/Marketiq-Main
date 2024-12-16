@@ -46,7 +46,10 @@ const Benefits = () => {
           <div
             key={benefit.id}
             className={`relative h-[390px] w-full sm:w-[350px] md:w-[307px] p-6 rounded-tr-3xl rounded-bl-3xl transition-transform transform cursor-pointer duration-300 ${
-              activeCard === benefit.id ? "bg-[#FFFFFF]" : "bg-[#A2DFE1]"
+              activeCard === benefit.id
+              ? "bg-[#FFFFFF] border-2 border-[#4534B8]"
+              : "bg-[#A2DFE1] border-2 border-transparent"
+              
             }`}
             onMouseEnter={() => setActiveCard(benefit.id)}
             onMouseLeave={() => setActiveCard(null)}
