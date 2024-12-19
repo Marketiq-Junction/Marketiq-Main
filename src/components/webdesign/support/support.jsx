@@ -1,104 +1,69 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const services = [
   {
     title: "Content Writing",
-    description: [
-      "Engage your audience with high-quality content.",
-      "Enhance your website’s SEO with strategic keywords.",
-      "Drive traffic and boost conversion rates.",
-      "Ensure your brand stands out online.",
-    ],
+    description:
+      "Content writing is essential for engaging your audience and enhancing your website’s SEO.",
   },
   {
     title: "Video Production",
-    description: [
-      "Create engaging content that captures attention.",
-      "Convey your brand message effectively.",
-      "Leverage high-quality video editing and animations.",
-      "Drive user engagement across platforms.",
-    ],
+    description:
+      "Video production is essential for creating engaging content that captures audience attention and conveys your brand message effectively.",
   },
   {
     title: "Logo Design",
-    description: [
-      "Create unique and memorable logos.",
-      "Blend creativity and strategy to resonate with your audience.",
-      "Set the tone for your brand’s visual presence.",
-      "Ensure your logo reflects your brand identity.",
-    ],
+    description:
+      "Our logo design service focuses on creating unique and memorable logos that encapsulate your brand’s identity.",
   },
   {
     title: "Technical SEO",
-    description: [
-      "Optimize technical aspects for better performance.",
-      "Improve site speed and mobile-friendliness.",
-      "Enhance crawlability and proper URL structures.",
-      "Achieve better search rankings and user experience.",
-    ],
+    description:
+      "Technical SEO focuses on optimizing the technical aspects of a website to maximize its visibility and performance in search engines.",
   },
 ];
 
 const Support = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
-
   return (
-    <section ref={ref} className="bg-[#E5F8FF] py-16">
+    <section className="bg-[#A2DFE1] py-16 mb-8">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Heading Section */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
             Our other services that Support Your Website Marketing
           </h2>
           <p className="text-lg text-gray-600">
-            Explore a range of professional services designed to enhance your
-            website’s impact and reach.
+            Accumsan. Magna varius. Bibendum. Morbi nisi sit, hac vestibulum
+            euismod habitasse nibh. Vivamus nullam hymenaeos. Semper et sociis
+            est luctus ante ornare. Leo.
           </p>
-        </motion.div>
+        </div>
 
-        {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-            >
-              <h3 className="text-xl font-bold text-blue-600 mb-4">
-                {service.title}
-              </h3>
-              <ul className="pl-6 space-y-3">
-                {service.description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="text-gray-600 flex items-center gap-3"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.3, delay: idx * 0.1 }}
-                  >
-                    <span
-                      className="text-blue-600 font-extrabold text-xl"
-                    >
-                      ➤
-                    </span>
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+        {/* Content Section */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* Left Image */}
+          <div className="w-full md:w-1/2">
+            <img
+              src="/117.png" // Replace with your actual image path
+              alt="Supporting Services"
+              className="w-[70%] h-auto"
+            />
+          </div>
+
+          {/* Right Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-1/2">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg p-6 border-2 border-blue-500 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+              >
+                <h3 className="text-xl font-bold text-blue-600 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

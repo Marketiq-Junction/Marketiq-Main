@@ -1,122 +1,96 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const stepsData = [
   {
     title: "Your Goals",
-    description: [
-      "Identify the purpose of your website.",
-      "Determine your target audience.",
-      "Define the key functionalities required to achieve your objectives.",
-    ],
+    description:
+      "Defining your goals is the first step in the process. It involves identifying the purpose of your website, your target audience, and the key functionalities required to achieve your objectives.",
     image: "/plan.png",
+    icon: "🎯",
   },
   {
     title: "Creating A Plan",
-    description: [
-      "Outline an effective web design and development process.",
-      "Align every stage with your objectives.",
-      "Maximize resource efficiency.",
-    ],
+    description:
+      "Creating a plan is the foundation of an effective web design and development process. It ensures that every stage is aligned with the objectives and maximizes resource efficiency.",
     image: "/plan.png",
+    icon: "📝",
   },
   {
-    title: "Wireframes & Mockups",
-    description: [
-      "Create visual representations of the website layout.",
-      "Understand the structure and flow of the site.",
-      "Prepare for actual development with a clear blueprint.",
-    ],
+    title: "Wireframes",
+    description:
+      "Wireframes and mockups provide a visual representation of the layout and design of your website, helping you understand the structure and flow before actual development begins.",
     image: "/plan.png",
+    icon: "📐",
   },
   {
     title: "Web Development",
-    description: [
-      "Translate design into a functional website.",
-      "Use coding languages and frameworks.",
-      "Ensure responsiveness and compatibility across devices.",
-    ],
+    description:
+      "Web development involves translating the design into a functional website using coding languages and frameworks, ensuring responsiveness and compatibility across devices.",
     image: "/plan.png",
+    icon: "💻",
   },
   {
     title: "Quality Assurance",
-    description: [
-      "Test the website for bugs and issues.",
-      "Ensure smooth functionality.",
-      "Deliver a seamless user experience.",
-    ],
+    description:
+      "Quality assurance involves testing the website to identify and fix any bugs or issues, ensuring that it functions smoothly and delivers a seamless user experience.",
     image: "/plan.png",
+    icon: "✅",
   },
   {
     title: "Website Launch",
-    description: [
-      "Finalize optimizations.",
-      "Make the website live for your audience.",
-      "Ensure everything runs as expected.",
-    ],
+    description:
+      "The final step is launching the website, making it live for your audience. This includes final optimizations and ensuring everything runs as expected.",
     image: "/plan.png",
+    icon: "🚀",
   },
 ];
 
 const Development = () => {
-  const [activeStep, setActiveStep] = useState(stepsData[0]);
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
-  });
+  const [activeStep, setActiveStep] = useState(stepsData[0]); // Default to the first step
 
   const handleStepClick = (step) => {
     setActiveStep(step);
   };
 
   return (
-    <section ref={ref} className="bg-white py-16">
+    <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Title and Description */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className="text-4xl font-bold text-black mb-4">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Web Design & Development Process
           </h1>
-          <p className="text-lg text-black">
+          {/* <p className="text-lg text-gray-600">
             The Web Design & Development Process involves a series of structured
             steps to create an effective website, starting from initial planning
             and design to implementation and testing.
-          </p>
-        </motion.div>
+          </p> */}
+        </div>
 
         {/* Steps Section */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-4 mb-16 relative">
           {stepsData.map((step, index) => (
-            <motion.button
-              key={index}
-              className={`font-semibold text-center py-4 px-6 rounded-lg shadow-md w-48 transition-all duration-200 ${
-                activeStep.title === step.title
-                  ? "bg-[#4A9BD3] text-white"
-                  : "bg-[#A2DFE1] text-black"
-              }`}
-              onClick={() => handleStepClick(step)}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              {step.title}
-            </motion.button>
+            <div key={index} className="relative">
+              <button
+                className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-6 rounded-lg shadow-md w-48 transition-all duration-200 ${
+                  activeStep.title === step.title ? "bg-blue-300 text-black" : ""
+                }`}
+                onClick={() => handleStepClick(step)}
+              >
+                <div className="text-2xl mb-2">{step.icon}</div>
+                {step.title}
+              </button>
+              {activeStep.title === step.title && (
+                <div
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-[10%] h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-[#4A9BD3] hidden md:block"
+                ></div>
+              )}
+            </div>
           ))}
         </div>
 
         {/* Active Step Content */}
-        <motion.div
-          className="flex flex-col md:flex-row items-center gap-8"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={inView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.5 }}
-        >
+        <div className="flex flex-col md:flex-row items-center gap-8 border-2 border-black">
           {/* Left Image */}
           <div className="w-full md:w-1/2">
             <img
@@ -128,23 +102,12 @@ const Development = () => {
 
           {/* Right Content */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-bold text-black mb-4">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {activeStep.title}
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-black">
-              {activeStep.description.map((point, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={inView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.3, delay: idx * 0.1 }}
-                >
-                  {point}
-                </motion.li>
-              ))}
-            </ul>
+            <p className="text-lg text-gray-600">{activeStep.description}</p>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

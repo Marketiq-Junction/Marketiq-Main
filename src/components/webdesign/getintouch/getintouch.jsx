@@ -26,34 +26,29 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-blue-300 py-16 mt-12">
-      <div className="container mx-auto px-6 lg:px-16 text-white">
-        {/* Heading Section */}
-        <div className="text-left mb-8">
-          <h1 className="text-4xl font-bold mb-4">Get in touch and let’s get started.</h1>
-          <p className="text-lg">
-            Ready to take your business to the next level? Get in touch with us
-            today, and let’s start crafting the perfect digital strategy for your
-            brand. Our team at Marketiq Junction is eager to collaborate and
-            provide tailored solutions that meet your unique needs.
-          </p>
-        </div>
-
-        {/* Form Section */}
-        <div className="flex flex-col lg:flex-row justify-between items-center">
-          {/* Left Section (Text) */}
-          <div className="lg:w-1/2 w-full mb-8 lg:mb-0">
-            <h2 className="text-2xl font-semibold mb-4">Let’s Get Started</h2>
-            <p className="text-lg">
-              Don’t wait any longer—let’s embark on this journey together! Fill out the
-              form to get started with your next digital transformation.
+    <section className="bg-gradient-to-r from-[#4A9BD3] to-[#50C3C6] py-16 mt-8">
+      <div className="container mx-auto px-6 lg:px-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Left Text Section */}
+          <div className="lg:w-1/2 w-full text-left">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              Get in touch and let’s get started.
+            </h1>
+            <p className="text-lg text-white mb-4">
+              Ready to take your business to the next level? Get in touch with us today, and let’s start crafting the perfect digital strategy for your brand. Our team at Marketiq Junction is eager to collaborate and provide tailored solutions that meet your unique needs.
             </p>
+            <p className="text-lg text-white">
+              Don’t wait any longer—let’s embark on this journey together! Fill out the form to get started with your next digital transformation.
+            </p>
+            <button className="bg-transparent text-white hover:text-blue-700 font-semibold border-2 border-white px-6 py-3 rounded-md mt-8">
+                  Discover More
+                </button>
           </div>
 
-          {/* Right Section (Form) */}
-          <div className="lg:w-1/2 w-full bg-white p-6 rounded-lg shadow-lg">
+          {/* Right Form Section */}
+          <div className="lg:w-1/2 w-full bg-white p-6 rounded-lg shadow-md border-t-8 border-[#3F85B5]">
             <form onSubmit={handleSubmit}>
-              <h2 className="text-2xl font-semibold text-center mb-6">Get In Touch</h2>
+              <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Get In Touch</h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <input
@@ -126,12 +121,9 @@ const GetInTouch = () => {
               <div className="flex justify-between items-center">
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700"
+                  className="bg-[#3F85B5] text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 items-center"
                 >
                   Submit
-                </button>
-                <button className="bg-transparent text-blue-600 hover:text-blue-700 font-semibold border-2 border-blue-600 px-6 py-3 rounded-md">
-                  Discover More
                 </button>
               </div>
             </form>
