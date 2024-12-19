@@ -2,7 +2,7 @@ import React from "react";
 
 const Benefits = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white lg:mb-28">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold">Benefits</h2>
         <p className="text-xl text-black mt-2">

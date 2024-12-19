@@ -8,80 +8,93 @@ const SEOProcess = () => {
       id: 1,
       title: "Content Creation",
       description:
-        "Content creation involves crafting high-quality, engaging, and relevant content tailored to your target audience. This includes blogs, articles, videos, and infographics designed to attract, inform, and convert visitors into customers.",
-      image: "/seomarketing.png", // Replace with actual image path
+        "Craft high-quality, engaging content tailored to your audience, including blogs, articles, videos, and infographics.",
+      image: "/seomarketing.png",
+      icon: "✍️",
     },
     {
       id: 2,
       title: "Competitive Analysis",
       description:
-        "A competitive analysis is essential for understanding your market landscape. It involves identifying direct and indirect competitors, evaluating their strengths and weaknesses, and analyzing their marketing strategies. By assessing customer feedback and benchmarking performance metrics, you can gain valuable insights into areas for improvement.",
-      image: "/seomarketing.png", // Replace with actual image path
+        "Identify competitors, evaluate their strengths and weaknesses, and gain insights to improve your strategy.",
+      image: "/seomarketing.png",
+      icon: "📊",
     },
     {
       id: 3,
       title: "Keyword Research",
       description:
-        "Keyword research identifies high-value, relevant keywords that your audience is searching for. This ensures your content aligns with user intent, driving organic traffic and improving search engine rankings.",
-      image: "/seomarketing.png", // Replace with actual image path
+        "Discover high-value keywords to align content with user intent, driving organic traffic and improving rankings.",
+      image: "/seomarketing.png",
+      icon: "🔍",
     },
     {
       id: 4,
-      title: "Mapping Optimization",
+      title: " Optimization",
       description:
-        "Mapping optimization involves aligning your website's structure and content with target keywords. It ensures seamless navigation, improved user experience, and better search engine indexing.",
-      image: "/seomarketing.png", // Replace with actual image path
+        "Optimize your website's structure for seamless navigation, improved user experience, and better indexing.",
+      image: "/seomarketing.png",
+      icon: "📍",
     },
   ];
 
-  const [activeStep, setActiveStep] = useState(steps[1]); // Default to Competitive Analysis
+  const [activeStep, setActiveStep] = useState(steps[0]); // Default to the first step
+
+  const handleStepClick = (step) => {
+    setActiveStep(step);
+  };
 
   return (
-    <section className="bg-white py-12 px-8 md:py-16 md:px-20">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+    <section className="bg-gray-50 py-16 shadow-lg mb-4">
+      <div className="container mx-auto px-6 lg:px-16">
+        {/* Title Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">Our SEO Process</h2>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Our SEO Process
+          </h1>
         </div>
 
-        {/* Step Selection */}
-        <div className="flex flex-wrap justify-center gap-6 mb-12">
+        {/* Steps Section */}
+        <div className="flex flex-wrap justify-center gap-4 mb-16 relative">
           {steps.map((step) => (
-            <div
-              key={step.id}
-              onClick={() => setActiveStep(step)}
-              className={`cursor-pointer p-4 rounded-lg shadow-lg text-center w-48 transition-transform transform hover:scale-105 ${
-                activeStep.id === step.id
-                  ? "bg-blue-500 text-white"
-                  : "bg-blue-100 text-black"
-              }`}
-            >
-              <p className="text-lg font-semibold">{step.title}</p>
+            <div key={step.id} className="relative">
+              <button
+                className={`bg-[#A2DFE1] text-black font-semibold text-center py-6 px-4 rounded-lg shadow-md w-48 transition-all duration-200 ${
+                  activeStep.id === step.id ? "bg-blue-300 text-black" : ""
+                }`}
+                onClick={() => handleStepClick(step)}
+              >
+                <div className="text-2xl mb-2">{step.icon}</div>
+                {step.title}
+              </button>
+              {activeStep.id === step.id && (
+                <div
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-300 hidden md:block"
+                ></div>
+              )}
             </div>
           ))}
         </div>
 
-        {/* Dynamic Content */}
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Left Section: Image */}
-          <div className="lg:w-1/2">
+        {/* Active Step Content */}
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          {/* Image Section */}
+          <div className="w-full lg:w-1/2">
             <Image
               src={activeStep.image}
               alt={activeStep.title}
-              width={500}
+              width={400}
               height={350}
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
             />
           </div>
 
-          {/* Right Section: Text */}
-          <div className="lg:w-1/2">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+          {/* Text Section */}
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {activeStep.title}
-            </h3>
-            <p className="text-base md:text-lg leading-relaxed">
-              {activeStep.description}
-            </p>
+            </h2>
+            <p className="text-lg text-gray-600">{activeStep.description}</p>
           </div>
         </div>
       </div>

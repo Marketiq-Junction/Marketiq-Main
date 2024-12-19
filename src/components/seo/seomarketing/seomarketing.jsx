@@ -8,9 +8,9 @@ const SEOMarketing = () => {
         <Image
           src="/seomarketing.png" // Replace with the correct image path
           alt="SEO Marketing Illustration"
-          width={500}
+          width={400}
           height={300}
-          className="rounded-lg"
+          className="rounded-lg shadow-lg "
         />
       </div>
 

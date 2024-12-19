@@ -4,60 +4,83 @@ const Offers = () => {
   const services = [
     {
       title: "Link Building",
-      description:
-        "We provide a comprehensive approach to improve your site's authority and visibility. We secure high-quality backlinks from reputable websites relevant to your industry, enhancing your domain authority and boosting search engine rankings.",
-      icon: "🔗", // Replace with an actual icon if needed
+      description: [
+        " Improve site's authority and visibility.",
+        " Secure high-quality backlinks.",
+        " Boost search engine rankings."
+      ],
+      icon: "🔗",
     },
     {
       title: "Content Optimization",
-      description:
-        "We optimize content to resonate with search engines and audiences alike. By structuring your website's content effectively and including high-performing keywords, we ensure that it's relevant, engaging, and optimized for higher rankings.",
-      icon: "📊", // Replace with an actual icon if needed
+      description: [
+        " Optimize content for search engines and users.",
+        " Use high-performing keywords.",
+        " Ensure relevance and engagement."
+      ],
+      icon: "📊",
     },
     {
       title: "On-Page SEO",
-      description:
-        "Our team optimizes each element of your website, from meta tags to headers, images, and internal linking, ensuring it's fully aligned with search engine guidelines for maximum relevance and reach.",
-      icon: "🛠️", // Replace with an actual icon if needed
+      description: [
+        " Optimize meta tags, headers, and images.",
+        " Align content with search engine guidelines.",
+        " Enhance website relevance and reach."
+      ],
+      icon: "🛠️",
     },
     {
       title: "Keyword Research",
-      description:
-        "By identifying high-value keywords that resonate with your target audience, we help your content rank effectively and drive more relevant traffic to your site.",
-      icon: "🔍", // Replace with an actual icon if needed
+      description: [
+        " Identify high-value keywords.",
+        " Drive relevant traffic to your site.",
+        " Improve content rankings."
+      ],
+      icon: "🔍",
     },
     {
       title: "Technical SEO",
-      description:
-        "Our technical SEO services include improving your website's speed, mobile-friendliness, and indexing, making it easy for search engines to crawl and users to navigate. This results in a seamless experience and boosts your overall ranking potential.",
-      icon: "⚙️", // Replace with an actual icon if needed
+      description: [
+        " Improve website speed and mobile-friendliness.",
+        " Ensure easy indexing by search engines.",
+        " Enhance overall user experience."
+      ],
+      icon: "⚙️",
     },
     {
       title: "Off-Page SEO",
-      description:
-        "We strengthen your website's authority through strategic link-building, content marketing, and collaboration, enhancing its credibility and visibility in search engine results.",
-      icon: "📜", // Replace with an actual icon if needed
+      description: [
+        " Build website authority with quality backlinks.",
+        " Leverage content marketing and collaborations.",
+        " Improve credibility and search rankings."
+      ],
+      icon: "📜",
     },
   ];
 
   return (
-    <section className="bg-blue-400 text-white py-16 px-8">
-      <div className="max-w-7xl mx-auto text-center">
-        <h3 className="text-lg uppercase font-semibold mb-4">
+    <section className="bg-[#4A9BD3] text-white py-16 px-8">
+      <div className="max-w-7xl mx-auto text-left">
+        <h3 className="text-lg uppercase font-semibold mb-4 text-center">
           What We’re Offering
         </h3>
-        <h2 className="text-3xl md:text-4xl font-bold mb-8">
-          We are specialized in the following services
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
+          We are specialized in the<br />following services
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white text-black p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:bg-blue-500 hover:text-white"
+              className="bg-white text-black p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-[#4A9BD3] hover:to-[#50C3C6] hover:text-white"
             >
               <div className="text-4xl mb-4">{service.icon}</div>
-              <p className="text-sm mb-4">{service.description}</p>
+              <ul className="text-sm mb-6 list-disc list-inside">
+                {service.description.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
+              <hr className="border-t border-gray-300 mb-4" />
               <h4 className="text-lg font-semibold">{service.title}</h4>
             </div>
           ))}

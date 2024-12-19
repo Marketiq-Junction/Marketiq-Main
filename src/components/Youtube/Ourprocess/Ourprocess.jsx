@@ -25,7 +25,7 @@ const Ourprocess = () => {
   ];
 
   return (
-    <section className="py-16 bg-[#4A9BD3]">
+    <section className="py-16 bg-[#4A9BD3] lg:mb-28">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
           Our Process

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
 import Ayansir from "@/components/Footer/ayansir"; // Import the Ayansir component
@@ -8,8 +8,10 @@ import Ayansir from "@/components/Footer/ayansir"; // Import the Ayansir compone
 const Footer = () => {
   return (
     <div>
-      {/* Ayansir Component */}
-      <Ayansir />
+      {/* Ayansir Component (Hidden on Mobile View) */}
+      <div className="hidden md:block">
+        <Ayansir />
+      </div>
 
       {/* Main Footer Section */}
       <section className="w-full h-auto bg-[#3F85B5] text-white relative flex flex-col md:flex-row">
@@ -37,8 +39,7 @@ const Footer = () => {
         <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
           <h1 className="text-xl font-bold">Our Services</h1>
           <div className="flex flex-col gap-2 mt-3">
-            {[
-              { name: "Website Management", link: "/webdesign" },
+            {[{ name: "Website Management", link: "/webdesign" },
               { name: "Google My Business", link: "/GoogleMyBusiness" },
               { name: "SEO", link: "/seo" },
               { name: "Social Media Marketing", link: "/marketingsolution" },

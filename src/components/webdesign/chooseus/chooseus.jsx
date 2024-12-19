@@ -37,7 +37,7 @@ const ChooseUs = () => {
   ];
 
   return (
-    <section className="bg-[#DFF4F4] py-16">
+    <section className="bg-[#A2DFE1] py-16">
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-start gap-12">
         {/* Left Text Section */}
         <motion.div
@@ -69,7 +69,7 @@ const ChooseUs = () => {
             ))}
           </ul>
           <motion.button
-            className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
+            className="mt-6 px-6 py-3 bg-[#4A9BD3] text-white font-semibold hover:bg-white hover:text-black transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 function ContactForm() {
   return (
-    <div className="flex flex-col md:flex-row items-start bg-white py-16 px-8 md:px-16 lg:px-32">
+    <div className="flex flex-col md:flex-row items-start bg-white py-16 px-8 md:px-16 lg:px-32 lg:mb-28">
       {/* Left Section: Contact Information */}
       <div className="md:w-1/2 text-black">
         <h2 className="text-3xl font-bold mb-4 font-syne">Get in Touch</h2>

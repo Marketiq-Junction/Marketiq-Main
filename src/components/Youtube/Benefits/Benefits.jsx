@@ -33,37 +33,37 @@ const Benefits = () => {
     <section className="py-16 bg-[#FFFFFF]">
       <div className="text-center px-4 mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits</h2>
-        <p className="text-[#000000] text-sm sm:text-base md:text-lg">
+        <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
           YouTube management offers long-term benefits by building authentic audience
-          relationships, <br /> increasing visibility without ad costs, and improving channel ranking.
-          Through consistent <br /> engagement and SEO, it ensures that your content remains relevant
+          relationships, increasing visibility without ad costs, and improving channel ranking.
+          Through consistent engagement and SEO, it ensures that your content remains relevant
           and accessible, growing your channel sustainably and effectively.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-8 lg:px-28">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-8 lg:px-28">
         {benefitsData.map((benefit) => (
           <div
             key={benefit.id}
-            className={`relative h-[390px] w-full sm:w-[350px] md:w-[307px] p-6 rounded-tr-3xl rounded-bl-3xl transition-transform transform cursor-pointer duration-300 ${
+            className={`relative h-[350px] md:h-[390px] w-full p-6 rounded-tr-3xl rounded-bl-3xl transition-transform transform cursor-pointer duration-300 shadow-md ${
               activeCard === benefit.id
-              ? "bg-[#FFFFFF] border-2 border-[#4534B8]"
-              : "bg-[#A2DFE1] border-2 border-transparent"
-              
+                ? "bg-[#FFFFFF] border-2 border-[#4534B8] scale-105"
+                : "bg-[#A2DFE1] border-2 border-transparent"
             }`}
             onMouseEnter={() => setActiveCard(benefit.id)}
             onMouseLeave={() => setActiveCard(null)}
           >
             {/* Top-left triangle with ID */}
             <div className="absolute top-0 left-0">
-              <svg width="100" height="100">
-                <polygon points="0,0 100,0 0,100" style={{ fill: "#4A9BD3" }} />
+              <svg width="80" height="80" className="md:w-100 md:h-100">
+                <polygon points="0,0 80,0 0,80" style={{ fill: "#4A9BD3" }} />
                 <text
                   x="10"
-                  y="40"
+                  y="35"
                   fill="white"
-                  fontSize="16"
+                  fontSize="14"
                   fontWeight="bold"
+                  className="md:font-semibold md:text-base"
                 >
                   {benefit.id}
                 </text>
@@ -72,25 +72,29 @@ const Benefits = () => {
 
             {/* Bottom-right triangle with Icon */}
             <div className="absolute bottom-0 right-0">
-              <svg width="100" height="100">
-                <polygon points="100,100 0,100 100,0" style={{ fill: "#4A9BD3" }} />
+              <svg width="80" height="80" className="md:w-100 md:h-100">
+                <polygon points="80,80 0,80 80,0" style={{ fill: "#4A9BD3" }} />
               </svg>
               <div className="absolute bottom-3 right-3 text-white">
-                {React.cloneElement(benefit.icon, { className: "text-3xl" })}
+                {React.cloneElement(benefit.icon, { className: "text-2xl md:text-3xl" })}
               </div>
             </div>
 
             {/* Centered Title and Description */}
             <div className="flex flex-col justify-center items-center h-full text-center">
-              <h3 className="text-lg md:text-xl font-bold mb-4">{benefit.title}</h3>
-              <p className="text-sm md:text-base">{benefit.description}</p>
+              <h3 className="text-base md:text-xl font-bold mb-4 text-gray-900">
+                {benefit.title}
+              </h3>
+              <p className="text-xs md:text-sm lg:text-base text-gray-700">
+                {benefit.description}
+              </p>
             </div>
           </div>
         ))}
       </div>
 
       <div className="text-center mt-8">
-        <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3">
+        <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 rounded-lg shadow-md hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300">
           Request A Free Quote
         </button>
       </div>

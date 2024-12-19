@@ -11,7 +11,7 @@ import Testimonial from '@/components/seo/testimonial/testimonal';
 import SEOProcess from '@/components/seo/seoprocess/seoprocess';
 import WebsiteAudit from '@/components/seo/auditing/auditing';
 import OurServices from '@/components/seo/ourservices/ourservices';
-import Results from '@/components/seo/results/results';
+// import Results from '@/components/seo/results/results';
 function page() {
     return (
       <>
@@ -21,11 +21,11 @@ function page() {
         <Visibility/>
         <SEOMarketing/>
         <Offers/>
-        <SEOProcess/>
         <Testimonial/>
+        <SEOProcess/>
         <WebsiteAudit/>
         <OurServices/>
-        <Results/>
+        {/* <Results/> */}
         <Footer />
       </>
     );

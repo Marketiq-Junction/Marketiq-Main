@@ -26,7 +26,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-[#4A9BD3] to-[#50C3C6] py-16 mt-8">
+    <section className="bg-gradient-to-r from-[#4A9BD3] to-[#50C3C6] py-16 mt-8 lg:mb-28">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Text Section */}

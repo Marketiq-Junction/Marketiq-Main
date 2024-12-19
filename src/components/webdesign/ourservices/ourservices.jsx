@@ -62,7 +62,7 @@ const OurServices = () => {
     <section className="w-full bg-gradient-to-b from-[#A2DFE1] to-[#4A9BD3] py-12">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-black">Our Services</h2>
-        <p className="text-gray-900 mt-4 max-w-3xl mx-auto">
+        <p className="text-gray-900 mt-4 max-w-3xl mx-auto mb-4">
           Discover the specialized services crafted to meet your digital needs!
         </p>
 

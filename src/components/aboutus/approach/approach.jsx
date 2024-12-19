@@ -35,7 +35,7 @@ const Approach = () => {
   ];
 
   return (
-    <div className="bg-white px-6 lg:px-20 py-12">
+    <div className="bg-white px-6 lg:px-20 py-12 lg:mb-28">
       <div className="flex flex-col lg:flex-row gap-12 items-center">
         {/* Text Section */}
         <div className="lg:w-1/2">

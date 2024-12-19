@@ -4,7 +4,7 @@ import React from "react";
 
 const Request = () => {
   return (
-    <section className="bg-gray-100 py-12 flex items-center justify-center">
+    <section className="bg-gray-100 py-12 flex items-center justify-center lg:mb-28">
       <div className="bg-[#4A9BD3] max-w-5xl w-full py-12 px-6 rounded-3xl shadow-lg text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-3xl font-bold text-black mb-4">

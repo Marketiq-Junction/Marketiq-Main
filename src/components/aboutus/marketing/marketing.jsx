@@ -38,7 +38,7 @@ const MarketingSection = () => {
         <img
           src="/about1.png" // Replace with your image path
           alt="Marketing Illustration"
-          className="w-90% max-w-md lg:max-w-full mx-auto"
+          className="w-[70%] lg:max-w-full mx-auto"
         />
       </div>
     </div>

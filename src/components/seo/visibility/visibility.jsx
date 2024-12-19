@@ -8,7 +8,7 @@ const Visibility = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="bg-blue-400 text-white p-12 md:p-20 max-w-8xl mx-auto my-12">
+    <section className="bg-[#50C3C6] text-white p-12 md:p-20 max-w-8xl mx-auto my-12">
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-8 lg:space-y-0">
         {/* Left Section: Text Content */}
         <div className="lg:w-3/5 space-y-6">
@@ -16,16 +16,18 @@ const Visibility = () => {
             Meet pure visibility
           </h2>
           <p className="text-base md:text-lg leading-relaxed">
-            We focus on creating transparency and accessibility for your brand
-            in the digital world, making sure your audience not only finds you
-            but also engages meaningfully with your content. By leveraging
-            advanced SEO practices, data-driven insights, and tailored marketing
-            strategies, we help your brand stand out across search engines,
-            social platforms, and beyond. With a commitment to measurable
-            growth and user-focused design, Pure Visibility ensures your brand's
-            online footprint is both robust and sustainable.
+          • Enhance transparency and accessibility for your brand in the digital world.<br/>
+          • Ensure meaningful audience engagement with your content.<br/>
+          • Use advanced SEO, data-driven insights, and tailored marketing strategies.<br/>
+          • Help your brand stand out on search engines and social platforms.<br/>
+          • Focus on measurable growth and user-centered design.<br/>
+          • Build a strong and sustainable online presence with Pure Visibility.<br/>
+          • Provide affordable, effective digital marketing solutions to enhance online presence.<br/>
+          • Drive measurable growth through tailored strategies like SEO, web design, and social media management.<br/>
+          • Craft digital solutions to build genuine connections and drive sustainable growth.<br/>
+          • Ensure accessibility, effectiveness, and transparency for clients across all industries.<br/>
           </p>
-          <h3 className="text-2xl font-semibold">Our Mission</h3>
+          {/* <h3 className="text-2xl font-semibold">Our Mission</h3>
           <p className="text-base md:text-lg leading-relaxed">
             Our mission is to empower businesses of all sizes by providing
             affordable and effective digital marketing solutions. We strive to
@@ -39,7 +41,7 @@ const Visibility = () => {
             foster genuine connections and drive sustainable growth. We aim to
             make the digital landscape accessible, effective, and transparent
             for all our clients, regardless of size or industry.
-          </p>
+          </p> */}
         </div>
 
         {/* Right Section: Video Thumbnail */}

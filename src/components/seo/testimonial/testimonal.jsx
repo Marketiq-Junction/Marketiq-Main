@@ -9,7 +9,7 @@ const Testimonial = () => {
       name: "Sophia Lee",
       time: "2 months ago",
       rating: "★★★★★",
-      image: "/images/profile1.jpg",
+      image: "/people/2.jpg",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const Testimonial = () => {
       name: "Michael Brown",
       time: "4 months ago",
       rating: "★★★★★",
-      image: "/images/profile2.jpg",
+      image: "/people/1.jpg",
     },
     {
       id: 3,
@@ -25,7 +25,7 @@ const Testimonial = () => {
       name: "Kiran Matloob",
       time: "5 months ago",
       rating: "★★★★★",
-      image: "/images/profile3.jpg",
+      image: "/people/3.jpg",
     },
     {
       id: 4,
@@ -33,7 +33,7 @@ const Testimonial = () => {
       name: "Jessica Doe",
       time: "1 month ago",
       rating: "★★★★★",
-      image: "/images/profile4.jpg",
+      image: "/people/2.jpg",
     },
     {
       id: 5,
@@ -41,7 +41,7 @@ const Testimonial = () => {
       name: "David Smith",
       time: "3 weeks ago",
       rating: "★★★★★",
-      image: "/images/profile5.jpg",
+      image: "/people/4.jpg",
     },
     {
       id: 6,
@@ -49,7 +49,7 @@ const Testimonial = () => {
       name: "Emily Johnson",
       time: "6 months ago",
       rating: "★★★★★",
-      image: "/images/profile6.jpg",
+      image: "/people/1.jpg",
     },
   ];
 
@@ -72,7 +72,7 @@ const Testimonial = () => {
   );
 
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-blue-300 text-white py-16 px-8 md:py-20 md:px-20">
+    <section className="bg-[#50C3C6] text-white py-16 px-8 md:py-20 md:px-20 mt-8">
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="text-center mb-12">
@@ -87,11 +87,11 @@ const Testimonial = () => {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="flex justify-center gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleTestimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white text-black p-6 rounded-lg shadow-lg w-80 hover:scale-105 hover:shadow-xl transition-transform duration-300"
+              className="bg-white text-black p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden">
@@ -100,6 +100,7 @@ const Testimonial = () => {
                     alt={testimonial.name}
                     width={48}
                     height={48}
+                    className="object-cover"
                   />
                 </div>
                 <div>

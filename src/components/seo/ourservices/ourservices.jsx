@@ -2,7 +2,7 @@ import React from "react";
 
 const OurServices = () => {
   return (
-    <section className="bg-blue-400 py-12 px-8 md:py-16 md:px-20">
+    <section className="bg-[#4A9BD3] py-12 px-8 md:py-16 md:px-20 lg:mb-28">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Section: Reasons for Choosing */}
         <div>

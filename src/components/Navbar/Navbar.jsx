@@ -77,7 +77,7 @@ const Navbar = () => {
               className={`text-[1.1vw] font-syne-bold font-semibold cursor-pointer flex items-center gap-2 transition-all duration-300 ${isActive("/webdesign") || isActive("/GoogleMyBusiness") || isActive("/seo") || isActive("/marketingsolution") || isActive("/youtube") ? "text-[#4A9BD3] underline" : ""}`}
               onClick={toggleDropdown}
             >
-              <span className="group-hover:text-[#4A9BD3] group-hover:underline group-hover:animate-bounce">
+              <span className="group-hover:text-[#4A9BD3] group-hover:underline">
                 Marketing Solution
               </span>
               {isDropdownOpen ? <FiChevronUp className="text-lg" /> : <FiChevronDown className="text-lg" />}
@@ -123,7 +123,9 @@ const Navbar = () => {
         {/* Let's Talk Button */}
         <div className="hidden md:flex">
           <Link
-            href="/contact"
+            href="https://wa.me/9920892689"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-black text-white rounded-2xl transition-all duration-500 ease-in-out hover:bg-[#4A9BD3]"
           >
             <span className="text-[1.2vw] font-syne-bold font-bold">Let's Talk</span>
@@ -199,12 +201,14 @@ const Navbar = () => {
             className={`group text-2xl font-semibold mb-6 cursor-pointer transition-all duration-300 ${isActive("/Contactus") ? "text-[#4A9BD3] underline" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            <span className="group-hover:text-[#4A9BD3] group-hover:underline group-hover:animate-bounce">
+            <span className="group-hover:text-[#4A9BD3] group-hover:underline">
               Contact
             </span>
           </Link>
           <Link
-            href="/contact"
+            href="https://wa.me/9920892689"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 px-6 py-3 bg-[#4A9BD3] text-white text-lg rounded-lg hover:bg-teal-600"
             onClick={() => setIsMobileMenuOpen(false)}
           >

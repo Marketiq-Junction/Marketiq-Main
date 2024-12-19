@@ -12,20 +12,14 @@ const ChooseUs = () => {
           Boosts Your Website Traffic!
         </h2>
         <p className="text-base md:text-lg leading-relaxed mb-6">
-          Boost your website traffic with tailored strategies that drive
-          engagement and visibility. At Marketiq Junction, we focus on creating
-          a lasting online presence through high-quality content, targeted SEO
-          techniques, and powerful link-building. By analyzing and optimizing
-          keywords relevant to your audience, we help connect your brand with
-          users actively searching for your products and services.
+        • Boost website traffic with tailored engagement and visibility strategies.<br/>
+        • Create a lasting online presence through quality content and targeted SEO.<br/>
+        • Optimize keywords to connect your brand with active searchers.<br/>
+        • Leverage powerful link-building to enhance online reach.<br/>
+        • Transform your site into a hub for organic traffic and lead generation.<br/>
+        • Experience steady visitor growth and convert traffic into meaningful business results.
         </p>
-        <p className="text-base md:text-lg leading-relaxed mb-6">
-          Our goal is to make your site a hub of activity, capturing both
-          organic traffic and potential leads that convert. With Marketiq
-          Junction, experience a steady increase in visitors and transform that
-          traffic into meaningful results for your business.
-        </p>
-        <button className="bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition">
+        <button className="bg-[#4534B8] text-white py-3 px-6 font-semibold hover:bg-purple-700 transition">
           Discover More
         </button>
       </div>
@@ -35,9 +29,9 @@ const ChooseUs = () => {
         <Image
           src="/chooseus.png" // Replace with your image path
           alt="Boost Website Traffic"
-          width={500}
+          width={400}
           height={500}
-          className="rounded-lg"
+          className="rounded-lg shadow-lg"
         />
       </div>
     </section>
