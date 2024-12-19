@@ -99,10 +99,10 @@ const Footer = () => {
 
         {/* Get In Touch */}
         <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
-          <h1 className="text-xl font-bold">Get In Touch</h1>
+          {/* <h1 className="text-xl font-bold">Get In Touch</h1> */}
           <div className="flex flex-col gap-5 mt-3">
             <div className="flex items-center">
-              <div className="w-full lg:h-10 h-10 flex bg-white rounded-lg">
+              {/* <div className="w-full lg:h-10 h-10 flex bg-white rounded-lg">
                 <input
                   type="text"
                   placeholder="Enter your email here"
@@ -111,7 +111,7 @@ const Footer = () => {
                 <button className="bg-black rounded-r-lg text-[1vw] px-5">
                   Submit
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="w-full">
               <h1 className="text-sm md:text-base font-bold">Let's Socialize</h1>
@@ -122,9 +122,9 @@ const Footer = () => {
                 <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
                   <FaFacebook className="text-lg text-black" />
                 </div>
-                <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
+                {/* <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
                   <FaInstagram className="text-lg text-black" />
-                </div>
+                </div> */}
                 <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
                   <FaLinkedin className="text-lg text-black" />
                 </div>

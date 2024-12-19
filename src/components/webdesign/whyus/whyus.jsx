@@ -41,7 +41,7 @@ const services = [
 
 const WhyUs = () => {
   return (
-    <section className="bg-[#4A9BD3] py-16">
+    <section className="bg-[#4A9BD3] py-16 lg:mb-28">
       <div className="container mx-auto px-6 lg:px-16 text-center">
         {/* Heading Section */}
         <h2 className="text-4xl font-bold text-black mb-4">Our Services</h2>

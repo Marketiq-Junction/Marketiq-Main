@@ -53,7 +53,7 @@ const WebsiteAudit = () => {
   ];
 
   return (
-    <section className="bg-white py-16 px-6 md:py-20 md:px-12 lg:px-20">
+    <section className="bg-white py-16 px-6 md:py-20 md:px-12 lg:px-20 lg:mb-28">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">

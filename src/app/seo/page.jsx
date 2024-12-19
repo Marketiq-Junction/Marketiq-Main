@@ -24,7 +24,7 @@ function page() {
         <Testimonial/>
         <SEOProcess/>
         <WebsiteAudit/>
-        <OurServices/>
+        {/* <OurServices/> */}
         {/* <Results/> */}
         <Footer />
       </>

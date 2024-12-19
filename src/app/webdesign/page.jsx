@@ -31,7 +31,7 @@ function page() {
         <Development/>
         <Support/>
         <WhyUs/>
-        <GetInTouch/>
+        {/* <GetInTouch/> */}
         <Footer />
       </>
     );

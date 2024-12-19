@@ -110,14 +110,14 @@ const Navbar = () => {
               About Us
             </span>
           </Link>
-          <Link
+          {/* <Link
             href="/Contactus"
             className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${isActive("/Contactus") ? "text-[#4A9BD3] underline" : ""}`}
           >
             <span className="group-hover:text-[#4A9BD3] group-hover:underline group-hover:animate-bounce">
               Contact
             </span>
-          </Link>
+          </Link> */}
         </div>
 
         {/* Let's Talk Button */}
@@ -196,7 +196,7 @@ const Navbar = () => {
               About Us
             </span>
           </Link>
-          <Link
+          {/* <Link
             href="/Contactus"
             className={`group text-2xl font-semibold mb-6 cursor-pointer transition-all duration-300 ${isActive("/Contactus") ? "text-[#4A9BD3] underline" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
@@ -204,7 +204,7 @@ const Navbar = () => {
             <span className="group-hover:text-[#4A9BD3] group-hover:underline">
               Contact
             </span>
-          </Link>
+          </Link> */}
           <Link
             href="https://wa.me/9920892689"
             target="_blank"
