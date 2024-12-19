@@ -1,82 +1,114 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ChooseUs = () => {
+  const pointsLeft = [
+    "Transform your website into a powerful revenue driver.",
+    "Tailored, data-driven strategies for better visibility.",
+    "Enhance user engagement and maximize conversions.",
+    "Create a seamless path from visitor to loyal customer.",
+  ];
+
+  const cardData = [
+    {
+      title: "Digital Marketing Analysis",
+      points: [
+        "Understand the effectiveness of your online strategies.",
+        "Evaluate key metrics and user behavior.",
+        "Identify areas for improvement and optimize campaigns.",
+      ],
+    },
+    {
+      title: "Conversion Rate Optimization",
+      points: [
+        "Increase the percentage of website visitors who take desired actions.",
+        "Analyze user behavior and refine user experience.",
+        "Enhance conversion rates and maximize ROI.",
+      ],
+    },
+    {
+      title: "Social Media Marketing",
+      points: [
+        "Build brand awareness and engage with your target audience.",
+        "Create compelling content and utilize targeted advertising.",
+        "Drive traffic to websites and boost customer loyalty.",
+      ],
+    },
+  ];
+
   return (
     <section className="bg-[#DFF4F4] py-16">
       <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-start gap-12">
         {/* Left Text Section */}
-        <div className="lg:w-1/2">
+        <motion.div
+          className="lg:w-1/2"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <h3 className="text-lg font-bold text-gray-700 uppercase mb-4">
             Why Choose Us
           </h3>
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Turn your site into a revenue driver with Digital Insides
           </h1>
-          <p className="text-lg text-gray-700 mb-4">
-            Transform your website into a powerful revenue driver with Digital
-            Insides! Through tailored, data-driven strategies, we optimize your
-            site for better visibility, engagement, and conversions, creating a
-            seamless path from visitor to loyal customer.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Whether it’s enhancing user experience, improving SEO rankings, or
-            maximizing conversion rates, we design and implement every element
-            with one goal in mind: turning your site into a high-performing
-            asset that grows your bottom line.
-          </p>
-          <p className="text-lg text-gray-700 mb-6">
-            Let Digital Insides give your website the boost it needs to become
-            a key player in your business success.
-          </p>
-          <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all">
+          <ul className="text-lg text-gray-700 space-y-4">
+            {pointsLeft.map((point, index) => (
+              <motion.li
+                key={index}
+                className="flex items-start gap-2"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.2, duration: 0.5 }}
+              >
+                <span className="text-blue-600">&#9656;</span>
+                {point}
+              </motion.li>
+            ))}
+          </ul>
+          <motion.button
+            className="mt-6 px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
             Contact Us
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
 
         {/* Right Cards Section */}
-        <div className="lg:w-1/2 grid grid-cols-1 gap-8">
-          {/* Card 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-xl font-bold text-blue-600 mb-3">
-              Digital Marketing Analysis
-            </h3>
-            <p className="text-gray-700">
-              Digital marketing analysis is essential for understanding the
-              effectiveness of your online strategies. By evaluating key
-              metrics and user behavior, businesses can identify areas for
-              improvement, optimize campaigns, and drive better results.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-xl font-bold text-blue-600 mb-3">
-              Conversion Rate Optimization
-            </h3>
-            <p className="text-gray-700">
-              Conversion Rate Optimization (CRO) focuses on increasing the
-              percentage of website visitors who take desired actions, such as
-              making a purchase or signing up for a newsletter. By analyzing
-              user behavior and refining the user experience, businesses can
-              enhance their conversion rates and maximize ROI from their
-              marketing efforts.
-            </p>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-6">
-            <h3 className="text-xl font-bold text-blue-600 mb-3">
-              Social Media Marketing
-            </h3>
-            <p className="text-gray-700">
-              Social Media Marketing is essential for building brand awareness
-              and engaging with your target audience across various platforms.
-              By creating compelling content and utilizing targeted advertising,
-              businesses can foster meaningful connections and drive traffic to
-              their websites, ultimately boosting sales and customer loyalty.
-            </p>
-          </div>
-        </div>
+        <motion.div
+          className="lg:w-1/2 grid grid-cols-1 gap-8"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          {cardData.map((card, index) => (
+            <motion.div
+              key={index}
+              className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+            >
+              <h3 className="text-xl font-bold text-blue-600 mb-3">
+                {card.title}
+              </h3>
+              <ul className="text-gray-700 space-y-2">
+                {card.points.map((point, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-blue-600">&#9656;</span>
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
