@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import CenterFocusStrongIcon from "@mui/icons-material/CenterFocusStrong";
+import { motion, AnimatePresence } from "framer-motion";
 
 const DigitalAgency = () => {
   const [activeCard, setActiveCard] = useState("mission");
@@ -11,22 +12,31 @@ const DigitalAgency = () => {
   const content = {
     mission: {
       title: "Our mission at Marketiq Junction",
-      description: `Our mission is to empower businesses of all sizes by providing affordable and effective digital marketing solutions.
-      We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.
-      We are committed to helping businesses adapt to the ever-evolving digital landscape by leveraging cutting-edge strategies that are results-focused, scalable, and customer-centric.`,
-      image: "/about2.png", // Replace with your mission image
+      description: [
+        "Empower businesses of all sizes with affordable and effective digital marketing solutions.",
+        "Enhance online presence and connect with target audiences through tailored strategies.",
+        "Leverage cutting-edge, results-focused strategies to ensure measurable growth.",
+        "Adapt to the ever-evolving digital landscape with scalable and customer-centric solutions."
+      ],
+      image: "/about2.png",
     },
     vision: {
       title: "Our Vision at Marketiq Junction",
-      description: `Our vision is to lead the digital marketing landscape by offering innovative, effective, and sustainable solutions that empower businesses to thrive in a rapidly changing online environment.
-      We aim to create a future where businesses of all sizes can succeed in the digital world through partnerships built on trust, collaboration, and shared success.`,
-      image: "/about2.png", // Replace with your vision image
+      description: [
+        "Lead the digital marketing landscape with innovative and sustainable solutions.",
+        "Empower businesses to thrive in a rapidly changing online environment.",
+        "Foster partnerships built on trust, collaboration, and shared success."
+      ],
+      image: "/about2.png",
     },
     goals: {
       title: "Our Goals at Marketiq Junction",
-      description: `Our goal is to consistently deliver high-quality digital marketing services that drive growth and maximize ROI for our clients.
-      We are dedicated to understanding each business's unique challenges and crafting strategies that align with their goals to ensure long-term success in a competitive market.`,
-      image: "/about2.png", // Replace with your goals image
+      description: [
+        "Consistently deliver high-quality digital marketing services to drive growth.",
+        "Maximize ROI through strategies tailored to each business's unique challenges.",
+        "Ensure long-term success by aligning strategies with clients' goals in competitive markets."
+      ],
+      image: "/about2.png",
     },
   };
 
@@ -108,16 +118,37 @@ const DigitalAgency = () => {
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-4">
             {content[activeCard].title}
           </h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-700">
-            {content[activeCard].description}
-          </p>
+          <AnimatePresence mode="wait">
+            <motion.ul
+              key={activeCard}
+              className="list-disc list-inside text-base md:text-lg lg:text-xl text-gray-700 space-y-2"
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.5 }}
+            >
+              {content[activeCard].description.map((point, idx) => (
+                <motion.li
+                  key={idx}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.2 }}
+                >
+                  {point}
+                </motion.li>
+              ))}
+            </motion.ul>
+          </AnimatePresence>
         </div>
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center">
-          <img
+          <motion.img
             src={content[activeCard].image}
             alt={activeCard}
             className="w-full max-w-md rounded-lg shadow-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
           />
         </div>
       </div>

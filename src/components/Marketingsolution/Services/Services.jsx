@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import { motion } from "framer-motion";
+
 const Services = () => {
   const cards = [
     {
@@ -65,41 +68,63 @@ const Services = () => {
   ];
 
   return (
-    <section className="services bg-gray-100 py-12">
+    <section className="services bg-gray-100 py-16">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <h3 className="text-blue-500 font-semibold text-base md:text-lg uppercase mb-4 text-center">
+        <motion.h3
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-blue-500 font-semibold text-base md:text-lg uppercase mb-4 text-center"
+        >
           Why Choose Us
-        </h3>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-10 text-center">
+        </motion.h3>
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-10 text-center"
+        >
           We are specialized in the <br /> following services
-        </h1>
+        </motion.h1>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {cards.map((card) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {cards.map((card, index) => (
+            <motion.div
               key={card.id}
-              className="card group cursor-pointer border rounded-lg shadow-md p-6 w-[321px] h-auto mx-auto bg-white text-black hover:bg-gradient-to-b hover:from-[#4A9BD3] hover:to-[#50C3C6] hover:text-white transition duration-300"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
+              }}
+              className="card group cursor-pointer border rounded-lg shadow-lg p-6 w-full bg-white text-black hover:bg-gradient-to-b hover:from-[#4A9BD3] hover:to-[#50C3C6] hover:text-white transition duration-300 transform"
             >
               {/* Icon */}
-              <div className="icon text-5xl mb-6">{card.icon}</div>
-
-              {/* Description */}
-              <ul className="text-base md:text-lg mb-4 space-y-2 list-disc pl-5">
-                {card.description.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-
-              {/* Divider */}
-              <div className="border-t border-gray-300 my-4"></div>
+              <div className="icon text-5xl mb-4 text-[#4A9BD3] group-hover:text-white transition duration-300">
+                {card.icon}
+              </div>
 
               {/* Title */}
-              <h2 className="font-semibold text-lg md:text-xl text-[#4A9BD3] group-hover:text-black">
+              <h2 className="font-semibold text-lg md:text-xl mb-4 group-hover:text-black">
                 {card.title}
               </h2>
-            </div>
+
+              {/* Divider */}
+              <div className="border-t-2 border-gray-200 group-hover:border-white my-4 transition duration-300"></div>
+
+              {/* Description */}
+              <ul className="text-base md:text-lg mb-4 space-y-2 list-disc pl-5 group-hover:text-white">
+                {card.description.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </motion.div>
           ))}
         </div>
       </div>

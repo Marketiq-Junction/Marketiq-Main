@@ -1,75 +1,148 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { FaGlobe, FaChartLine, FaArrowsAlt, FaPencilAlt, FaComments, FaChartPie } from "react-icons/fa";
 
 const Why = () => {
-  return (
-    <div className="max-w-6xl mx-auto p-6">
-      <h2 className="text-3xl font-bold text-center mb-6">Why Choose Us</h2>
-      <p className="text-[#000000] mb-12">
-      Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultrices Urna vulputate non non nisl amet commodo. Sollicitudin. Leo mi curabitur <br />euismod orci. Ridiculus sem. Torquent. Ornare euismod, per nullam, ligula morbi natoque nibh faucibus vitae sapien. 
+  const listVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.5, staggerChildren: 0.3 },
+    },
+  };
 
-      </p>
+  const listItemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4 } },
+  };
+
+  return (
+    <motion.div
+      className="max-w-6xl mx-auto p-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+    >
+      <motion.h2
+        className="text-3xl font-bold text-center mb-6"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        Why Choose Us
+      </motion.h2>
+
+      <motion.p
+        className="text-[#000000] mb-12 text-center"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultrices Urna vulputate non non nisl amet commodo. Sollicitudin. Leo mi curabitur <br />
+        euismod orci. Ridiculus sem. Torquent. Ornare euismod, per nullam, ligula morbi natoque nibh faucibus vitae sapien.
+      </motion.p>
+
       <div className="flex flex-wrap justify-between items-center gap-6">
         {/* Left Content */}
-        <div className="flex-1 min-w-[300px]">
-          <h3 className="text-xl font-semibold mb-4 text-[#000000]">Organic YouTube SEO Optimization</h3>
+        <motion.div
+          className="flex-1 min-w-[300px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={listVariants}
+        >
+          <h3 className="text-xl font-semibold mb-4 text-[#000000]">
+            Organic YouTube SEO Optimization
+          </h3>
           <ul className="space-y-4">
-            <li className="flex items-start">
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-blue-500">
-                <FaGlobe />
+                <FaGlobe className="text-xl hover:scale-110 transition-transform" />
               </span>
               We enhance your content’s visibility using targeted keywords, effective video descriptions, and relevant tags.
-            </li>
-            <li className="flex items-start">
+            </motion.li>
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-green-500">
-                <FaChartLine />
+                <FaChartLine className="text-xl hover:scale-110 transition-transform" />
               </span>
               Our SEO strategy improves channel rankings, making your content easier for audiences to find.
-            </li>
-            <li className="flex items-start">
+            </motion.li>
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-purple-500">
-                <FaArrowsAlt />
+                <FaArrowsAlt className="text-xl hover:scale-110 transition-transform" />
               </span>
               Organic SEO ensures consistent reach and audience engagement without reliance on paid ads.
-            </li>
+            </motion.li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* Center Image */}
-        <div className="flex-1 min-w-[200px] flex justify-center">
+        <motion.div
+          className="flex-1 min-w-[200px] flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <img
             src="/images/youtube/s2.png"
             alt="SEO Optimization Illustration"
             className="max-w-full h-auto"
           />
-        </div>
+        </motion.div>
 
         {/* Right Content */}
-        <div className="flex-1 min-w-[300px]">
-          <h3 className="text-xl font-semibold mb-4">Content Strategy and Audience Engagement</h3>
+        <motion.div
+          className="flex-1 min-w-[300px]"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={listVariants}
+        >
+          <h3 className="text-xl font-semibold mb-4">
+            Content Strategy and Audience Engagement
+          </h3>
           <ul className="space-y-4">
-            <li className="flex items-start">
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-blue-500">
-                <FaPencilAlt />
+                <FaPencilAlt className="text-xl hover:scale-110 transition-transform" />
               </span>
               We design organic methods to create content that resonates with your audience, based on trends.
-            </li>
-            <li className="flex items-start">
+            </motion.li>
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-green-500">
-                <FaComments />
+                <FaComments className="text-xl hover:scale-110 transition-transform" />
               </span>
               Through comment interaction, prompts, and end screens, we foster genuine viewer engagement.
-            </li>
-            <li className="flex items-start">
+            </motion.li>
+            <motion.li
+              className="flex items-start"
+              variants={listItemVariants}
+            >
               <span className="mr-4 text-purple-500">
-                <FaChartPie />
+                <FaChartPie className="text-xl hover:scale-110 transition-transform" />
               </span>
               We continuously monitor your channel's performance and optimize based on organic metrics.
-            </li>
+            </motion.li>
           </ul>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

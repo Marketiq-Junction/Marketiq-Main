@@ -69,16 +69,22 @@ const Benefits = () => {
         {benefits.map((item, index) => (
           <motion.div
             key={index}
-            className="relative bg-[#4A9BD3] text-white rounded-lg shadow-md p-6 flex flex-col items-center min-h-[240px] hover:shadow-xl transition transform duration-300 hover:-translate-y-2 mt-10"
-            whileHover={{ y: -10 }}
+            className="relative bg-[#4A9BD3] text-white rounded-lg shadow-md p-6 flex flex-col items-center min-h-[260px] cursor-pointer"
+            whileHover={{
+              scale: 1.05,
+              rotate: 2,
+              boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
+            }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            {/* Icon at the Very Top */}
+            {/* Icon at the Top */}
             <div className="absolute -top-8 w-16 h-16 bg-[#A2DFE1] rounded-full flex items-center justify-center">
               {item.icon}
             </div>
+
             {/* Title */}
-            <h3 className="mt-10 font-bold text-lg text-center">{item.title}</h3>
+            <h3 className="mt-12 font-bold text-lg text-center">{item.title}</h3>
+
             {/* Description */}
             <p className="text-sm text-white text-center mt-4">
               {item.description}
@@ -88,10 +94,19 @@ const Benefits = () => {
       </div>
 
       {/* Call-to-Action */}
-      <div className="text-center mt-4">
-        <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 transition">
+      <div className="text-center mt-10">
+        <motion.button
+          whileHover={{
+            scale: 1.1,
+            backgroundColor: "#4A9BD3",
+            color: "#FFFFFF",
+            borderColor: "#4A9BD3",
+          }}
+          transition={{ duration: 0.3 }}
+          className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 rounded-lg shadow-md hover:text-white transition-all"
+        >
           Request A Quote
-        </button>
+        </motion.button>
       </div>
     </div>
   );

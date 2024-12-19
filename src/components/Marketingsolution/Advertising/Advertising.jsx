@@ -1,7 +1,6 @@
-// "use client";
 "use client";
-
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const services = [
@@ -9,7 +8,7 @@ const services = [
     id: "facebook",
     title: "Facebook Management Services",
     description:
-      "Our Facebook Management services enhance your brand’s presence on Facebook through optimized content creation and performance analytics. We help create engaging posts that resonate with your audience and track performance metrics to achieve better engagement and growth.",
+      "Our Facebook Management services enhance your brand’s presence on Facebook through optimized content creation and performance analytics. We create engaging posts that resonate with your audience and track performance metrics to achieve better engagement and growth.",
     icon: <FaFacebook />,
   },
   {
@@ -23,14 +22,14 @@ const services = [
     id: "linkedin",
     title: "LinkedIn Management Services",
     description:
-      "Our LinkedIn Management services enhance your brand’s professional presence on the platform. We optimize your profile to showcase your expertise, share insightful content to establish thought leadership, and expand your network through strategic connections with industry peers. Our engagement strategies encourage meaningful interactions, while regular performance analytics track growth and effectiveness. By utilizing our services, you can strengthen your professional reputation and unlock new business opportunities.",
+      "Our LinkedIn Management services enhance your brand’s professional presence. We optimize your profile, share insightful content to establish thought leadership, and expand your network through strategic connections.",
     icon: <FaLinkedin />,
   },
   {
     id: "youtube",
     title: "YouTube Management Services",
     description:
-      "Our YouTube Management services enhance your brand's presence through optimized video content creation and channel management. We oversee everything from branding to content scheduling, ensuring your videos resonate with your audience. Our analytics provide valuable insights into engagement, helping you refine your strategy for maximum reach and impact.",
+      "Our YouTube Management services enhance your brand's presence through optimized video content creation and channel management. We ensure your videos resonate with your audience for maximum reach and impact.",
     icon: <FaYoutube />,
   },
 ];
@@ -38,88 +37,85 @@ const services = [
 const Advertising = () => {
   const [activeService, setActiveService] = useState(services[0].id);
 
-  const reorderedServices = [
-    services.find((service) => service.id === activeService),
-    ...services.filter((service) => service.id !== activeService),
-  ];
-
   return (
     <section className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-12">
       {/* Heading */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-black mb-4">
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-4xl font-bold text-black mb-4 leading-snug">
           What do our Social Media Advertising <br /> services include?
         </h2>
         <p className="text-lg text-gray-600">
-          Our Social Media Management services encompass a holistic approach to
-          enhancing <br /> your brand's online presence and engagement. Here’s what we
-          include:
+          Our Social Media Management services enhance your brand's <br />
+          online presence and engagement. Here’s what we include:
         </p>
-      </div>
+      </motion.div>
 
       {/* Content Section */}
-     
-
-      
-      <div className="flex flex-col lg:flex-row gap-8 z-50">
+      <div className="flex flex-col lg:flex-row gap-8">
         {/* Sidebar */}
-
-        <div className="flex flex-col gap-4 w-full lg:w-1/3 overflow-x-auto">
-          <div className="flex lg:flex-col gap-4">
-            {services.map((service) => (
-              <button
-                key={service.id}
-                className={`flex items-center gap-4 text-left p-4 border-l-4 ${
-                  activeService === service.id
-                    ? "border-[#A2DFE1] bg-[#A2DFE1] text-black"
-                    : "border-gray-200 bg-[#4A9BD3] text-black"
-                }  hover:text-black transition duration-150`}
-                onClick={() => setActiveService(service.id)}
-              >
-                <span className="text-sm">{service.icon}</span>
-                <span className="text-base">{service.title}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-        
-
-        {/* Details Section */}
-        <div className="flex-1 bg-white p-8 shadow-md rounded overflow-y-auto max-h-[400px] scrollbar-thin scrollbar-thumb-[#A2DFE1] scrollbar-track-gray-200 space-y-6">
-          <style jsx>{`
-            /* Custom scrollbar styles */
-            .scrollbar-thin::-webkit-scrollbar {
-              width: 8px;
-            }
-
-            .scrollbar-thin::-webkit-scrollbar-thumb {
-              background-color: #a2dfe1;
-              border-radius: 4px;
-            }
-
-            .scrollbar-thin::-webkit-scrollbar-track {
-              background-color: #f0f0f0;
-            }
-          `}</style>
-          {reorderedServices.map((service) => (
-            <div
+        <div className="flex flex-col gap-4 w-full lg:w-1/3">
+          {services.map((service, index) => (
+            <motion.button
               key={service.id}
-              className={`p-4 rounded ${
-                activeService === service.id ? "bg-[#F0F8FF] shadow" : ""
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className={`flex items-center gap-4 text-left p-4 rounded-lg shadow-md border-l-4 ${
+                activeService === service.id
+                  ? "border-[#4A9BD3] bg-[#A2DFE1] text-black"
+                  : "border-gray-200 bg-white text-gray-700 hover:bg-[#EAF6F6]"
               }`}
+              onClick={() => setActiveService(service.id)}
             >
-              <h3 className="text-2xl font-bold text-[#4A9BD3] mb-4 flex items-center gap-2">
-                <span className="text-3xl">{service.icon}</span>
-                {service.title}
-              </h3>
-              <p className="text-lg text-gray-600">{service.description}</p>
-            </div>
+              <span className="text-2xl text-[#4A9BD3]">{service.icon}</span>
+              <span className="text-lg font-medium">{service.title}</span>
+            </motion.button>
           ))}
         </div>
+
+        {/* Details Section */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeService}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.5 }}
+            className="flex-1 bg-white p-8 shadow-lg rounded-lg overflow-y-auto max-h-[400px] scrollbar-thin scrollbar-thumb-[#A2DFE1] scrollbar-track-gray-200"
+          >
+            {services
+              .filter((service) => service.id === activeService)
+              .map((service) => (
+                <div key={service.id}>
+                  <motion.h3
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    className="text-2xl font-bold text-[#4A9BD3] mb-4 flex items-center gap-2"
+                  >
+                    <span className="text-3xl">{service.icon}</span>
+                    {service.title}
+                  </motion.h3>
+                  <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="text-lg text-gray-600 leading-relaxed"
+                  >
+                    {service.description}
+                  </motion.p>
+                </div>
+              ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
 };
 
 export default Advertising;
-

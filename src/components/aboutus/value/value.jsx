@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import StarIcon from "@mui/icons-material/Star";
 import GroupIcon from "@mui/icons-material/Group";
 import WorkIcon from "@mui/icons-material/Work";
 import PsychologyIcon from "@mui/icons-material/Psychology";
@@ -13,128 +13,293 @@ const ValuesAndCulture = () => {
   const values = [
     {
       title: "Gratitude",
-      description: "Thankfulness and humility drive us every day.",
-      icon: <FavoriteIcon className="text-blue-500 text-5xl" />,
+      description: [
+        "Lead with thankfulness and humility.",
+        "Express gratitude daily.",
+        "Give back to impact the world positively."
+      ],
+      icon: <StarIcon className="text-black text-4xl opacity-80" />,
     },
     {
       title: "Respect",
-      description: "We see the best in ourselves and others.",
-      icon: <GroupIcon className="text-blue-500 text-5xl" />,
-    },
-    {
-      title: "Work Ethic",
-      description: "We work smart, stay balanced, and deliver results.",
-      icon: <WorkIcon className="text-blue-500 text-5xl" />,
+      description: [
+        "Operate with positive assumptions.",
+        "See the best in others.",
+        "Refrain from gossip and anger."
+      ],
+      icon: <GroupIcon className="text-black text-4xl opacity-75" />,
     },
     {
       title: "Ownership",
-      description: "We own our actions and make things right.",
-      icon: <PsychologyIcon className="text-blue-500 text-5xl" />,
+      description: [
+        "Take responsibility for actions.",
+        "Steward resources responsibly.",
+        "Work to make things right."
+      ],
+      icon: <PsychologyIcon className="text-black text-4xl opacity-75" />,
+    },
+    {
+      title: "Work Ethic",
+      description: [
+        "Work smart and proactively.",
+        "Maintain high-performance expectations.",
+        "Balance work-life priorities."
+      ],
+      icon: <WorkIcon className="text-black text-4xl opacity-75" />,
     },
     {
       title: "Think Bigger",
-      description: "We embrace change and strive for growth.",
-      icon: <AutoAwesomeIcon className="text-blue-500 text-5xl" />,
+      description: [
+        "Strive for continuous improvement.",
+        "Embrace change and overcome challenges.",
+        "Never take the easy way out."
+      ],
+      icon: <AutoAwesomeIcon className="text-black text-4xl opacity-75" />,
     },
     {
       title: "Honesty",
-      description: "Integrity and trust guide our every move.",
-      icon: <CheckCircleIcon className="text-blue-500 text-5xl" />,
+      description: [
+        "Build trust through integrity.",
+        "Act with honesty in all situations.",
+        "Do the right thing even when difficult."
+      ],
+      icon: <CheckCircleIcon className="text-black text-4xl opacity-75" />,
     },
   ];
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white px-6 lg:px-16 py-12">
-      {/* Header Section */}
+    <section className="relative bg-gradient-to-b from-[#E6F9FD] to-white px-6 lg:px-16 py-16">
+      {/* Header */}
       <motion.div
         className="text-center mb-12"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <h1 className="text-4xl lg:text-6xl font-bold text-gray-800 mb-4">
-          Our Values & Culture
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+          Values and Culture
         </h1>
-        <p className="text-lg lg:text-xl text-gray-600">
-          The heart of who we are and how we thrive together.
+        <p className="text-gray-600 text-lg">
+          Our values define how we work and interact, fostering exceptional results.
         </p>
       </motion.div>
 
-      {/* Content Section */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
-        {/* Left Column */}
-        <div className="flex flex-col gap-6">
-          {values.slice(0, 3).map((value, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300"
-              whileHover={{ scale: 1.1, rotate: 1 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -50 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.2 }}
-            >
-              {value.icon}
-              <h2 className="text-2xl font-semibold mt-4 text-gray-800">
-                {value.title}
-              </h2>
-              <p className="text-gray-600 mt-2">{value.description}</p>
-            </motion.div>
-          ))}
+      {/* Center MJ Logo */}
+      <motion.div
+        className="z-20 bg-white border-[8px] border-[#4A9BD3] shadow-lg rounded-full w-56 h-56 flex items-center justify-center mx-auto"
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src="/loggo.jpg"
+          alt="Center Logo"
+          className="w-32 h-32 object-contain"
+        />
+      </motion.div>
+
+      {/* Cards Positioned as Branches */}
+      <div className="flex flex-wrap justify-center gap-8 mt-16">
+        <div className="w-full md:w-auto flex justify-center">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[0].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[0].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[0].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         </div>
-
-        {/* Center Logo */}
-        <motion.div
-          className="bg-white border-4 border-blue-200 rounded-full shadow-lg flex items-center justify-center w-60 h-60"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <img
-            src="/loggo.jpg"
-            alt="Logo"
-            className="w-40 h-40 object-cover"
-          />
-        </motion.div>
-
-        {/* Right Column */}
-        <div className="flex flex-col gap-6">
-          {values.slice(3, 6).map((value, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300"
-              whileHover={{ scale: 1.1, rotate: 1 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: 50 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.2 }}
-            >
-              {value.icon}
-              <h2 className="text-2xl font-semibold mt-4 text-gray-800">
-                {value.title}
-              </h2>
-              <p className="text-gray-600 mt-2">{value.description}</p>
-            </motion.div>
-          ))}
+        <div className="w-full md:w-auto flex justify-center">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[1].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[1].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[1].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+        <div className="w-full md:w-auto flex justify-center">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[2].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[2].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[2].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+        <div className="w-full md:w-auto flex justify-center">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[3].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[3].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[3].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+        <div className="w-full md:w-auto flex justify-center mt-8">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[4].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[4].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[4].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+        <div className="w-full md:w-auto flex justify-center mt-8">
+          <motion.div
+            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+          >
+            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+              {values[5].icon}
+            </div>
+            <div className="text-center mt-10">
+              <h3 className="text-lg font-bold text-gray-800 mb-2">
+                {values[5].title}
+              </h3>
+              <ul className="text-gray-600 text-sm space-y-2">
+                {values[5].description.map((point, idx) => (
+                  <motion.li
+                    key={idx}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: idx * 0.2 }}
+                  >
+                    {point}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
         </div>
       </div>
 
       {/* CTA Buttons */}
       <motion.div
         className="mt-12 flex justify-center gap-6"
-        whileInView={{ opacity: 1 }}
         initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <button className="bg-blue-600 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-blue-700 transition">
+        <button className="bg-[#4A9BD3] text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-[#3a82b2] transition duration-300 transform hover:scale-105">
           Request A Quote
         </button>
-        <button className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition">
+        <button className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition duration-300 transform hover:scale-105">
           Get In Touch
         </button>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
 export default ValuesAndCulture;
+
+           

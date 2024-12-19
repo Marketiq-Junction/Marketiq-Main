@@ -1,37 +1,68 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const Profile = () => {
   return (
     <section className="bg-white py-12">
       <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-8 px-6">
 
-        {/* left Side Image */}
-        <div className="flex-1 flex justify-center">
+        {/* Left Side Image */}
+        <motion.div
+          className="flex-1 flex justify-center"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <img
             src="/images/GoogleMyBusiness/two.png"
             alt="Profile Optimization"
-            className="w-full max-w-md md:max-w-lg h-auto"
+            className="w-full max-w-md md:max-w-lg h-auto rounded-lg shadow-md"
           />
-        </div>
-        {/* right Side Content */}
-        <div className="flex-1">
+        </motion.div>
+
+        {/* Right Side Content */}
+        <motion.div
+          className="flex-1"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
             Profile Optimization
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-6">
-            We start by creating or optimizing your Google My Business profile
-            to ensure it accurately represents your business. This includes
-            updating essential information such as your business name, address,
-            phone number, website link, hours of operation, and business
-            description. We also focus on selecting the right categories and
-            attributes to enhance your visibility in search results.
-          </p>
-          <button className="px-6 py-3 bg-[#4A9BD3] text-white">
+          <motion.ul
+            className="space-y-4 text-gray-600 text-lg"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <li className="flex items-start gap-3">
+              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              Create or optimize your Google My Business profile.
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              Update essential information like name, address, and phone number.
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              Ensure accurate business description and hours of operation.
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              Select relevant categories and attributes to boost visibility.
+            </li>
+          </motion.ul>
+          <motion.button
+            className="px-6 py-3 bg-[#4A9BD3] text-white rounded-md mt-6 shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             Contact Us
-          </button>
-        </div>
-
-        
+          </motion.button>
+        </motion.div>
       </div>
     </section>
   );

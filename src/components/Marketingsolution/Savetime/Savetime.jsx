@@ -1,38 +1,78 @@
 "use client";
+import React from "react";
+import { motion } from "framer-motion";
 
 const Savetime = () => {
+  const points = [
+    "Maximize your time and effort with streamlined digital marketing solutions.",
+    "Expertise in web design, social media management, and SEO to drive results.",
+    "Implement effective strategies that save valuable resources efficiently.",
+    "Focus on growing your business while we handle the digital landscape.",
+    "Optimize marketing efforts for sustainable success.",
+  ];
+
+  const pointVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: index * 0.2, duration: 0.5 },
+    }),
+  };
+
   return (
-    <div className="bg-[#4A9BD3] text-white w-full  h-45">
-      <div className="flex flex-col md:flex-row  justify-start w-full max-w-screen-xl">
-        {/* Left Image Section */}
-        <div className="flex justify-start md:justify-end w-full md:w-1/4 mb-6 md:mb-0">
+    <div className="bg-[#4A9BD3] text-white w-full py-10">
+      <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl mx-auto px-6">
+        {/* Left Image Section with Animation */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="flex justify-center md:justify-end w-full md:w-1/4 mb-6 md:mb-0"
+        >
           <img
             src="/images/socialmedia/three.png" // Replace with your image path
             alt="Illustration"
-            className="w-1/2 md:w-2/3 object-contain" // Adjusted width for smaller image
+            className="w-2/3 md:w-2/3 object-contain rounded-lg shadow-lg"
           />
-        </div>
+        </motion.div>
 
         {/* Right Content Section */}
-        <div className="flex flex-col items-center text-center md:w-3/4 justify-center">
+        <div className="flex flex-col text-center md:text-left md:w-3/4 justify-center px-6">
+          {/* Heading */}
           <h1 className="text-3xl md:text-4xl font-bold mb-6">
             Save Time & Effort With the Marketiq Junction
           </h1>
-          <p className="text-base leading-relaxed mb-6">
-            We understand the importance of maximizing your time and effort while navigating the complexities of digital marketing. Our team is
-            dedicated to streamlining your marketing processes, allowing you to focus on what matters most—growing your business.<br />
-            With our expertise in web design, social media management, and SEO, we implement effective strategies that drive results efficiently.<br />
-            By leveraging our services, you can save valuable resources and ensure that your marketing efforts are optimized for success.
-          </p>
-          <p className="text-base leading-relaxed mb-8">
-            Let us take care of the digital landscape while you concentrate on your core business activities. For more information on how we can help
-            you, feel free to reach out!
-          </p>
-          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 rounded transition hover:bg-gray-100">
+
+          {/* Bullet Points with Animation */}
+          <motion.ul
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="space-y-4 mb-8"
+          >
+            {points.map((point, index) => (
+              <motion.li
+                key={index}
+                variants={pointVariants}
+                custom={index}
+                className="flex items-start gap-3"
+              >
+                <div className="w-6 h-6 flex items-center justify-center bg-[#FFFFFF] text-[#4A9BD3] font-bold rounded-full shadow-md">
+                  ✓
+                </div>
+                <span className="text-lg text-gray-200 leading-7">{point}</span>
+              </motion.li>
+            ))}
+          </motion.ul>
+
+          {/* Buttons */}
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4">
+            <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 rounded transition hover:bg-gray-100 hover:scale-105 shadow-md">
               Contact Us
             </button>
-            <button className="bg-[#4A9BD3] border-[#FFFFFF] border-2 text-[#FFFFFF] px-8 py-3 rounded transition hover:bg-[#3a82b2]">
+            <button className="bg-[#4A9BD3] border-[#FFFFFF] border-2 text-[#FFFFFF] px-8 py-3 rounded transition hover:bg-[#3a82b2] hover:scale-105 shadow-md">
               Subscribe Now
             </button>
           </div>

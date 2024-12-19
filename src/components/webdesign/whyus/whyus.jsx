@@ -47,7 +47,7 @@ const WhyUs = () => {
         <h2 className="text-4xl font-bold text-black mb-4">Our Services</h2>
         <p className="text-lg text-white mb-10">
           Our affordable services enable businesses of all sizes to access
-          professional digital marketing without stretching their budgets.
+          professional digital marketing without stretching their budgets .
         </p>
 
         {/* Cards Section */}
