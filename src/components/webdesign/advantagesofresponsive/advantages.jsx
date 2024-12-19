@@ -35,7 +35,7 @@ const Advantages = () => {
           {advantages.map((advantage, index) => (
             <div
               key={index}
-              className="bg-white shadow-md rounded-lg p-6 text-center transform hover:scale-105 transition-transform"
+              className="bg-white shadow-md p-6 text-center transform hover:scale-105 transition-transform border-b-4 border-[#4EB8CA]"
             >
               <div className="mb-4">
                 <div className="bg-cyan-100 rounded-full p-4 w-16 h-16 mx-auto">
@@ -59,7 +59,7 @@ const Advantages = () => {
                 {advantage.title}
               </h3>
               <p className="text-gray-600 mb-4">{advantage.description}</p>
-              <button className="text-blue-600 font-semibold border border-blue-600 rounded-lg px-4 py-2 hover:bg-blue-50">
+              <button className="text-blue-600 font-semibold border border-blue-600 px-4 py-2 hover:bg-blue-50">
                 Read More
               </button>
             </div>

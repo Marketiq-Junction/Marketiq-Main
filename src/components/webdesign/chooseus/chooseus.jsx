@@ -3,9 +3,9 @@ import React from "react";
 const ChooseUs = () => {
   return (
     <section className="bg-[#DFF4F4] py-16">
-      <div className="container mx-auto px-6 lg:px-16">
-        {/* Heading Section */}
-        <div className="mb-10">
+      <div className="container mx-auto px-6 lg:px-16 flex flex-col lg:flex-row items-start gap-12">
+        {/* Left Text Section */}
+        <div className="lg:w-1/2">
           <h3 className="text-lg font-bold text-gray-700 uppercase mb-4">
             Why Choose Us
           </h3>
@@ -33,8 +33,8 @@ const ChooseUs = () => {
           </button>
         </div>
 
-        {/* Cards Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Right Cards Section */}
+        <div className="lg:w-1/2 grid grid-cols-1 gap-8">
           {/* Card 1 */}
           <div className="bg-white shadow-lg rounded-lg p-6">
             <h3 className="text-xl font-bold text-blue-600 mb-3">

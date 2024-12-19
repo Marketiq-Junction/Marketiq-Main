@@ -1,50 +1,48 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  SpeakerphoneIcon,
-  ChatAltIcon,
-  CurrencyDollarIcon,
-  ChartBarIcon,
-  ChartPieIcon,
-  UserCircleIcon,
-} from "@heroicons/react/outline";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import BarChartIcon from "@mui/icons-material/BarChart";
+import PieChartIcon from "@mui/icons-material/PieChart";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 const Benefits = () => {
   const benefits = [
     {
       title: "Increased Brand Awareness",
-      icon: <SpeakerphoneIcon className="h-8 w-8 text-white" />,
+      icon: <CampaignIcon className="text-white" fontSize="large" />,
       description:
         "Social media platforms allow businesses to reach a wider audience, digitally improving brand visibility and recognition. Regularly engaging with users helps maintain a strong online presence.",
     },
     {
       title: "Enhanced Customer Engagement",
-      icon: <ChatAltIcon className="h-8 w-8 text-white" />,
+      icon: <ChatBubbleOutlineIcon className="text-white" fontSize="large" />,
       description:
         "Social media facilitates direct interaction with customers, enabling businesses to respond to inquiries, gather feedback, and build relationships, which fosters loyalty and trust.",
     },
     {
       title: "Cost-Effective Marketing",
-      icon: <CurrencyDollarIcon className="h-8 w-8 text-white" />,
+      icon: <AttachMoneyIcon className="text-white" fontSize="large" />,
       description:
         "Compared to traditional advertising, social media marketing is more affordable and can yield higher returns on investment (ROI). Businesses can reach their target audience without significant expenditure.",
     },
     {
       title: "Increased Website Traffic",
-      icon: <ChartBarIcon className="h-8 w-8 text-white" />,
+      icon: <BarChartIcon className="text-white" fontSize="large" />,
       description:
         "By sharing content and links on social media, businesses can drive traffic to their websites, enhancing lead generation and potential conversions.",
     },
     {
       title: "Access to Analytics",
-      icon: <ChartPieIcon className="h-8 w-8 text-white" />,
+      icon: <PieChartIcon className="text-white" fontSize="large" />,
       description:
         "Social media platforms provide valuable insights and analytics, helping businesses assess their performance, understand audience behavior, and refine their strategies for better results.",
     },
     {
       title: "Improved Customer Insights",
-      icon: <UserCircleIcon className="h-8 w-8 text-white" />,
+      icon: <AccountCircleIcon className="text-white" fontSize="large" />,
       description:
         "Social media provides valuable data about customer preferences and behaviors. Businesses can analyze this information to tailor their products and services to better meet customer needs.",
     },

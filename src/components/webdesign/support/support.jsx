@@ -4,28 +4,28 @@ const services = [
   {
     title: "Content Writing",
     description:
-      "Content writing is essential for engaging your audience and enhancing your website’s SEO. Our expert writers create high-quality, relevant content that informs and captivates visitors, driving traffic and boosting conversion rates. By incorporating strategic keywords and clear messaging, we ensure your brand stands out online.",
+      "Content writing is essential for engaging your audience and enhancing your website’s SEO.",
   },
   {
     title: "Video Production",
     description:
-      "Video production is essential for creating engaging content that captures audience attention and conveys your brand message effectively. Our services include high-quality video editing, animations, and optimization, ensuring your videos enhance your online presence and drive user engagement across platforms.",
+      "Video production is essential for creating engaging content that captures audience attention and conveys your brand message effectively.",
   },
   {
     title: "Logo Design",
     description:
-      "Our logo design service focuses on creating unique and memorable logos that encapsulate your brand’s identity. We blend creativity and strategy to ensure your logo not only looks appealing but also resonates with your target audience, setting the tone for your brand’s visual presence.",
+      "Our logo design service focuses on creating unique and memorable logos that encapsulate your brand’s identity.",
   },
   {
     title: "Technical SEO",
     description:
-      "Technical SEO focuses on optimizing the technical aspects of a website to maximize its visibility and performance in search engines. This includes improving site speed, ensuring mobile-friendliness, implementing proper URL structures, and enhancing crawlability, all of which contribute to better search rankings and user experience.",
+      "Technical SEO focuses on optimizing the technical aspects of a website to maximize its visibility and performance in search engines.",
   },
 ];
 
 const Support = () => {
   return (
-    <section className="bg-[#E5F8FF] py-16">
+    <section className="bg-[#A2DFE1] py-16 mb-8">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Heading Section */}
         <div className="text-center mb-12">
@@ -39,19 +39,31 @@ const Support = () => {
           </p>
         </div>
 
-        {/* Cards Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-blue-500 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-bold text-blue-600 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
+        {/* Content Section */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* Left Image */}
+          <div className="w-full md:w-1/2">
+            <img
+              src="/117.png" // Replace with your actual image path
+              alt="Supporting Services"
+              className="w-[70%] h-auto"
+            />
+          </div>
+
+          {/* Right Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:w-1/2">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white shadow-lg rounded-lg p-6 border-2 border-blue-500 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+              >
+                <h3 className="text-xl font-bold text-blue-600 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

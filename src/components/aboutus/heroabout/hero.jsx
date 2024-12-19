@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className="bg-blue-400 text-white py-16 relative">
+    <div className="bg-[#4A9BD3] text-white py-16 relative">
       {/* Content Section */}
       <div className="text-center px-4 mb-12">
         <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">

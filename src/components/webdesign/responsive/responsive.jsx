@@ -35,10 +35,10 @@ const Responsive = () => {
             <li>• Helps SEO</li>
           </ul>
           <div className="mt-6 flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#4A9BD3] text-white px-6 py-3 font-semibold hover:bg-blue-500 transition duration-300">
               View Our Portfolio
             </button>
-            <button className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
+            <button className="bg-[#4A9BD3] text-white px-6 py-3 font-semibold hover:bg-blue-500 transition duration-300">
               Request A Free Quote
             </button>
           </div>
