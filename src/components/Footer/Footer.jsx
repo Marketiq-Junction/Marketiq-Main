@@ -14,17 +14,17 @@ const Footer = () => {
       </div>
 
       {/* WhatsApp and Call Sticky Icons */}
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-4">
         {/* WhatsApp Icon */}
         <Link href="https://wa.me/+919920892689" target="_blank">
-          <div className="w-12 h-12 bg-green-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
-            <FaWhatsapp className="text-2xl text-white" />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+            <FaWhatsapp className="text-3xl sm:text-4xl text-white" />
           </div>
         </Link>
         {/* Call Icon */}
         <Link href="tel:+919920892689">
-          <div className="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
-            <FaPhone className="text-2xl text-white" />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+            <FaPhone className="text-3xl sm:text-4xl text-white" />
           </div>
         </Link>
       </div>
@@ -117,15 +117,24 @@ const Footer = () => {
           <div className="w-full">
             <h1 className="text-sm md:text-base font-bold">Let's Socialize</h1>
             <div className="flex items-center gap-5 mt-2">
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                <FaInstagram className="text-lg text-black" />
-              </div>
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                <FaFacebook className="text-lg text-black" />
-              </div>
-              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                <FaLinkedin className="text-lg text-black" />
-              </div>
+              {/* Instagram Link */}
+              <Link href="https://www.instagram.com/marketiq_junction/" target="_blank">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
+                  <FaInstagram className="text-lg sm:text-xl text-black" />
+                </div>
+              </Link>
+              {/* Facebook Link */}
+              <Link href="https://www.facebook.com/people/Marketiq-Junction/61567512213882/" target="_blank">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
+                  <FaFacebook className="text-lg sm:text-xl text-black" />
+                </div>
+              </Link>
+              {/* LinkedIn Link */}
+              <Link href="https://linkedin.com/in/your_linkedin_handle" target="_blank">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
+                  <FaLinkedin className="text-lg sm:text-xl text-black" />
+                </div>
+              </Link>
             </div>
           </div>
         </div>

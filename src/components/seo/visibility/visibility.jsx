@@ -30,7 +30,7 @@ const Visibility = () => {
         {/* Right Section: Video Thumbnail */}
         <div className="lg:w-2/5 flex justify-center relative">
           <Image
-            src="/images/visibility-thumbnail.png" // Replace with your actual image path
+            src="/loggo.jpg" // Replace with your actual image path
             alt="Video Thumbnail"
             width={400}
             height={300}

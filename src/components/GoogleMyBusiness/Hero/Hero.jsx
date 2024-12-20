@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section className="flex flex-col md:flex-row justify-center items-center py-12 bg-[#4A9BD3]">
-      <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10 px-4 md:px-6 lg:px-12">
+      <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10 px-6 sm:px-8 lg:px-12">
         {/* Left Side Content */}
         <motion.div
           className="flex-1 flex flex-col justify-center"
@@ -23,7 +23,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <motion.h1
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.5 }}
@@ -32,7 +32,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.ul
-            className="text-white space-y-4"
+            className="text-white space-y-3 sm:space-y-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -64,11 +64,11 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Enter Your Website"
-              className="w-full py-4 px-5 pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full py-3 px-4 sm:py-4 sm:px-5 pr-32 md:pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <button
               onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-3 sm:px-4 py-2 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
             >
               Request A Audit
             </button>
@@ -85,7 +85,7 @@ const Hero = () => {
           <img
             src="/images/GoogleMyBusiness/first1.png"
             alt="Google My Business Illustration"
-            className="max-w-full h-auto "
+            className="max-w-full h-auto sm:max-w-md md:max-w-lg"
           />
         </motion.div>
       </div>

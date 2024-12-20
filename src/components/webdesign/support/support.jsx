@@ -49,7 +49,7 @@ const Support = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Our other services that Support Your Website Marketing
+            Our Other Services That Support Your Website Marketing
           </h2>
           <p className="text-lg text-gray-600">
             Explore our wide range of services designed to strengthen your online presence and deliver impactful results.
@@ -60,7 +60,7 @@ const Support = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left Image */}
           <motion.div
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 flex justify-center md:justify-start"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -69,7 +69,7 @@ const Support = () => {
             <img
               src="/117.png" // Replace with your actual image path
               alt="Supporting Services"
-              className="w-[70%] h-auto"
+              className="w-[70%] h-auto mx-auto md:mx-0"
             />
           </motion.div>
 

@@ -17,21 +17,21 @@ const Hero = () => {
   };
 
   return (
-    <motion.section 
+    <motion.section
       className="herosection bg-[#4A9BD3] w-full h-auto flex flex-col lg:flex-row"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       {/* Left Section: Text and Form */}
-      <motion.div 
+      <motion.div
         className="lg:w-[60%] w-full flex items-center justify-center flex-col p-5 lg:p-0"
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
         <div className="w-full px-5 lg:px-20 text-white text-center lg:text-left mt-10 lg:mt-0">
-          <motion.h1 
+          <motion.h1
             className="text-[8vw] lg:text-[4vw] font-semibold"
             initial={{ y: -50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -40,7 +40,7 @@ const Hero = () => {
             Digital <br className="hidden lg:block" /> marketing that <br /> drives revenue
           </motion.h1>
         </div>
-        <motion.form 
+        <motion.form
           className="w-full flex items-center justify-center lg:justify-start px-5 lg:px-20 mt-5 lg:mt-10"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -70,20 +70,20 @@ const Hero = () => {
       </motion.div>
 
       {/* Right Section: Image */}
-      <motion.div 
+      <motion.div
         className="lg:w-[40%] w-full flex items-center justify-center mt-16 lg:mt-0 mb-16"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <motion.div 
-          className="w-[95%] lg:w-[70%] h-[40vh] lg:h-[60vh]"
-          whileHover={{ scale: 1.05 }}
+        <motion.div
+          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] flex-shrink-0"
+          // whileHover={{ scale: 1.05 }}
         >
           <motion.img
             src="/hero17.png"
             alt="Hero Image"
-            className="w-full h-full object-cover rounded-lg mt-10 animate-pulse"
+            className="w-full h-full object-cover rounded-lg"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}

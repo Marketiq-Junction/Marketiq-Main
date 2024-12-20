@@ -25,7 +25,7 @@ const Page = () => {
       <Engage />
       <Advertising />
      <Benefits />
-     <Savetime />
+     {/* <Savetime /> */}
     <Services />
     {/* <Steps /> */}
     <Databaner />

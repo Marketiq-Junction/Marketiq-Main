@@ -104,9 +104,9 @@ function Socialmedia() {
       <section>
         <div className="flex justify-center gap-6 bg-cyan-200 py-6">
           {[
-            { name: "instagram", color: "from-pink-500 via-red-500 to-yellow-500", url: "https://www.instagram.com" },
-            { name: "whatsapp", color: "bg-green-500", url: "https://www.whatsapp.com" },
-            { name: "facebook", color: "bg-blue-500", url: "https://www.facebook.com" },
+            { name: "instagram", color: "from-pink-500 via-red-500 to-yellow-500", url: "https://www.instagram.com/marketiq_junction/" },
+            { name: "whatsapp", color: "bg-green-500", url: "https://wa.me/+919920892689" },
+            { name: "facebook", color: "bg-blue-500", url: "https://www.facebook.com/people/Marketiq-Junction/61567512213882/" },
             { name: "linkedin", color: "bg-blue-700", url: "https://www.linkedin.com" },
           ].map((social, index) => (
             <motion.a

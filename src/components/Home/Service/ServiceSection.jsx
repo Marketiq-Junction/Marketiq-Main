@@ -74,12 +74,12 @@ const ServiceSection = () => {
         >
           <h2 className="text-lg font-bold text-gray-500 mb-2">WHAT WE DO</h2>
           <h3 className="text-4xl font-bold">
-            Driving a better way of <br /> doing marketing
+            Driving a better way of doing marketing
           </h3>
         </motion.div>
 
         {/* Bullet Points Section */}
-        <motion.div
+        {/* <motion.div
           className="md:w-1/2 mt-4 md:mt-0 flex justify-end"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -92,7 +92,7 @@ const ServiceSection = () => {
             <li className="leading-relaxed pl-0">Tailored and affordable strategies</li>
             <li className="leading-relaxed pl-0">Drive sustainable growth</li>
           </ul>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Main Content Section */}

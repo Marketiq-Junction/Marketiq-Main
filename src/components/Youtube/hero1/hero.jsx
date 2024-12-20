@@ -88,7 +88,7 @@ const Hero = () => {
           <img
             src="/images/youtube/s1.png"
             alt="YouTube Management Illustration"
-            className="w-[90%] sm:w-[75%] md:w-[60%] lg:w-[50%] h-auto rounded-lg shadow-lg"
+            className="w-[90%] sm:w-[75%] md:w-[60%] lg:w-[80%] h-auto"
           />
         </motion.div>
       </div>

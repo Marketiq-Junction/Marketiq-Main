@@ -17,9 +17,9 @@ const Databaner = () => {
 
     const targetStats = {
       hours: 2700000,
-      experts: 250,
-      reviews: 1000,
-      caseStudies: 600,
+      experts: 200,
+      reviews: 300,
+      caseStudies: 100,
     };
 
     const increments = Object.fromEntries(
@@ -59,10 +59,10 @@ const Databaner = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-around items-center">
         {/* Stats Section */}
         {[
-          { label: "Digital Marketing Hours", value: "2.7 M" },
-          { label: "Marketing Experts", value: `${stats.experts}+` },
-          { label: "4 Stars Up Reviews", value: `${stats.reviews}+` },
-          { label: "Case Studies", value: `${stats.caseStudies}+` },
+          { label: "Social Media Engagements Handled", value: "2.5 M" },
+          { label: "Social Media Campaigns Managed", value: `${stats.experts}+` },
+          { label: "Brands Assisted in Growth", value: `${stats.reviews}+` },
+          { label: "Case Studies Across Various Industries", value: `${stats.caseStudies}+` },
         ].map(({ label, value }, index) => (
           <div key={index} className="text-center mb-6 md:mb-0">
             <h3 className="text-3xl md:text-4xl font-bold font-montserrat text-white">

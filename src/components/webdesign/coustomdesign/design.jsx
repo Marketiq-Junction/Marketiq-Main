@@ -20,7 +20,7 @@ const CustomDesigns = () => {
           {/* Left Image */}
           <div className="flex-shrink-0 w-full lg:w-1/2 text-left">
             <img
-              src="/17.png"
+              src="/gio.png"
               alt="Custom Design Left"
               className="rounded-lg shadow-lg mx-auto max-w-full h-auto"
             />
@@ -29,7 +29,7 @@ const CustomDesigns = () => {
           {/* Right Image */}
           <div className="flex-shrink-0 w-full lg:w-1/2 text-right">
             <img
-              src="/17.png"
+              src="/code4bharat.png"
               alt="Custom Design Right"
               className="rounded-lg shadow-lg mx-auto max-w-full h-auto"
             />
