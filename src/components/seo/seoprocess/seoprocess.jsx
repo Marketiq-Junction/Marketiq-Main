@@ -9,7 +9,7 @@ const SEOProcess = () => {
       title: "Content Creation",
       description:
         "Craft high-quality, engaging content tailored to your audience, including blogs, articles, videos, and infographics.",
-      image: "/seomarketing.png",
+      image: "/content.png",
       icon: "✍️",
     },
     {
@@ -17,7 +17,7 @@ const SEOProcess = () => {
       title: "Competitive Analysis",
       description:
         "Identify competitors, evaluate their strengths and weaknesses, and gain insights to improve your strategy.",
-      image: "/seomarketing.png",
+      image: "/competitive.png",
       icon: "📊",
     },
     {
@@ -25,7 +25,7 @@ const SEOProcess = () => {
       title: "Keyword Research",
       description:
         "Discover high-value keywords to align content with user intent, driving organic traffic and improving rankings.",
-      image: "/seomarketing.png",
+      image: "/keyword.png",
       icon: "🔍",
     },
     {
@@ -33,7 +33,7 @@ const SEOProcess = () => {
       title: " Optimization",
       description:
         "Optimize your website's structure for seamless navigation, improved user experience, and better indexing.",
-      image: "/seomarketing.png",
+      image: "/optimization.png",
       icon: "📍",
     },
   ];

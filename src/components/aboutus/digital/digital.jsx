@@ -18,7 +18,7 @@ const DigitalAgency = () => {
         "Leverage cutting-edge, results-focused strategies to ensure measurable growth.",
         "Adapt to the ever-evolving digital landscape with scalable and customer-centric solutions."
       ],
-      image: "/about2.png",
+      image: "/missionofourcompany.png",
     },
     vision: {
       title: "Our Vision at Marketiq Junction",
@@ -27,7 +27,7 @@ const DigitalAgency = () => {
         "Empower businesses to thrive in a rapidly changing online environment.",
         "Foster partnerships built on trust, collaboration, and shared success."
       ],
-      image: "/about2.png",
+      image: "/ourvisionatmarketiqjunction.png",
     },
     goals: {
       title: "Our Goals at Marketiq Junction",
