@@ -5,42 +5,42 @@ const stepsData = [
     title: "Your Goals",
     description:
       "Defining your goals is the first step in the process. It involves identifying the purpose of your website, your target audience, and the key functionalities required to achieve your objectives.",
-    image: "/plan.png",
+    image: "/goals.png",
     icon: "🎯",
   },
   {
     title: "Creating A Plan",
     description:
       "Creating a plan is the foundation of an effective web design and development process. It ensures that every stage is aligned with the objectives and maximizes resource efficiency.",
-    image: "/plan.png",
+    image: "/creating.png",
     icon: "📝",
   },
   {
     title: "Wireframes",
     description:
       "Wireframes and mockups provide a visual representation of the layout and design of your website, helping you understand the structure and flow before actual development begins.",
-    image: "/plan.png",
+    image: "/wireframes.png",
     icon: "📐",
   },
   {
     title: "Web Development",
     description:
       "Web development involves translating the design into a functional website using coding languages and frameworks, ensuring responsiveness and compatibility across devices.",
-    image: "/plan.png",
+    image: "/webdevelopment.png",
     icon: "💻",
   },
   {
     title: "Quality Assurance",
     description:
       "Quality assurance involves testing the website to identify and fix any bugs or issues, ensuring that it functions smoothly and delivers a seamless user experience.",
-    image: "/plan.png",
+    image: "/quality.png",
     icon: "✅",
   },
   {
     title: "Website Launch",
     description:
       "The final step is launching the website, making it live for your audience. This includes final optimizations and ensuring everything runs as expected.",
-    image: "/plan.png",
+    image: "/website.png",
     icon: "🚀",
   },
 ];
