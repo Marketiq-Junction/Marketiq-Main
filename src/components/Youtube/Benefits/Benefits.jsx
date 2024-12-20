@@ -29,6 +29,14 @@ const Benefits = () => {
 
   const [activeCard, setActiveCard] = useState(null);
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to request a free quote for your services.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="py-16 bg-[#FFFFFF]">
       <div className="text-center px-4 mb-12">
@@ -94,8 +102,11 @@ const Benefits = () => {
       </div>
 
       <div className="text-center mt-8">
-        <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 rounded-lg shadow-md hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300">
-          Request A Free Quote
+        <button
+          onClick={handleWhatsAppClick}
+          className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 rounded-lg shadow-md hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300"
+        >
+          Request A Free Audit
         </button>
       </div>
     </section>

@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Socialmedia() {
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to request a free quote for social media marketing.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <>
       {/* Hero Section */}
@@ -34,7 +42,7 @@ function Socialmedia() {
               >
                 <input
                   type="text"
-                  placeholder="Select Platform"
+                  placeholder="Platform"
                   className="p-3 w-full rounded-md shadow-md outline-none"
                 />
                 <input
@@ -62,11 +70,12 @@ function Socialmedia() {
               </motion.div>
               <div className="text-center">
                 <motion.button
+                  onClick={handleWhatsAppClick}
                   whileHover={{ scale: 1.05, boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)" }}
                   transition={{ duration: 0.3 }}
                   className="bg-white text-[#4A9BD3] px-8 py-3 font-semibold rounded-md shadow-lg transition"
                 >
-                  Request A Free Quote
+                  Request A Free Audit
                 </motion.button>
               </div>
             </div>

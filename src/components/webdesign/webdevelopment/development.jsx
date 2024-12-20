@@ -60,19 +60,14 @@ const Development = () => {
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Web Design & Development Process
           </h1>
-          {/* <p className="text-lg text-gray-600">
-            The Web Design & Development Process involves a series of structured
-            steps to create an effective website, starting from initial planning
-            and design to implementation and testing.
-          </p> */}
         </div>
 
         {/* Steps Section */}
-        <div className="flex flex-wrap justify-center gap-4 mb-16 relative">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center mb-16">
           {stepsData.map((step, index) => (
             <div key={index} className="relative">
               <button
-                className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-6 rounded-lg shadow-md w-48 transition-all duration-200 ${
+                className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-4 rounded-lg shadow-md w-36 sm:w-48 transition-all duration-200 ${
                   activeStep.title === step.title ? "bg-blue-300 text-black" : ""
                 }`}
                 onClick={() => handleStepClick(step)}
@@ -90,18 +85,18 @@ const Development = () => {
         </div>
 
         {/* Active Step Content */}
-        <div className="flex flex-col md:flex-row items-center gap-8 border-2 border-black">
+        <div className="flex flex-col md:flex-row items-center gap-8 border border-gray-300 p-6 rounded-lg">
           {/* Left Image */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex justify-center">
             <img
               src={activeStep.image}
               alt={activeStep.title}
-              className="w-[70%] rounded-lg shadow-lg"
+              className="w-[80%] rounded-lg shadow-lg"
             />
           </div>
 
           {/* Right Content */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {activeStep.title}
             </h2>

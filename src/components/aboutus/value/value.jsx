@@ -67,6 +67,13 @@ const ValuesAndCulture = () => {
     },
   ];
 
+  const handleWhatsAppClick = (message) => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="relative bg-gradient-to-b from-[#E6F9FD] to-white px-6 lg:px-16 py-16">
       {/* Header */}
@@ -100,186 +107,38 @@ const ValuesAndCulture = () => {
 
       {/* Cards Positioned as Branches */}
       <div className="flex flex-wrap justify-center gap-8 mt-16">
-        <div className="w-full md:w-auto flex justify-center">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[0].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[0].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[0].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-auto flex justify-center">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[1].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[1].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[1].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-auto flex justify-center">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[2].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[2].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[2].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-auto flex justify-center">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[3].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[3].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[3].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-auto flex justify-center mt-8">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[4].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[4].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[4].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
-        <div className="w-full md:w-auto flex justify-center mt-8">
-          <motion.div
-            className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-          >
-            <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
-              {values[5].icon}
-            </div>
-            <div className="text-center mt-10">
-              <h3 className="text-lg font-bold text-gray-800 mb-2">
-                {values[5].title}
-              </h3>
-              <ul className="text-gray-600 text-sm space-y-2">
-                {values[5].description.map((point, idx) => (
-                  <motion.li
-                    key={idx}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                  >
-                    {point}
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </div>
+        {values.map((value, index) => (
+          <div className="w-full md:w-auto flex justify-center mt-8" key={index}>
+            <motion.div
+              className="relative group w-80 h-56 bg-white shadow-lg rounded-lg flex flex-col items-center justify-center gap-4 p-6 transition transform hover:scale-110 hover:rotate-2 hover:shadow-2xl"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
+              <div className="absolute -top-12 w-20 h-20 bg-gradient-to-br from-[#4A9BD3] to-[#50C3C6] rounded-full flex items-center justify-center shadow-md border-4 border-white">
+                {value.icon}
+              </div>
+              <div className="text-center mt-10">
+                <h3 className="text-lg font-bold text-gray-800 mb-2">
+                  {value.title}
+                </h3>
+                <ul className="text-gray-600 text-sm space-y-2">
+                  {value.description.map((point, idx) => (
+                    <motion.li
+                      key={idx}
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: idx * 0.2 }}
+                    >
+                      {point}
+                    </motion.li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        ))}
       </div>
 
       {/* CTA Buttons */}
@@ -289,11 +148,17 @@ const ValuesAndCulture = () => {
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <button className="bg-[#4A9BD3] text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-[#3a82b2] transition duration-300 transform hover:scale-105">
+        {/* <button
+          onClick={() => handleWhatsAppClick("Hello, I would like to request a quote for your services.")}
+          className="bg-[#4A9BD3] text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-[#3a82b2] transition duration-300 transform hover:scale-105"
+        >
           Request A Quote
-        </button>
-        <button className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition duration-300 transform hover:scale-105">
-          Get In Touch
+        </button> */}
+        <button
+          onClick={() => handleWhatsAppClick("Hello, I would like to get in touch regarding your services.")}
+          className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition duration-300 transform hover:scale-105"
+        >
+          Communicate with Us
         </button>
       </motion.div>
     </section>
@@ -301,5 +166,3 @@ const ValuesAndCulture = () => {
 };
 
 export default ValuesAndCulture;
-
-           

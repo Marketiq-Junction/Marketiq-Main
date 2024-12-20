@@ -15,22 +15,22 @@ const Hero = () => {
       </div>
 
       {/* Left Image Section */}
-      <div className="hidden sm:block absolute left-4 bottom-0 sm:left-8 md:left-12 lg:left-16">
+      {/* <div className="hidden sm:block absolute left-4 bottom-0 sm:left-8 md:left-12 lg:left-16">
         <img
           src="/abouthero1.png" // Replace with your left image path
           alt="Rocket"
           className="w-[100px] sm:w-[120px] md:w-[150px] lg:w-[200px]"
         />
-      </div>
+      </div> */}
 
       {/* Right Image Section */}
-      <div className="hidden sm:block absolute right-4 bottom-0 sm:right-8 md:right-12 lg:right-16">
+      {/* <div className="hidden sm:block absolute right-4 bottom-0 sm:right-8 md:right-12 lg:right-16">
         <img
           src="/abouthero2.png" // Replace with your right image path
           alt="Target"
           className="w-[100px] sm:w-[120px] md:w-[150px] lg:w-[200px]"
         />
-      </div>
+      </div> */}
     </div>
   );
 };

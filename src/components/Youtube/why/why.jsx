@@ -33,7 +33,7 @@ const Why = () => {
         Why Choose Us
       </motion.h2>
 
-      <motion.p
+      {/* <motion.p
         className="text-[#000000] mb-12 text-center"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ const Why = () => {
       >
         Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis ultrices Urna vulputate non non nisl amet commodo. Sollicitudin. Leo mi curabitur <br />
         euismod orci. Ridiculus sem. Torquent. Ornare euismod, per nullam, ligula morbi natoque nibh faucibus vitae sapien.
-      </motion.p>
+      </motion.p> */}
 
       <div className="flex flex-wrap justify-between items-center gap-6">
         {/* Left Content */}

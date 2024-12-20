@@ -48,7 +48,7 @@ const ChooseUs = () => {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-lg font-bold text-gray-700 uppercase mb-4">
-            Why Choose Us
+             Why Choose Us
           </h3>
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
             Turn your site into a revenue driver with Digital Insides
@@ -68,13 +68,21 @@ const ChooseUs = () => {
               </motion.li>
             ))}
           </ul>
-          <motion.button
-            className="mt-6 px-6 py-3 bg-[#4A9BD3] text-white font-semibold hover:bg-white hover:text-black transition-all"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <motion.div
+            className="mt-6 flex justify-center lg:justify-start"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            Contact Us
-          </motion.button>
+            <motion.button
+              className="px-6 py-3 bg-[#4A9BD3] text-white font-semibold hover:bg-white hover:text-black transition-all"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Talk to Us
+            </motion.button>
+          </motion.div>
         </motion.div>
 
         {/* Right Cards Section */}

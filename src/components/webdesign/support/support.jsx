@@ -38,7 +38,7 @@ const services = [
 
 const Support = () => {
   return (
-    <section className="bg-[#A2DFE1] py-16 mb-8">
+    <section className="bg-[#A2DFE1] py-16 mb-8 lg:mb-28">
       <div className="container mx-auto px-6 lg:px-16">
         {/* Heading Section */}
         <motion.div

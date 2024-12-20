@@ -24,6 +24,13 @@ const Ourprocess = () => {
     },
   ];
 
+  const handleWhatsAppClick = (message) => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="py-16 bg-[#4A9BD3] lg:mb-28">
       <div className="container mx-auto px-4 md:px-6">
@@ -82,12 +89,18 @@ const Ourprocess = () => {
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center mt-12 space-y-4 sm:space-y-0 sm:space-x-4">
-        <button className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition">
-          Contact Us
+        <button
+          onClick={() => handleWhatsAppClick("Hello, I would like to contact you for more information.")}
+          className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
+        >
+          Speak With Us
         </button>
-        <button className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition">
+        {/* <button
+          onClick={() => handleWhatsAppClick("Hello, I would like to get a quote for your services.")}
+          className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
+        >
           Get A Quote
-        </button>
+        </button> */}
       </div>
     </section>
   );

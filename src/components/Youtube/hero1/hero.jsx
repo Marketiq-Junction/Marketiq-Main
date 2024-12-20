@@ -1,20 +1,36 @@
 "use client";
 
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Hero = () => {
+  const [website, setWebsite] = useState("");
+  const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+
+  const handleWhatsAppClick = () => {
+    if (!website) {
+      alert("Please enter your website URL.");
+      return;
+    }
+
+    const message = `Hello, I would like to request a quote for YouTube management services for my website: ${website}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
-    <section className="flex flex-row justify-center items-center py-12 bg-[#4A9BD3]">
-      <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10">
+    <section className="flex flex-col items-center justify-center py-12 bg-[#4A9BD3] px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row max-w-6xl w-full gap-10 items-center">
         {/* Left Side Content */}
         <motion.div
-          className="flex-1 flex flex-col justify-center ml-6 px-6 md:px-0"
+          className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Youtube Management
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            YouTube Management
           </h1>
           <motion.ul
             className="space-y-4 text-white text-lg"
@@ -43,26 +59,28 @@ const Hero = () => {
               Drive measurable results through data-driven decisions.
             </li>
           </motion.ul>
-          <div className="relative w-full md:w-[500px] mt-6">
-            <motion.input
+
+          {/* Input Section */}
+          <div className="relative w-full sm:w-[400px] md:w-[500px] mt-6">
+            <input
               type="text"
               placeholder="Enter Your Website"
-              className="w-full py-4 px-5 pr-36 border border-gray-300 rounded-md text-gray-700"
-              whileHover={{ scale: 1.05 }}
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              className="w-full py-3 px-4 pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <motion.button
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+            <button
+              onClick={handleWhatsAppClick}
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
             >
-              Request A Quote
-            </motion.button>
+              Request A Audit
+            </button>
           </div>
         </motion.div>
 
         {/* Right Side Image */}
         <motion.div
-          className="flex-1 flex justify-end items-center px-6 md:px-0"
+          className="flex-1 flex justify-center md:justify-end items-center"
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -70,7 +88,7 @@ const Hero = () => {
           <img
             src="/images/youtube/s1.png"
             alt="YouTube Management Illustration"
-            className="max-w-full h-auto rounded-lg shadow-lg"
+            className="w-[90%] sm:w-[75%] md:w-[60%] lg:w-[50%] h-auto rounded-lg shadow-lg"
           />
         </motion.div>
       </div>

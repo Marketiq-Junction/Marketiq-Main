@@ -61,7 +61,7 @@ const Approach = () => {
             ))}
           </ul>
           <div className="flex gap-6 mt-8">
-            <motion.button
+            {/* <motion.button
               className="bg-[#4A9BD3] text-white px-6 py-3 text-lg shadow hover:bg-white hover:text-black transition"
               whileHover={{ scale: 1.05 }}
             >
@@ -72,7 +72,7 @@ const Approach = () => {
               whileHover={{ scale: 1.05 }}
             >
               Get A Free Quote
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
 

@@ -20,6 +20,15 @@ const Responsive = () => {
     threshold: 0.1,
   });
 
+  const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+
+  const handleWhatsAppClick = () => {
+    const message = `Hello, I would like to request a free quote for responsive web design.`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section ref={ref} className="w-full bg-white py-12">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
@@ -47,7 +56,7 @@ const Responsive = () => {
             Engage Your Target Audience and Foster Trust
           </motion.h2>
           <motion.ul
-            className="text-gray-600 mt-6 space-y-4"
+            className="text-gray-600 mt-6 space-y-4 text-left lg:text-left"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.5 }}
@@ -55,7 +64,7 @@ const Responsive = () => {
             {bulletPoints[0].points.map((point, index) => (
               <motion.li
                 key={index}
-                className="flex items-center gap-3"
+                className="flex sm:items-start items-center gap-3"
                 initial={{ opacity: 0, x: -20 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -72,18 +81,12 @@ const Responsive = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
           >
             <motion.button
+              onClick={handleWhatsAppClick}
               className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-transform duration-300 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              View Our Portfolio
-            </motion.button>
-            <motion.button
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-transform duration-300 relative overflow-hidden"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Request A Free Quote
+              Request A Free Audit
             </motion.button>
           </motion.div>
         </motion.div>

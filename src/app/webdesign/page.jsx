@@ -30,7 +30,7 @@ function page() {
         <Databaner/>
         <Development/>
         <Support/>
-        <WhyUs/>
+        {/* <WhyUs/> */}
         {/* <GetInTouch/> */}
         <Footer />
       </>

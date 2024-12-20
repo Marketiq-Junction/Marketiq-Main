@@ -24,7 +24,7 @@ const Ayansir = () => {
             </div>
             <div>
               <p className="text-lg font-semibold">Talk to a Growth Expert</p>
-              <p className="text-1xl font-bold mt-2">+91 808 254 0401</p>
+              <p className="text-1xl font-bold mt-2">+91 9920892689</p>
             </div>
           </div>
 

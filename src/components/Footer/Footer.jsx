@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaPhone } from "react-icons/fa";
 import Ayansir from "@/components/Footer/ayansir"; // Import the Ayansir component
 
 const Footer = () => {
@@ -11,6 +11,22 @@ const Footer = () => {
       {/* Ayansir Component (Hidden on Mobile View) */}
       <div className="hidden md:block">
         <Ayansir />
+      </div>
+
+      {/* WhatsApp and Call Sticky Icons */}
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-3">
+        {/* WhatsApp Icon */}
+        <Link href="https://wa.me/+919920892689" target="_blank">
+          <div className="w-12 h-12 bg-green-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+            <FaWhatsapp className="text-2xl text-white" />
+          </div>
+        </Link>
+        {/* Call Icon */}
+        <Link href="tel:+919920892689">
+          <div className="w-12 h-12 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+            <FaPhone className="text-2xl text-white" />
+          </div>
+        </Link>
       </div>
 
       {/* Main Footer Section */}
@@ -39,7 +55,8 @@ const Footer = () => {
         <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
           <h1 className="text-xl font-bold">Our Services</h1>
           <div className="flex flex-col gap-2 mt-3">
-            {[{ name: "Website Management", link: "/webdesign" },
+            {[
+              { name: "Website Management", link: "/webdesign" },
               { name: "Google My Business", link: "/GoogleMyBusiness" },
               { name: "SEO", link: "/seo" },
               { name: "Social Media Marketing", link: "/marketingsolution" },
@@ -69,7 +86,7 @@ const Footer = () => {
                   target="_blank"
                 >
                   <span className="text-blue-200">
-                    Off Bkc Mumbai, India, 400070
+                    Off BKC Mumbai, India, 400070
                   </span>
                 </Link>
               </p>
@@ -87,10 +104,8 @@ const Footer = () => {
             <div>
               <h1 className="text-sm md:text-base font-bold">PHONE:</h1>
               <p className="text-sm md:text-base">
-                <Link href="https://wa.me/+918082540401">
-                  <span className="text-blue-200">
-                    +91 808 254 0401
-                  </span>
+                <Link href="tel:+919920892689">
+                  <span className="text-blue-200">+91 99208 92689</span>
                 </Link>
               </p>
             </div>
@@ -99,35 +114,17 @@ const Footer = () => {
 
         {/* Get In Touch */}
         <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
-          {/* <h1 className="text-xl font-bold">Get In Touch</h1> */}
-          <div className="flex flex-col gap-5 mt-3">
-            <div className="flex items-center">
-              {/* <div className="w-full lg:h-10 h-10 flex bg-white rounded-lg">
-                <input
-                  type="text"
-                  placeholder="Enter your email here"
-                  className="text-sm px-2 flex-grow rounded-l-lg outline-none"
-                />
-                <button className="bg-black rounded-r-lg text-[1vw] px-5">
-                  Submit
-                </button>
-              </div> */}
-            </div>
-            <div className="w-full">
-              <h1 className="text-sm md:text-base font-bold">Let's Socialize</h1>
-              <div className="flex items-center gap-5 mt-2">
-                <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                  <FaInstagram className="text-lg text-black" />
-                </div>
-                <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                  <FaFacebook className="text-lg text-black" />
-                </div>
-                {/* <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                  <FaInstagram className="text-lg text-black" />
-                </div> */}
-                <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
-                  <FaLinkedin className="text-lg text-black" />
-                </div>
+          <div className="w-full">
+            <h1 className="text-sm md:text-base font-bold">Let's Socialize</h1>
+            <div className="flex items-center gap-5 mt-2">
+              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
+                <FaInstagram className="text-lg text-black" />
+              </div>
+              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
+                <FaFacebook className="text-lg text-black" />
+              </div>
+              <div className="w-8 h-8 bg-white flex items-center justify-center rounded-full">
+                <FaLinkedin className="text-lg text-black" />
               </div>
             </div>
           </div>

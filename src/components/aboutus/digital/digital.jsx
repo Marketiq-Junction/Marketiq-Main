@@ -72,7 +72,7 @@ const DigitalAgency = () => {
             <RocketLaunchIcon className="text-3xl text-[#4A9BD3]" />
           </div>
           <div className="text-lg md:text-2xl font-bold">
-            Mission Of Our <br /> Company
+            Mission
           </div>
         </div>
         <div
@@ -89,7 +89,7 @@ const DigitalAgency = () => {
             <VisibilityIcon className="text-3xl text-[#4A9BD3]" />
           </div>
           <div className="text-lg md:text-2xl font-bold">
-            Vision Of Our <br /> Company
+            Vision 
           </div>
         </div>
         <div
@@ -106,7 +106,7 @@ const DigitalAgency = () => {
             <CenterFocusStrongIcon className="text-3xl text-[#4A9BD3]" />
           </div>
           <div className="text-lg md:text-2xl font-bold">
-            Goals of <br /> Marketiq Junction
+            Goals
           </div>
         </div>
       </div>

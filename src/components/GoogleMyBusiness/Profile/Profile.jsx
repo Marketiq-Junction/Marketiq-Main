@@ -3,6 +3,15 @@
 import { motion } from "framer-motion";
 
 const Profile = () => {
+  const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+
+  const handleWhatsAppClick = () => {
+    const message = "Hello, I would like to know more about Profile Optimization.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-white py-12">
       <div className="flex flex-col md:flex-row max-w-6xl mx-auto items-center gap-8 px-6">
@@ -54,14 +63,21 @@ const Profile = () => {
               Select relevant categories and attributes to boost visibility.
             </li>
           </motion.ul>
-          <motion.button
-            className="px-6 py-3 bg-[#4A9BD3] text-white rounded-md mt-6 shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+          <motion.div
+            className="mt-6 flex justify-center md:justify-start"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Contact Us
-          </motion.button>
+            <motion.button
+              onClick={handleWhatsAppClick}
+              className="px-6 py-3 bg-[#4A9BD3] text-white rounded-md shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Talk to Us
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

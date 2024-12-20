@@ -1,6 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 const HeroSection = () => {
+  const [website, setWebsite] = useState("");
+  const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+
+  const handleWhatsAppClick = () => {
+    if (!website) {
+      alert("Please enter your website URL.");
+      return;
+    }
+
+    const message = `Hello, I would like to request a quote for my website: ${website}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-blue-400 w-full h-[90%] flex items-center justify-center">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
@@ -13,21 +28,19 @@ const HeroSection = () => {
             Ensuring the best return on investment for your bespoke SEO Campaign requirement.
           </p>
           {/* Input Section */}
-          <div
-            className="relative w-full md:w-[500px] mt-6"
-            // initial={{ opacity: 0, y: 20 }}
-            // animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <div className="relative w-full md:w-[500px] mt-6">
             <input
               type="text"
               placeholder="Enter Your Website"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
               className="w-full py-4 px-5 pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <button
+              onClick={handleWhatsAppClick}
               className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
             >
-              Request A Quote
+              Request A Audit
             </button>
           </div>
         </div>

@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
           onClick={handleWhatsAppClick}
           className="mt-6 px-6 py-3 bg-[#50C3C6] text-white text-lg font-semibold rounded-md hover:bg-[#3aa1a4] transition"
         >
-          Learn More
+          Let's Chat
         </button>
       </div>
     </section>

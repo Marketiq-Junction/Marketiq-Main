@@ -20,6 +20,14 @@ const Savetime = () => {
     }),
   };
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to get in touch to learn more about your services.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="bg-[#4A9BD3] text-white w-full py-10">
       <div className="flex flex-col md:flex-row items-center w-full max-w-screen-xl mx-auto px-6">
@@ -69,12 +77,15 @@ const Savetime = () => {
 
           {/* Buttons */}
           <div className="flex flex-col md:flex-row items-center justify-center md:justify-start space-y-4 md:space-y-0 md:space-x-4">
-            <button className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 rounded transition hover:bg-gray-100 hover:scale-105 shadow-md">
-              Contact Us
+            <button
+              onClick={handleWhatsAppClick}
+              className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-8 py-3 rounded transition hover:bg-gray-100 hover:scale-105 shadow-md"
+            >
+              Get in Contact
             </button>
-            <button className="bg-[#4A9BD3] border-[#FFFFFF] border-2 text-[#FFFFFF] px-8 py-3 rounded transition hover:bg-[#3a82b2] hover:scale-105 shadow-md">
+            {/* <button className="bg-[#4A9BD3] border-[#FFFFFF] border-2 text-[#FFFFFF] px-8 py-3 rounded transition hover:bg-[#3a82b2] hover:scale-105 shadow-md">
               Subscribe Now
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

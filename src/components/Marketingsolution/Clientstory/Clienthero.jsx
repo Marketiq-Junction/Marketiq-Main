@@ -18,6 +18,13 @@ const Clienthero = () => {
     },
   ];
 
+  const handleWhatsAppClick = (message) => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-white py-12">
       <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 gap-12">
@@ -41,12 +48,12 @@ const Clienthero = () => {
           <h2 className="text-4xl font-bold text-black mb-6 leading-snug">
             We make the Client the hero <br /> of our story.
           </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          {/* <p className="text-gray-600 mb-8 leading-relaxed">
             Facilisis. Consequat. Litora. Pede eleifend lacus. Massa risus turpis
             ultrices urna vulputate non non nisl amet commodo. Sollicitudin. Leo mi
             curabitur euismod orci. Ridiculus sem. Torquent. Ornare euismod, per
             nullam, ligula morbi natoque nibh faucibus vitae sapien.
-          </p>
+          </p> */}
 
           {data.map((section, index) => (
             <div key={index} className="mb-6">
@@ -76,17 +83,15 @@ const Clienthero = () => {
           ))}
 
           {/* Buttons */}
-          <div className="flex gap-4">
+          <div className="flex justify-center lg:justify-start mt-6">
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "#3863F5" }}
               transition={{ duration: 0.3 }}
-              className="bg-[#4A9BD3] text-white px-6 py-3 rounded-lg shadow-md transition-all"
-            >
-              Discover More
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "#3863F5" }}
-              transition={{ duration: 0.3 }}
+              onClick={() =>
+                handleWhatsAppClick(
+                  "Hello, I would like to book a meeting to discuss your services."
+                )
+              }
               className="bg-[#4A9BD3] text-white px-6 py-3 rounded-lg shadow-md transition-all"
             >
               Book A Meeting

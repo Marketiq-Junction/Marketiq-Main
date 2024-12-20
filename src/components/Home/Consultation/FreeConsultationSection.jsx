@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { TiTick } from "react-icons/ti";
 
 const FreeConsultationSection = () => {
+  const [companyName, setCompanyName] = useState("");
+  const predefinedWhatsappNumber = "9920892689"; // Your WhatsApp number
+
   const points = [
     "Tailored Digital Solutions: We'll analyze your business needs and create a custom strategy just for you.",
     "Expert Guidance: Gain insights from experienced digital marketing professionals.",
@@ -17,6 +20,18 @@ const FreeConsultationSection = () => {
       x: 0,
       transition: { delay: index * 0.2, duration: 0.6 },
     }),
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault(); // Prevent form submission
+    if (companyName) {
+      const message = `Hello, I am ${companyName}. I would like to get a free audit for my business.`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappURL = `https://wa.me/${predefinedWhatsappNumber}?text=${encodedMessage}`;
+      window.open(whatsappURL, "_blank");
+    } else {
+      alert("Please fill in the company name.");
+    }
   };
 
   return (
@@ -76,17 +91,14 @@ const FreeConsultationSection = () => {
           </div>
           <div className="w-full h-auto mt-5 md:mt-5">
             <form
-              action=""
+              onSubmit={handleFormSubmit}
               className="w-full h-auto flex flex-col gap-5 text-black"
             >
               <input
                 type="text"
                 placeholder="Company Name"
-                className="px-5 md:px-10 text-[4vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.3vw] outline-none w-full h-12 md:h-14 lg:h-12 rounded-2xl border-2 border-black"
-              />
-              <input
-                type="text"
-                placeholder="WhatsApp"
+                value={companyName}
+                onChange={(e) => setCompanyName(e.target.value)}
                 className="px-5 md:px-10 text-[4vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.3vw] outline-none w-full h-12 md:h-14 lg:h-12 rounded-2xl border-2 border-black"
               />
               <input

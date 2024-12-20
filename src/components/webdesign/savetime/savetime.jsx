@@ -15,15 +15,16 @@ const SaveTime = () => {
         </div>
 
         {/* Right Side - Content */}
-        <div className="md:w-1/2 text-center md:text-left">
+        <div className="md:w-1/2 text-left">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             Save Time & Effort With
           </h1>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#4A9BD3]">Marketiq</span> <span className="text-[#50C3C6]">Junction</span>
+            <span className="text-[#4A9BD3]">Marketiq</span>{" "}
+            <span className="text-[#50C3C6]">Junction</span>
           </h1>
           <motion.ul
-            className="text-lg mb-6 leading-relaxed space-y-4 pl-6"
+            className="text-lg mb-6 leading-relaxed space-y-4 sm:pl-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ staggerChildren: 0.2, duration: 0.5 }}
@@ -65,7 +66,7 @@ const SaveTime = () => {
             </motion.li>
           </motion.ul>
           <motion.div
-            className="flex justify-center md:justify-start gap-4"
+            className="flex flex-col sm:flex-row justify-start gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
@@ -77,13 +78,13 @@ const SaveTime = () => {
             >
               Contact Us
             </motion.button>
-            <motion.button
+            {/* <motion.button
               className="border border-[#4A9BD3] text-[#4A9BD3] font-semibold px-6 py-2 rounded-md hover:bg-[#4A9BD3] hover:text-white transition duration-200"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
               Subscribe Now
-            </motion.button>
+            </motion.button> */}
           </motion.div>
         </div>
       </div>

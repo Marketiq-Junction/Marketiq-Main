@@ -19,9 +19,9 @@ const ChooseUs = () => {
         • Transform your site into a hub for organic traffic and lead generation.<br/>
         • Experience steady visitor growth and convert traffic into meaningful business results.
         </p>
-        <button className="bg-[#4534B8] text-white py-3 px-6 font-semibold hover:bg-purple-700 transition">
+        {/* <button className="bg-[#4534B8] text-white py-3 px-6 font-semibold hover:bg-purple-700 transition">
           Discover More
-        </button>
+        </button> */}
       </div>
 
       {/* Image Section */}

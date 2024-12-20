@@ -52,6 +52,14 @@ const WebsiteAudit = () => {
     },
   ];
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to request a quote for a website audit.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-white py-16 px-6 md:py-20 md:px-12 lg:px-20 lg:mb-28">
       <div className="max-w-7xl mx-auto">
@@ -87,8 +95,11 @@ const WebsiteAudit = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button className="bg-white text-black py-3 px-6 border-2 border-[#4A9BD3] shadow-lg hover:bg-[#50C3C6] transition duration-300">
-            Request A Quote
+          <button
+            onClick={handleWhatsAppClick}
+            className="bg-white text-black py-3 px-6 border-2 border-[#4A9BD3] shadow-lg hover:bg-[#50C3C6] transition duration-300"
+          >
+            Request A Audit
           </button>
         </div>
       </div>

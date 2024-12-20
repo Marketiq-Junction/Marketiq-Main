@@ -21,12 +21,21 @@ const Drive = () => {
     }),
   };
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message =
+      "Hello, I would like to learn more about your social media marketing services.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
-    <section id="social-media" className="bg-white p-12 h-auto text-left">
+    <section id="social-media" className="bg-white p-12 h-auto shadow-lg">
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
         {/* Left Content */}
         <div className="flex-1">
-          <h1 className="text-4xl font-bold text-black mb-6 leading-tight">
+          <h1 className="text-4xl font-bold text-black mb-6 leading-tight text-center lg:text-left">
             Drive More Revenue With <br /> Social Media Marketing Services
           </h1>
 
@@ -35,25 +44,28 @@ const Drive = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="space-y-4 mb-8"
+            className="space-y-6 mb-8"
           >
             {bulletPoints.map((point, index) => (
               <motion.li
                 key={index}
                 variants={pointVariants}
                 custom={index}
-                className="flex items-start gap-3"
+                className="flex items-start gap-4"
               >
-                {/* Bullet Icon */}
-                <div className="w-6 h-6 flex items-center justify-center bg-[#4A9BD3] text-white rounded-full">
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
+                {/* Arrow Icon */}
+                <div className="w-8 h-8 flex items-center justify-center bg-[#4A9BD3] text-white rounded-full shadow-md">
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.2 }}
-                    className="font-bold text-lg"
                   >
-                    •
-                  </motion.span>
+                    <path d="M10 4l2-2 8 8-8 8-2-2 6-6-6-6z" />
+                  </motion.svg>
                 </div>
                 {/* Text */}
                 <span className="text-lg text-gray-600 font-medium leading-7">
@@ -64,9 +76,12 @@ const Drive = () => {
           </motion.ul>
 
           {/* Button */}
-          <div className="text-start">
-            <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105">
-              Get in touch
+          <div className="flex justify-center lg:justify-start">
+            <button
+              onClick={handleWhatsAppClick}
+              className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105"
+            >
+              Speak With Us
             </button>
           </div>
         </div>

@@ -48,6 +48,14 @@ const Benefits = () => {
     },
   ];
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to request a quote for social media marketing benefits.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="py-10 bg-white">
       {/* Title Section */}
@@ -94,6 +102,7 @@ const Benefits = () => {
       {/* Call-to-Action */}
       <div className="text-center mt-10">
         <motion.button
+          onClick={handleWhatsAppClick}
           whileHover={{
             scale: 1.1,
             backgroundColor: "#4A9BD3",
@@ -103,7 +112,7 @@ const Benefits = () => {
           transition={{ duration: 0.3 }}
           className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 rounded-lg shadow-md hover:text-white transition-all"
         >
-          Request A Quote
+          Request A Audit
         </motion.button>
       </div>
     </div>

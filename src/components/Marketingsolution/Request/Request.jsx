@@ -3,6 +3,14 @@
 import React from "react";
 
 const Request = () => {
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to request a free quote.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-gray-100 py-12 flex items-center justify-center lg:mb-28">
       <div className="bg-[#4A9BD3] max-w-5xl w-full py-12 px-6 rounded-3xl shadow-lg text-center">
@@ -64,8 +72,11 @@ const Request = () => {
         </p>
 
         {/* Submit Button */}
-        <button className="bg-[#A2DFE1] text-black px-8 py-3">
-          Request A Free Quote
+        <button
+          onClick={handleWhatsAppClick}
+          className="bg-[#A2DFE1] text-black px-8 py-3"
+        >
+          Request A Free Audit
         </button>
       </div>
     </section>

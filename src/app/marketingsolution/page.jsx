@@ -9,12 +9,12 @@ import Footer from "@/components/Footer/Footer";
 import Benefits from "@/components/Marketingsolution/Benefits/Benifits";
 import Savetime from "@/components/Marketingsolution/Savetime/Savetime";
 import Services from "@/components/Marketingsolution/Services/Services";
-import Steps from "@/components/Marketingsolution/Steps/Steps";
+// import Steps from "@/components/Marketingsolution/Steps/Steps";
 import Databaner from "@/components/Marketingsolution/Databaner/Databaner";
 import Clienthero from "@/components/Marketingsolution/Clientstory/Clienthero";
 import Request from "@/components/Marketingsolution/Request/Request";
 // import Ourservices from "@/components/Marketingsolution/Ourservices/Ourservices";
-import WhyUs from "@/components/webdesign/whyus/whyus";
+// import WhyUs from "@/components/webdesign/whyus/whyus";
 
 const Page = () => {
   return (
@@ -27,7 +27,7 @@ const Page = () => {
      <Benefits />
      <Savetime />
     <Services />
-    <Steps />
+    {/* <Steps /> */}
     <Databaner />
     <Clienthero />
     <Request />

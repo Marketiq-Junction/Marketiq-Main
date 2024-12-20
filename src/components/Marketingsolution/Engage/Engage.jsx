@@ -21,6 +21,14 @@ const Engage = () => {
     }),
   };
 
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = "9920892689"; // Replace with your WhatsApp number
+    const message = "Hello, I would like to get in touch to learn more about your services.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <section className="bg-white p-12">
       <div className="flex flex-col lg:flex-row items-start gap-12">
@@ -39,7 +47,7 @@ const Engage = () => {
 
         {/* Right Content (Text and Buttons) */}
         <div className="flex-1">
-          <h2 className="text-4xl font-bold text-black leading-snug mb-6">
+          <h2 className="text-4xl font-bold text-black leading-snug mb-6 text-center lg:text-left">
             Let’s Engage and Inspire <br /> Together
           </h2>
 
@@ -65,7 +73,7 @@ const Engage = () => {
                     transition={{ duration: 0.4, delay: index * 0.2 }}
                     className="font-bold text-lg"
                   >
-                    •
+                    →
                   </motion.span>
                 </div>
                 {/* Text */}
@@ -76,13 +84,13 @@ const Engage = () => {
             ))}
           </motion.ul>
 
-          {/* Buttons */}
-          <div className="flex gap-4">
-            <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105">
-              View Pricing
-            </button>
-            <button className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105">
-              Get In Touch
+          {/* Button */}
+          <div className="flex justify-center lg:justify-start">
+            <button
+              onClick={handleWhatsAppClick}
+              className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105"
+            >
+              Get in Contact
             </button>
           </div>
         </div>
