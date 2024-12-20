@@ -20,7 +20,7 @@ const FreeConsultationSection = () => {
   };
 
   return (
-    <section className="w-full h-auto bg-[#4A9BD3] text-white flex flex-col lg:flex-row items-center justify-center mt-5 lg:mt-0 lg:mb-28">
+    <section className="w-full h-auto bg-[#4A9BD3] text-white flex flex-col lg:flex-row items-center justify-center mt-5 lg:mt-0 lg:mb-28 md:mb-20">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 h-auto flex flex-col items-center justify-center p-5 lg:p-0 mb-8">
         <div className="w-full h-auto flex flex-col gap-5 justify-end lg:gap-10 lg:px-24">

@@ -1,10 +1,12 @@
 import React from "react";
 
 const WhyChooseUs = () => {
-  const whatsappNumber = "9920892689";
+  const whatsappNumber = "9920892689"; // Specified WhatsApp number
+  const predefinedMessage = "Hello, I would like to know more about your services.";
 
   const handleWhatsAppClick = () => {
-    const whatsappURL = `https://wa.me/${whatsappNumber}`;
+    const encodedMessage = encodeURIComponent(predefinedMessage);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
   };
 
