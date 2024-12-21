@@ -78,7 +78,7 @@ const Ourprocess = () => {
               {/* Step Details */}
               <div className="text-center">
                 <p
-                  className="text-sm text-[#000000]"
+                  className="text-sm text-white"
                   dangerouslySetInnerHTML={{ __html: step.description }}
                 ></p>
               </div>
