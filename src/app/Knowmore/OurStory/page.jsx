@@ -1,5 +1,5 @@
-import Footer from "@/components/footer/footer";
-import Navbar from "@/components/navbar/navbar";
+import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 import React from "react";
 
 const OurStory = () => {
