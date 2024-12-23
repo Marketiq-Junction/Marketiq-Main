@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
-import { FaInstagram, FaFacebook, FaLinkedin, FaWhatsapp, FaPhone } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaWhatsapp, FaPhone } from "react-icons/fa";
 import Ayansir from "@/components/Footer/ayansir"; // Import the Ayansir component
 
 const Footer = () => {
@@ -74,6 +73,41 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Explore Section (Updated) */}
+        <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
+          <h1 className="text-xl font-bold">Policies</h1>
+          <div className="flex flex-col gap-2 mt-3">
+            {[
+              { name: "About Us", link: "/Knowmore/OurStory" },
+              {
+                name: "Terms and Conditions",
+                link: "/Knowmore/TermsAndConditions",
+              },
+              { name: "Contact Us", link: "/Knowmore/Contact" },
+              { name: "Privacy Policy", link: "/Knowmore/PrivacyPolicy" },
+              { name: "Product Pricing", link: "/Knowmore/ProductPricing" },
+              { name: "Refund Policy", link: "/Knowmore/RefundPolicy" },
+              {
+                name: "Cancellation Policy",
+                link: "/Knowmore/CancellationPolicy",
+              },
+              {
+                name: "Shipping and Delivery Policy",
+                link: "/Knowmore/ShippingAndDelivery",
+              },
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <IoIosArrowForward />
+                <Link href={item.link}>
+                  <span className="text-sm md:text-base hover:underline cursor-pointer">
+                    {item.name}
+                  </span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Official Info */}
         <div className="w-full md:w-1/4 h-auto flex flex-col p-5">
           <h1 className="text-xl font-bold">Official Info</h1>
@@ -118,23 +152,23 @@ const Footer = () => {
             <h1 className="text-sm md:text-base font-bold">Let's Socialize</h1>
             <div className="flex items-center gap-5 mt-2">
               {/* Instagram Link */}
-              <Link href="https://www.instagram.com/marketiq_junction/" target="_blank">
+              <Link
+                href="https://www.instagram.com/marketiq_junction/"
+                target="_blank"
+              >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
                   <FaInstagram className="text-lg sm:text-xl text-black" />
                 </div>
               </Link>
               {/* Facebook Link */}
-              <Link href="https://www.facebook.com/people/Marketiq-Junction/61567512213882/" target="_blank">
+              <Link
+                href="https://www.facebook.com/people/Marketiq-Junction/61567512213882/"
+                target="_blank"
+              >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
                   <FaFacebook className="text-lg sm:text-xl text-black" />
                 </div>
               </Link>
-              {/* LinkedIn Link */}
-              {/* <Link href="https://linkedin.com/in/your_linkedin_handle" target="_blank">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white flex items-center justify-center rounded-full">
-                  <FaLinkedin className="text-lg sm:text-xl text-black" />
-                </div>
-              </Link> */}
             </div>
           </div>
         </div>
