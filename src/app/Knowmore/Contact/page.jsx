@@ -9,7 +9,7 @@ const Contact = () => {
       <Navbar />
 
       {/* Main Content */}
-      <div className="flex-grow bg-gray-100 flex flex-col items-center justify-center">
+      <div className="flex-grow flex flex-col items-center justify-center mb-24 mt-8">
         <div className="max-w-4xl bg-white shadow-md rounded-lg p-8">
           <h1 className="text-3xl font-bold text-blue-500 mb-6">Contact Us</h1>
           <p className="text-gray-700 text-lg leading-relaxed">
@@ -50,7 +50,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Footer */}
+      <Footer/>
     </div>
   );
 };

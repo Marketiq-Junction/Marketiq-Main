@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "@/components/Navbar/Navbar"; // Import the Navbar component
-import Footer from "@/components/Footer/Footer"; // Import the Footer component
+import Footer from "@/components/Footer/Footer";
 
 const CancellationPolicy = () => {
   return (
@@ -9,7 +9,7 @@ const CancellationPolicy = () => {
       <Navbar />
 
       {/* Main Content */}
-      <div className="flex-grow bg-gray-100 flex flex-col items-center justify-center">
+      <div className="flex-grow flex flex-col items-center justify-center mb-24 mt-8">
         <div className="max-w-4xl bg-white shadow-md rounded-lg p-8">
           <h1 className="text-3xl font-bold text-blue-500 mb-6">
             Cancellation Policy
@@ -73,8 +73,8 @@ const CancellationPolicy = () => {
           </div>
         </div>
       </div>
-
-      {/* Footer */}
+      <Footer/>
+      
     </div>
   );
 };

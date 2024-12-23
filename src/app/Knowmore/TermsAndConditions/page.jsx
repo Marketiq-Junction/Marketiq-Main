@@ -1,16 +1,20 @@
+import Footer from "@/components/Footer/Footer";
+import Navbar from "@/components/Navbar/Navbar";
 import React from "react";
 
 const TermsAndConditions = () => {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center">
-      <div className="max-w-4xl bg-white shadow-md rounded-lg p-8">
+    <div>
+      <Navbar/>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center mb-24">
+      <div className="max-w-4xl bg-white shadow-md rounded-lg p-8 mt-4">
         <h1 className="text-3xl font-bold text-blue-500 mb-6">
           Terms and Conditions
         </h1>
 
         <p className="text-gray-700 text-lg leading-relaxed mb-6">
           Welcome to <strong>MarketIQ Junction</strong>. By accessing or using
-          our website (www.education.marketiqjunction.com), you agree to abide
+          our website (www.marketiqjunction.com), you agree to abide
           by the following terms and conditions:
         </p>
 
@@ -86,6 +90,8 @@ const TermsAndConditions = () => {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };
