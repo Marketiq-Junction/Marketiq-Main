@@ -13,20 +13,24 @@ const Footer = () => {
       </div>
 
       {/* WhatsApp and Call Sticky Icons */}
-      <div className="fixed bottom-4 right-4 z-50 flex flex-col items-center gap-4 mb-8 mr-4">
-        {/* WhatsApp Icon */}
-        <Link href="https://wa.me/+919920892689" target="_blank">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
-            <FaWhatsapp className="text-3xl sm:text-4xl text-white" />
-          </div>
-        </Link>
-        {/* Call Icon */}
-        <Link href="tel:+919920892689">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
-            <FaPhone className="text-3xl sm:text-4xl text-white transform rotate-90" />
-          </div>
-        </Link>
-      </div>
+    {/* WhatsApp Icon (Right Side) */}
+<div className="fixed bottom-4 right-4 z-50 flex items-center justify-center mb-8 mr-4">
+  <Link href="https://wa.me/+919920892689" target="_blank">
+    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-green-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+      <FaWhatsapp className="text-3xl sm:text-4xl text-white" />
+    </div>
+  </Link>
+</div>
+
+{/* Call Icon (Left Side) */}
+<div className="fixed bottom-4 left-4 z-50 flex items-center justify-center mb-8 ml-4">
+  <Link href="tel:+919920892689">
+    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 transition-transform">
+      <FaPhone className="text-3xl sm:text-4xl text-white transform rotate-90" />
+    </div>
+  </Link>
+</div>
+
 
       {/* Main Footer Section */}
       <section className="w-full h-auto bg-[#3F85B5] text-white relative flex flex-col md:flex-row">
