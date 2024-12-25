@@ -18,77 +18,63 @@ const Hero = () => {
 
   return (
     <motion.section
-      className="herosection bg-[#4A9BD3] w-full h-auto flex flex-col lg:flex-row"
+      className="herosection w-full h-[80%] flex items-center justify-center relative overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      {/* Left Section: Text and Form */}
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/5.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay to Darken the Video */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+      
+      {/* Content Section */}
       <motion.div
-        className="lg:w-[60%] w-full flex items-center justify-center flex-col p-5 lg:p-0"
-        initial={{ x: -50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        className="z-20 flex flex-col items-center text-center px-5 lg:px-0"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="w-full px-5 lg:px-20 text-white text-center lg:text-left mt-10 lg:mt-0">
-          <motion.h1
-            className="text-[8vw] lg:text-[4vw] font-semibold"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            Digital <br className="hidden lg:block" /> marketing that <br /> drives revenue
-          </motion.h1>
-        </div>
-        <motion.form
-          className="w-full flex items-center justify-center lg:justify-start px-5 lg:px-20 mt-5 lg:mt-10"
+        {/* Heading */}
+        <motion.h1
+          className="text-white font-semibold text-4xl lg:text-7xl mb-5"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+         <span className="text-[#4A9BD3]">Digital Marketing </span><br /> That Drives <br /><span className="text-[#50C3C6]">Revenue</span>
+        </motion.h1>
+
+        {/* Form */}
+        {/* <motion.form
+          className="w-full max-w-lg bg-white shadow-lg p-3 flex flex-col gap-4"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ duration: 0.8 }}
           onSubmit={handleSendMessage}
         >
-          <div className="w-full lg:w-[60%] rounded-3xl bg-white shadow-lg p-4">
-            <div className="w-full flex flex-col lg:flex-row items-center gap-5">
-              <motion.input
-                type="text"
-                placeholder="Enter your message"
-                className="w-full lg:w-[70%] text-[4vw] lg:text-[1.2vw] px-4 py-3 rounded-3xl border-2 border-gray-300 focus:ring-2 focus:ring-blue-300 outline-none"
-                whileFocus={{ scale: 1.05 }}
-                value={whatsappMessage}
-                onChange={(e) => setWhatsappMessage(e.target.value)}
-              />
-              <motion.input
-                type="submit"
-                value="Send"
-                className="w-full lg:w-[30%] text-[4vw] lg:text-[1.2vw] py-3 rounded-xl bg-[#50C3C6] text-white cursor-pointer transition-all duration-300 hover:bg-[#4A9BD3]"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              />
-            </div>
-          </div>
-        </motion.form>
-      </motion.div>
-
-      {/* Right Section: Image */}
-      <motion.div
-        className="lg:w-[40%] w-full flex items-center justify-center mt-16 lg:mt-0 mb-16"
-        initial={{ x: 50, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[60vh] flex-shrink-0"
-          // whileHover={{ scale: 1.05 }}
-        >
-          <motion.img
-            src="/hero17.png"
-            alt="Hero Image"
-            className="w-full h-full object-cover rounded-lg"
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
+          <input
+            type="text"
+            placeholder="Enter your message"
+            className="w-full text-lg px-4 py-3 border-2 border-gray-300 focus:ring-2 focus:ring-blue-300 outline-none"
+            value={whatsappMessage}
+            onChange={(e) => setWhatsappMessage(e.target.value)}
           />
-        </motion.div>
+          <input
+            type="submit"
+            value="Send"
+            className="w-32 py-2 lg:ml-40 text-lg bg-[#50C3C6] text-white cursor-pointer transition-all duration-300 hover:bg-[#4A9BD3]"
+          />
+        </motion.form> */}
       </motion.div>
     </motion.section>
   );

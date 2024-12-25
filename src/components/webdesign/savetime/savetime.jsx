@@ -34,21 +34,21 @@ const SaveTime = () => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4 }}
             >
-              <span className="text-[#4A9BD3]">➤</span> Maximize your time and effort by streamlining your marketing processes.
+              <span className="text-[#4A9BD3]">➤</span> Streamline your marketing to save time and boost results.
             </motion.li>
             <motion.li
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.2 }}
             >
-              <span className="text-[#4A9BD3]">➤</span> Focus on growing your business while we handle the complexities of digital marketing.
+              <span className="text-[#4A9BD3]">➤</span> Grow your business while we simplify digital marketing for you.
             </motion.li>
             <motion.li
               initial={{ x: -20, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
             >
-              <span className="text-[#4A9BD3]">➤</span> Leverage expertise in web design, social media management, and SEO to drive results efficiently.
+              <span className="text-[#4A9BD3]">➤</span> Drive results with expert web design, social media management, and SEO.
             </motion.li>
             <motion.li
               initial={{ x: -20, opacity: 0 }}
@@ -72,7 +72,7 @@ const SaveTime = () => {
             transition={{ delay: 1.2, duration: 0.5 }}
           >
             <motion.button
-              className="bg-[#4A9BD3] text-white font-semibold px-6 py-2 rounded-md shadow-md hover:bg-[#3a82b2] transition-transform duration-200"
+              className="bg-[#4A9BD3] text-white font-semibold px-6 py-2 hover:bg-[#3a82b2] transition-transform duration-200"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >

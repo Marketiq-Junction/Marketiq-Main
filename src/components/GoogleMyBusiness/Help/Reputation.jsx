@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Reputation = () => {
   return (
-    <section className="py-12 bg-gradient-to-r from-white to-blue-100">
+    <section className="py-12 bg-[#4A9BD3]">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4 sm:px-6 lg:px-8">
         {/* Left Content */}
         <motion.div
@@ -13,33 +13,33 @@ const Reputation = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 text-center md:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4 sm:mb-6 text-center md:text-left">
             We Help You Control <br /> Your Online Reputation
           </h1>
           <motion.ul
-            className="space-y-3 sm:space-y-4 text-gray-600 text-sm sm:text-base md:text-lg"
+            className="space-y-3 sm:space-y-4 text-white text-xl sm:text-base md:text-xl"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-black font-extrabold text-lg">➤</span>
               Actively manage your digital presence across various platforms.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-black font-extrabold text-lg">➤</span>
               Monitor customer feedback to address concerns promptly.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-black font-extrabold text-lg">➤</span>
               Engage with your audience to build trust and loyalty.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-black font-extrabold text-lg">➤</span>
               Implement strategies to enhance your brand image effectively.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-black font-extrabold text-lg">➤</span>
               Build credibility in the digital landscape.
             </li>
           </motion.ul>

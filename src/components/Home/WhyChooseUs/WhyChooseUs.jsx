@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
       <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center p-6 lg:p-8">
         {/* Heading */}
         <div className="text-center lg:text-left">
-          <p className="text-3xl md:text-4xl lg:text-3xl text-[#4A9BD3] font-bold">
+          <p className="text-4xl md:text-5xl lg:text-5xl text-[#4A9BD3] font-bold">
             Why Choose Us
           </p>
           <h3 className="mt-4 text-2xl md:text-3xl lg:text-2xl leading-tight font-bold">

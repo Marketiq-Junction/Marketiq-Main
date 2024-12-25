@@ -48,10 +48,10 @@ const Support = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-5xl font-bold text-gray-800 mb-4">
             Our Other Services That Support Your Website Marketing
           </h2>
-          <p className="text-lg text-gray-600">
+          <p className="text-xl text-gray-600">
             Explore our wide range of services designed to strengthen your online presence and deliver impactful results.
           </p>
         </motion.div>
@@ -84,13 +84,13 @@ const Support = () => {
             {services.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white shadow-lg p-6 border-2 border-blue-500 rounded-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="bg-white shadow-lg p-6 border-2 border-[#4A9BD3] transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2, duration: 0.5 }}
               >
-                <h3 className="text-xl font-bold text-blue-600 mb-3">
+                <h3 className="text-xl font-bold text-[#4A9BD3] mb-3">
                   {service.title}
                 </h3>
                 <ul className="text-gray-600 space-y-2">

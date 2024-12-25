@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ChooseUs = () => {
+const   ChooseUs = () => {
   const pointsLeft = [
     "Transform your website into a powerful revenue driver.",
     "Tailored, data-driven strategies for better visibility.",
@@ -47,13 +47,13 @@ const ChooseUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-lg font-bold text-gray-700 uppercase mb-4">
+          <h3 className="text-3xl font-bold text-gray-700 uppercase mb-4">
              Why Choose Us
           </h3>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">
-            Turn your site into a revenue driver with Digital Insides
+          <h1 className="text-3xl font-bold text-gray-800 mb-4">
+            Transform your website into a revenue powerhouse with Digital Insides.
           </h1>
-          <ul className="text-lg text-gray-700 space-y-4">
+          <ul className="text-xl text-gray-700 space-y-4">
             {pointsLeft.map((point, index) => (
               <motion.li
                 key={index}
@@ -103,7 +103,7 @@ const ChooseUs = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
             >
-              <h3 className="text-xl font-bold text-blue-600 mb-3">
+              <h3 className="text-xl font-bold text-[#4A9BD3] mb-3">
                 {card.title}
               </h3>
               <ul className="text-gray-700 space-y-2">

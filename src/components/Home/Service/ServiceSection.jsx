@@ -72,7 +72,7 @@ const ServiceSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-lg font-bold text-gray-500 mb-2">WHAT WE DO</h2>
+          <h2 className="text-3xl font-bold text-gray-500 mb-2">WHAT WE DO</h2>
           <h3 className="text-4xl font-bold">
             Driving a better way of doing marketing
           </h3>

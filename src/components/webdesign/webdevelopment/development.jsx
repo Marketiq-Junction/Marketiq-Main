@@ -68,7 +68,7 @@ const Development = () => {
             <div key={index} className="relative">
               <button
                 className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-4 rounded-lg shadow-md w-36 sm:w-48 transition-all duration-200 ${
-                  activeStep.title === step.title ? "bg-blue-300 text-black" : ""
+                  activeStep.title === step.title ? "bg-blue-400 text-black" : ""
                 }`}
                 onClick={() => handleStepClick(step)}
               >
@@ -77,7 +77,7 @@ const Development = () => {
               </button>
               {activeStep.title === step.title && (
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-[10%] h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-[#4A9BD3] hidden md:block"
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-[10%] h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-400 hidden md:block"
                 ></div>
               )}
             </div>

@@ -48,7 +48,7 @@ const Responsive = () => {
             Responsive Web Design
           </motion.h1>
           <motion.h2
-            className="text-xl text-blue-500 mt-2"
+            className="text-xl text-[#4A9BD3] mt-2"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -69,7 +69,7 @@ const Responsive = () => {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
               >
-                <span className="text-blue-500 font-extrabold text-lg">➤</span>
+                <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
                 {point}
               </motion.li>
             ))}
@@ -82,11 +82,11 @@ const Responsive = () => {
           >
             <motion.button
               onClick={handleWhatsAppClick}
-              className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-transform duration-300 relative overflow-hidden"
+              className="bg-[#4A9BD3] text-white px-6 py-3 font-semibold hover:bg-[#50C3C6] transition-transform duration-300 relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Request A Free Audit
+              Request a Free Audit
             </motion.button>
           </motion.div>
         </motion.div>

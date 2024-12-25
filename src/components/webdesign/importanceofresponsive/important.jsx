@@ -54,7 +54,7 @@ const Important = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.2 }}
               >
-                <span className="text-blue-600">&#10148;</span>
+                <span className="text-[#4A9BD3]">&#10148;</span>
                 {point}
               </motion.li>
             ))}
@@ -66,11 +66,11 @@ const Important = () => {
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <motion.button
-              className="px-6 py-2 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-100 transition-transform"
+              className="px-6 py-2 text-[#4A9BD3] font-semibold border border-[#4A9BD3] hover:bg-blue-100 transition-transform"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Request A Audit
+              Request a Audit
             </motion.button>
           </motion.div>
         </div>

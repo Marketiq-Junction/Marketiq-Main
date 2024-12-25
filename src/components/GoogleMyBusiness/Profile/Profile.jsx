@@ -46,19 +46,19 @@ const Profile = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
               Create or optimize your Google My Business profile.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
               Update essential information like name, address, and phone number.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
               Ensure accurate business description and hours of operation.
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
-              <span className="text-blue-500 font-extrabold text-lg">➤</span>
+              <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
               Select relevant categories and attributes to boost visibility.
             </li>
           </motion.ul>
@@ -70,7 +70,7 @@ const Profile = () => {
           >
             <motion.button
               onClick={handleWhatsAppClick}
-              className="px-4 sm:px-6 py-2 sm:py-3 bg-[#4A9BD3] text-white rounded-md shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+              className="px-4 sm:px-6 py-2 sm:py-3 bg-[#4A9BD3] text-white shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

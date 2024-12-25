@@ -38,19 +38,19 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <li className="flex items-start gap-3">
-              <span className="text-teal-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Maximize your visibility and connect with local customers.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-teal-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Optimize your GMB profile to attract more clients.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-teal-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Drive traffic to your business with strategic updates.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-teal-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Stay ahead of the competition with enhanced local presence.
             </li>
           </motion.ul>
@@ -64,13 +64,13 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Enter Your Website"
-              className="w-full py-3 px-4 sm:py-4 sm:px-5 pr-32 md:pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
+              className="w-full py-3 px-4 sm:py-4 sm:px-5 pr-32 md:pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
             />
             <button
               onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-3 sm:px-4 py-2 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 text-sm sm:text-base"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-3 sm:px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 text-sm sm:text-base"
             >
-              Request A Audit
+              Request a Audit
             </button>
           </motion.div>
         </motion.div>

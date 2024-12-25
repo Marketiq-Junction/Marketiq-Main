@@ -17,7 +17,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="bg-blue-400 w-full h-[90%] flex items-center justify-center">
+    <section className="bg-[#4A9BD3] w-full h-[90%] flex items-center justify-center">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between px-6 lg:px-12">
         {/* Left Content */}
         <div className="text-center lg:text-left">
@@ -34,13 +34,13 @@ const HeroSection = () => {
               placeholder="Enter Your Website"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full py-4 px-5 pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="w-full py-4 px-5 pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <button
               onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
             >
-              Request A Audit
+              Request a Audit
             </button>
           </div>
         </div>
