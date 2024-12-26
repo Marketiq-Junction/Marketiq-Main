@@ -12,18 +12,28 @@ const Visibility = () => {
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between space-y-8 lg:space-y-0">
         {/* Left Section: Text Content */}
         <div className="lg:w-3/5 space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold">Meet pure visibility</h2>
+          <h2 className="text-4xl text-black md:text-4xl font-bold ml-8">Meet pure visibility</h2>
           <p className="text-base md:text-lg leading-relaxed">
-            • Enhance transparency and accessibility for your brand in the digital world.<br />
-            • Ensure meaningful audience engagement with your content.<br />
-            • Use advanced SEO, data-driven insights, and tailored marketing strategies.<br />
-            • Help your brand stand out on search engines and social platforms.<br />
-            • Focus on measurable growth and user-centered design.<br />
-            • Build a strong and sustainable online presence with Pure Visibility.<br />
-            • Provide affordable, effective digital marketing solutions to enhance online presence.<br />
-            • Drive measurable growth through tailored strategies like SEO, web design, and social media management.<br />
-            • Craft digital solutions to build genuine connections and drive sustainable growth.<br />
-            • Ensure accessibility, effectiveness, and transparency for clients across all industries.<br />
+          <span className="text-black font-extrabold text-lg">➤ </span>
+             Enhance transparency and accessibility for your brand in the digital world.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Ensure meaningful audience engagement with your content.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Use advanced SEO, data-driven insights, and tailored marketing strategies.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Help your brand stand out on search engines and social platforms.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Focus on measurable growth and user-centered design.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Build a strong and sustainable online presence with Pure Visibility.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Provide affordable, effective digital marketing solutions to enhance online presence.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Drive measurable growth through tailored strategies like SEO, web design, and social media management.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Craft digital solutions to build genuine connections and drive sustainable growth.<br />
+             <span className="text-black font-extrabold text-lg">➤ </span>
+             Ensure accessibility, effectiveness, and transparency for clients across all industries.<br />
           </p>
         </div>
 
@@ -75,7 +85,7 @@ const Visibility = () => {
               <iframe
                 src="https://www.youtube.com/embed/uOIkmeYcnac"
                 title="Video"
-                className="w-full h-64 md:h-96"
+                className="w-full h-full md:h-96"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>

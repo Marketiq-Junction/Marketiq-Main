@@ -59,8 +59,8 @@ const SEOProcess = () => {
           {steps.map((step) => (
             <div key={step.id} className="relative">
               <button
-                className={`bg-[#A2DFE1] text-black font-semibold text-center py-6 px-4 rounded-lg shadow-md w-48 transition-all duration-200 ${
-                  activeStep.id === step.id ? "bg-blue-300 text-black" : ""
+                className={`bg-[#50C3C6] text-black font-semibold text-center py-6 px-4 rounded-lg shadow-md w-48 transition-all duration-200 ${
+                  activeStep.id === step.id ? "bg-blue-400 text-black" : ""
                 }`}
                 onClick={() => handleStepClick(step)}
               >
@@ -69,7 +69,7 @@ const SEOProcess = () => {
               </button>
               {activeStep.id === step.id && (
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-300 hidden md:block"
+                  className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-400 hidden md:block"
                 ></div>
               )}
             </div>

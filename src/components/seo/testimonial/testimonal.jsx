@@ -6,7 +6,7 @@ const Testimonial = () => {
     {
       id: 1,
       text: "This company has been fantastic! Their efficient and effective approach helped boost my website's traffic in record time.",
-      name: "Sophia Lee",
+      name: "Muskan Shaikh",
       time: "2 months ago",
       rating: "★★★★★",
       image: "/people/2.jpg",
@@ -14,7 +14,7 @@ const Testimonial = () => {
     {
       id: 2,
       text: "The team did a great job improving our SEO rankings. Their expertise and transparency were much appreciated!",
-      name: "Michael Brown",
+      name: "Shams Ali",
       time: "4 months ago",
       rating: "★★★★★",
       image: "/people/1.jpg",
@@ -22,7 +22,7 @@ const Testimonial = () => {
     {
       id: 3,
       text: "I’m impressed with their quick and accurate solutions. They helped us establish a strong online presence.",
-      name: "Kiran Matloob",
+      name: "Juned Khan",
       time: "5 months ago",
       rating: "★★★★★",
       image: "/people/3.jpg",
@@ -30,7 +30,7 @@ const Testimonial = () => {
     {
       id: 4,
       text: "Professional and dedicated team! Their strategies helped us grow traffic and engage with new audiences.",
-      name: "Jessica Doe",
+      name: "Sanad",
       time: "1 month ago",
       rating: "★★★★★",
       image: "/people/2.jpg",
@@ -38,7 +38,7 @@ const Testimonial = () => {
     {
       id: 5,
       text: "An exceptional team! They improved our website’s loading speed and rankings beyond expectations.",
-      name: "David Smith",
+      name: "Harsh Kohli",
       time: "3 weeks ago",
       rating: "★★★★★",
       image: "/people/4.jpg",
@@ -46,7 +46,7 @@ const Testimonial = () => {
     {
       id: 6,
       text: "The collaboration with this team has been great. Their ideas are innovative, and results are consistent!",
-      name: "Emily Johnson",
+      name: "Danish",
       time: "6 months ago",
       rating: "★★★★★",
       image: "/people/1.jpg",
@@ -61,7 +61,7 @@ const Testimonial = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
       );
-    }, 5000); // Change every 5 seconds
+    }, 2000); // Change every 5 seconds
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
@@ -76,7 +76,7 @@ const Testimonial = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title Section */}
         <div className="text-center mb-12">
-          <h3 className="text-sm uppercase font-semibold tracking-wider text-gray-200">
+          <h3 className="text-xl uppercase font-semibold tracking-wider text-black">
             Testimonials
           </h3>
           <h2 className="text-4xl font-extrabold mb-4">What Our Clients Say</h2>
@@ -91,7 +91,7 @@ const Testimonial = () => {
           {visibleTestimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white text-black p-6 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
+              className="bg-white text-black p-6 rounded-tl-3xl rounded-br-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300"
             >
               <div className="flex items-center space-x-4 mb-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden">

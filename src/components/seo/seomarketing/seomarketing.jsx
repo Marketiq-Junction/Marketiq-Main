@@ -27,12 +27,12 @@ const SEOMarketing = () => {
         <p className="text-base md:text-lg leading-relaxed">
           You’re likely here because of one or more of the following reasons:
         </p>
-        <ul className="list-disc pl-6 text-base md:text-lg leading-relaxed space-y-2">
-          <li>Your website isn’t being found online.</li>
-          <li>
+        <ul className=" pl-6 text-base md:text-lg leading-relaxed space-y-2">
+          <li><span className="text-black font-extrabold text-lg">➤ </span>Your website isn’t being found online.</li>
+          <li><span className="text-black font-extrabold text-lg">➤ </span>
             Your website traffic has diminished recently and you don’t know why.
           </li>
-          <li>
+          <li><span className="text-black font-extrabold text-lg">➤ </span>
             You’re starting a new website and want to ramp up new business
             quickly.
           </li>

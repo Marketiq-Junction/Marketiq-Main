@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-blue-400 text-white flex flex-col items-center justify-center p-6 md:p-12 lg:p-24 max-w-8xl mx-auto">
+    <section className="relative bg-[#4A9BD3] text-white flex flex-col items-center justify-center p-6 md:p-12 lg:p-24 max-w-8xl mx-auto">
       {/* Visuals Section (Left Image) */}
       <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden lg:block">
         <Image

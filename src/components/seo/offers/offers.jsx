@@ -61,7 +61,7 @@ const Offers = () => {
   return (
     <section className="bg-[#4A9BD3] text-white py-16 px-8">
       <div className="max-w-7xl mx-auto text-left">
-        <h3 className="text-lg uppercase font-semibold mb-4 text-center">
+        <h3 className="text-xl uppercase text-black font-semibold mb-4 text-center">
           What We’re Offering
         </h3>
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
