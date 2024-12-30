@@ -39,23 +39,23 @@ const Hero = () => {
             transition={{ duration: 0.5, staggerChildren: 0.2 }}
           >
             <li className="flex items-start gap-3">
-              <span className="text-green-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Establish and optimize your YouTube channel for maximum visibility.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Develop engaging content that resonates with your audience.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Implement strategies to grow your subscriber base organically.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Analyze performance metrics to refine your content strategy.
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-green-300 font-extrabold text-lg">➤</span>
+              <span className="text-white font-extrabold text-lg">➤</span>
               Drive measurable results through data-driven decisions.
             </li>
           </motion.ul>
@@ -67,13 +67,13 @@ const Hero = () => {
               placeholder="Enter Your Website"
               value={website}
               onChange={(e) => setWebsite(e.target.value)}
-              className="w-full py-3 px-4 pr-36 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full py-3 px-4 pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
             <button
               onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-4 py-2 hover:bg-[#4A9BD3] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
             >
-              Request A Audit
+              Request a Audit
             </button>
           </div>
         </motion.div>

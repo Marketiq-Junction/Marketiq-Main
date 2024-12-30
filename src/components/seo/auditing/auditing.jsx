@@ -76,7 +76,7 @@ const WebsiteAudit = () => {
           {auditItems.map((item, index) => (
             <div
               key={index}
-              className="relative bg-[#4A9BD3] text-white p-6 shadow-lg transform transition-transform duration-300 hover:-translate-y-2 "
+              className="relative bg-[#4A9BD3] text-white p-6 shadow-lg transform transition-transform duration-300 hover:-translate-y-2 mt-8 "
             >
               {/* Icon */}
               <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 bg-[#50C3C6] text-blue-500 rounded-full flex items-center justify-center shadow-lg">
@@ -99,7 +99,7 @@ const WebsiteAudit = () => {
             onClick={handleWhatsAppClick}
             className="bg-white text-black py-3 px-6 border-2 border-[#4A9BD3] shadow-lg hover:bg-[#50C3C6] transition duration-300"
           >
-            Request A Audit
+            Request a Audit
           </button>
         </div>
       </div>

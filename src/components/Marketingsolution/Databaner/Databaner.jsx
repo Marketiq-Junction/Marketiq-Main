@@ -73,7 +73,7 @@ const Databaner = () => {
         ))}
       </div>
       {/* Arrow Image */}
-      <div className="absolute left-0 bottom-0 w-1/6 md:w-1/10 hidden md:block mt-10">
+      {/* <div className="absolute left-0 bottom-0 w-1/6 md:w-1/10 hidden md:block mt-10">
         <Image
           src="/images/socialmedia/data.png"
           alt="Arrow"
@@ -82,7 +82,7 @@ const Databaner = () => {
           height={100}
           className="object-contain"
         />
-      </div>
+      </div> */}
     </section>
   );
 };

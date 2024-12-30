@@ -11,7 +11,7 @@ const Approach = () => {
     {
       title: "OPTIMIZE",
       description: "Maximize your online visibility with tailored strategies that enhance your website and content.",
-      icon: <RocketLaunchIcon className="text-blue-500 text-6xl" />,
+      icon: <RocketLaunchIcon className="text-blue-500 text-6xl" />
     },
     {
       title: "GENERATE",

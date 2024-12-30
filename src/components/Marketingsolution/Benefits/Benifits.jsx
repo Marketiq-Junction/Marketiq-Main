@@ -75,7 +75,7 @@ const Benefits = () => {
         {benefits.map((item, index) => (
           <motion.div
             key={index}
-            className="relative bg-[#4A9BD3] text-white rounded-lg shadow-md p-6 flex flex-col items-center min-h-[260px] cursor-pointer"
+            className="relative bg-[#4A9BD3] text-white rounded-lg shadow-md p-6 flex flex-col items-center min-h-[260px] cursor-pointer mt-8"
             whileHover={{
               scale: 1.05,
               rotate: 2,
@@ -110,9 +110,9 @@ const Benefits = () => {
             borderColor: "#4A9BD3",
           }}
           transition={{ duration: 0.3 }}
-          className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 rounded-lg shadow-md hover:text-white transition-all"
+          className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 shadow-md hover:text-white transition-all"
         >
-          Request A Audit
+          Request a Audit
         </motion.button>
       </div>
     </div>

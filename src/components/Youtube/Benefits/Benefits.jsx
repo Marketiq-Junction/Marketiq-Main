@@ -40,7 +40,7 @@ const Benefits = () => {
   return (
     <section className="py-16 bg-[#FFFFFF]">
       <div className="text-center px-4 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Benefits</h2>
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Benefits</h2>
         <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
           YouTube management offers long-term benefits by building authentic audience
           relationships, increasing visibility without ad costs, and improving channel ranking.
@@ -104,9 +104,9 @@ const Benefits = () => {
       <div className="text-center mt-8">
         <button
           onClick={handleWhatsAppClick}
-          className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 rounded-lg shadow-md hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300"
+          className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300"
         >
-          Request A Free Audit
+          Request a Free Audit
         </button>
       </div>
     </section>

@@ -19,13 +19,13 @@ const Why = () => {
 
   return (
     <motion.div
-      className="max-w-6xl mx-auto p-6"
+      className="max-w-8xl mx-auto p-8 bg-gray-50"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
       <motion.h2
-        className="text-3xl font-bold text-center mb-6"
+        className="text-4xl font-bold text-center mb-12"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -52,34 +52,34 @@ const Why = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={listVariants}
         >
-          <h3 className="text-xl font-semibold mb-4 text-[#000000]">
+          <h3 className="text-3xl font-semibold mb-4 text-[#000000]">
             Organic YouTube SEO Optimization
           </h3>
           <ul className="space-y-4">
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-blue-500">
-                <FaGlobe className="text-xl hover:scale-110 transition-transform" />
+                <FaGlobe className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               We enhance your content’s visibility using targeted keywords, effective video descriptions, and relevant tags.
             </motion.li>
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-green-500">
-                <FaChartLine className="text-xl hover:scale-110 transition-transform" />
+                <FaChartLine className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               Our SEO strategy improves channel rankings, making your content easier for audiences to find.
             </motion.li>
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-purple-500">
-                <FaArrowsAlt className="text-xl hover:scale-110 transition-transform" />
+                <FaArrowsAlt className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               Organic SEO ensures consistent reach and audience engagement without reliance on paid ads.
             </motion.li>
@@ -108,34 +108,34 @@ const Why = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={listVariants}
         >
-          <h3 className="text-xl font-semibold mb-4">
+          <h3 className="text-3xl font-semibold mb-4">
             Content Strategy and Audience Engagement
           </h3>
           <ul className="space-y-4">
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-blue-500">
-                <FaPencilAlt className="text-xl hover:scale-110 transition-transform" />
+                <FaPencilAlt className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               We design organic methods to create content that resonates with your audience, based on trends.
             </motion.li>
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-green-500">
-                <FaComments className="text-xl hover:scale-110 transition-transform" />
+                <FaComments className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               Through comment interaction, prompts, and end screens, we foster genuine viewer engagement.
             </motion.li>
             <motion.li
-              className="flex items-start"
+              className="flex items-start text-xl"
               variants={listItemVariants}
             >
               <span className="mr-4 text-purple-500">
-                <FaChartPie className="text-xl hover:scale-110 transition-transform" />
+                <FaChartPie className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
               We continuously monitor your channel's performance and optimize based on organic metrics.
             </motion.li>

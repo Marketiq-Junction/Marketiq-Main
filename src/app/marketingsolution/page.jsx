@@ -30,7 +30,7 @@ const Page = () => {
     {/* <Steps /> */}
     <Databaner />
     <Clienthero />
-    <Request />
+    {/* <Request /> */}
     {/* <Ourservices /> */}
     {/* <WhyUs /> */}
       <Footer />

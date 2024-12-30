@@ -48,10 +48,10 @@ const Ourprocess = () => {
               {/* Arrow Image Between Steps */}
               {index > 0 && (
                 <div
-                  className="absolute hidden md:flex justify-center"
+                  className="absolute hidden md:flex justify-start"
                   style={{
                     left: `${index * 33.33}%`,
-                    top: "50%",
+                    top: "10%",
                     transform: "translateX(-50%)",
                   }}
                 >
@@ -91,7 +91,7 @@ const Ourprocess = () => {
       <div className="flex flex-col sm:flex-row justify-center mt-12 space-y-4 sm:space-y-0 sm:space-x-4">
         <button
           onClick={() => handleWhatsAppClick("Hello, I would like to contact you for more information.")}
-          className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
+          className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
         >
           Speak With Us
         </button>

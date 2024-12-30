@@ -26,8 +26,8 @@ const Clienthero = () => {
   };
 
   return (
-    <section className="bg-white py-12">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 gap-12">
+    <section className="bg-white py-12 lg:mb-28">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 gap-12 ">
         {/* Left Image Section with Animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -39,7 +39,7 @@ const Clienthero = () => {
           <img
             src="/images/socialmedia/four.png" // Replace with your image path
             alt="Analytics Visualization"
-            className="w-3/4 max-w-xs h-auto object-contain rounded-lg shadow-lg"
+            className="w-[60%] h-auto object-contain"
           />
         </motion.div>
 
@@ -92,7 +92,7 @@ const Clienthero = () => {
                   "Hello, I would like to book a meeting to discuss your services."
                 )
               }
-              className="bg-[#4A9BD3] text-white px-6 py-3 rounded-lg shadow-md transition-all"
+              className="bg-[#4A9BD3] text-white px-6 py-3 shadow-md transition-all"
             >
               Book A Meeting
             </motion.button>

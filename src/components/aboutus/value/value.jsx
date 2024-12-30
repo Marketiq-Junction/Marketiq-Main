@@ -156,7 +156,7 @@ const ValuesAndCulture = () => {
         </button> */}
         <button
           onClick={() => handleWhatsAppClick("Hello, I would like to get in touch regarding your services.")}
-          className="bg-gray-800 text-white px-8 py-3 text-lg rounded-lg shadow-lg hover:bg-gray-900 transition duration-300 transform hover:scale-105"
+          className="bg-gray-800 text-white px-8 py-3 text-lg hover:bg-gray-900 transition duration-300 transform   hover:scale-105"
         >
           Communicate with Us
         </button>

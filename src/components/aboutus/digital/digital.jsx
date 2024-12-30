@@ -145,7 +145,7 @@ const DigitalAgency = () => {
           <motion.img
             src={content[activeCard].image}
             alt={activeCard}
-            className="w-full max-w-md rounded-lg shadow-lg"
+            className="w-full max-w-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}

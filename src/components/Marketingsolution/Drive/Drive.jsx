@@ -31,7 +31,7 @@ const Drive = () => {
   };
 
   return (
-    <section id="social-media" className="bg-white p-12 h-auto shadow-lg">
+    <section id="social-media" className="bg-gray-50 p-12 h-auto shadow-lg">
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
         {/* Left Content */}
         <div className="flex-1">
@@ -54,18 +54,8 @@ const Drive = () => {
                 className="flex items-start gap-4"
               >
                 {/* Arrow Icon */}
-                <div className="w-8 h-8 flex items-center justify-center bg-[#4A9BD3] text-white rounded-full shadow-md">
-                  <motion.svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="w-6 h-6"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.2 }}
-                  >
-                    <path d="M10 4l2-2 8 8-8 8-2-2 6-6-6-6z" />
-                  </motion.svg>
+                <div className="w-8 h-8 flex items-center justify-center">
+                  <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
                 </div>
                 {/* Text */}
                 <span className="text-lg text-gray-600 font-medium leading-7">
@@ -79,7 +69,7 @@ const Drive = () => {
           <div className="flex justify-center lg:justify-start">
             <button
               onClick={handleWhatsAppClick}
-              className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-lg transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105"
+              className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-lg transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
             >
               Speak With Us
             </button>
@@ -91,7 +81,7 @@ const Drive = () => {
           <motion.img
             src="/images/socialmedia/two.png"
             alt="Social Media Marketing Illustration"
-            className="max-w-full h-auto rounded-lg shadow-lg"
+            className="w-[50%] h-auto"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}

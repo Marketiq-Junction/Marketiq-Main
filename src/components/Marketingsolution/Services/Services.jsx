@@ -76,7 +76,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-blue-500 font-semibold text-base md:text-lg uppercase mb-4 text-center"
+          className="text-blue-500 font-semibold text-2xl uppercase mb-4 text-center"
         >
           Why Choose Us
         </motion.h3>

@@ -37,7 +37,7 @@ const Engage = () => {
           <motion.img
             src="/images/socialmedia/two1.png"
             alt="Engage and Inspire"
-            className="max-w-full h-auto rounded-lg shadow-lg"
+            className="max-w-full h-auto "
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -66,15 +66,8 @@ const Engage = () => {
                 className="flex items-start gap-3"
               >
                 {/* Bullet Icon */}
-                <div className="w-6 h-6 flex items-center justify-center bg-[#4A9BD3] text-white rounded-full">
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.4, delay: index * 0.2 }}
-                    className="font-bold text-lg"
-                  >
-                    →
-                  </motion.span>
+                <div className="w-6 h-6 flex items-center justify-center">
+                  <span className="text-[#4A9BD3] font-extrabold text-lg">➤</span>
                 </div>
                 {/* Text */}
                 <span className="text-lg text-gray-600 font-medium leading-7">
@@ -88,7 +81,7 @@ const Engage = () => {
           <div className="flex justify-center lg:justify-start">
             <button
               onClick={handleWhatsAppClick}
-              className="bg-[#4A9BD3] border-[#BDB4FF] border-2 text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:bg-[#BDB4FF] hover:text-black hover:scale-105"
+              className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-md transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
             >
               Get in Contact
             </button>

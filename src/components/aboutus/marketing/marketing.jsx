@@ -33,7 +33,7 @@ const MarketingSection = () => {
         <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
           <button
             onClick={() => handleWhatsAppClick("Hello, I would like to get in touch regarding your services.")}
-            className="bg-black text-white px-6 py-3 text-lg shadow hover:bg-gray-800 transition"
+            className="bg-black text-white px-6 py-3 border-2 border-black text-lg shadow hover:bg-white hover:text-black transition duration-300 transform hover:scale-105"
           >
             Talk to Us
           </button>
