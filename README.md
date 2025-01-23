@@ -69,24 +69,8 @@ This document provides an overview of the Marketiq Junction project, a comprehen
 
 ## Libraries/Frameworks
 
-* React
 * Next.js
 * Tailwind CSS 
-* [List other libraries/frameworks used]
 
-## Contributing
 
-* Fork the repository.
-* Create a new branch for your changes.
-* Commit and push your changes.
-* Create a pull request.
 
-## License
-
-* [Project license] (e.g., MIT, GPL) 
-
-**Note:**
-
-* Replace placeholders like `<repository-url>`, `[List other libraries/frameworks]`, and `[Project license]` with the actual values.
-* Add more details to each section as needed.
-* Consider adding sections like "API Integration," "Testing," and "Deployment Instructions" if applicable.
