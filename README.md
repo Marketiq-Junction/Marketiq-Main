@@ -21,8 +21,7 @@ This document provides an overview of the Marketiq Junction project, a comprehen
 * **public:** Static assets (images, logos, favicons).
 * **src:**
     * **app:** Next.js file-based routing (e.g., `/dashboard`, `/social`, `/website`, `/seo`, `/analytics`, `/settings`).
-    * **components:** Reusable UI components (buttons, inputs, navigation bars, etc.).
-    * **data:** (Optional) Static data (e.g., default settings).
+    * **components:** Reusable UI components (buttons, inputs, navigation bars, etc.)
     * **styles:** Global CSS or styling files.
 
 ## Development
