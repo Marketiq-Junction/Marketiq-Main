@@ -3,6 +3,3 @@
 @tailwind utilities;
 /* Inside your global CSS file (e.g., styles/globals.css) */
 
-*{
-    user-select: none;
-}
