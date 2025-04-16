@@ -101,13 +101,23 @@ const FreeConsultationSection = () => {
                 onChange={(e) => setCompanyName(e.target.value)}
                 className="px-5 md:px-10 text-[4vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.3vw] outline-none w-full h-12 md:h-14 lg:h-12 rounded-2xl border-2 border-black"
               />
-              <input
-                type="submit"
-                value="Send"
-                className="w-full h-12 md:h-14 lg:h-12 rounded-2xl bg-black text-white text-[4vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.3vw] 
-                  transition-all duration-300 ease-in-out 
-                  hover:bg-[#50C3C6] hover:text-black hover:scale-105 cursor-pointer"
-              />
+             <input
+  type="submit"
+  value="Send"
+  className="w-full h-12 md:h-14 lg:h-12 rounded-2xl bg-black text-white text-[4vw] sm:text-[3.5vw] md:text-[2vw] lg:text-[1.3vw] 
+    transition-all duration-300 ease-in-out 
+    hover:bg-[#50C3C6] hover:text-black hover:scale-105 cursor-pointer"
+  onClick={() => {
+    // GA4 custom event when user clicks the "Send" button
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "send_button_click", {
+        event_category: "Form",
+        event_label: "Send Button Clicked",
+      });
+    }
+  }}
+/>
+
             </form>
           </div>
         </div>

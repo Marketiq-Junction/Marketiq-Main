@@ -66,15 +66,27 @@ const Development = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center mb-16">
           {stepsData.map((step, index) => (
             <div key={index} className="relative">
-              <button
-                className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-4 rounded-lg shadow-md w-36 sm:w-48 transition-all duration-200 ${
-                  activeStep.title === step.title ? "bg-blue-400 text-black" : ""
-                }`}
-                onClick={() => handleStepClick(step)}
-              >
-                <div className="text-2xl mb-2">{step.icon}</div>
-                {step.title}
-              </button>
+            <button
+  className={`bg-[#A2DFE1] text-black font-semibold text-center py-8 px-4 rounded-lg shadow-md w-36 sm:w-48 transition-all duration-200 ${
+    activeStep.title === step.title ? "bg-blue-400 text-black" : ""
+  }`}
+  onClick={() => {
+    // Track button click with GA4 when user clicks the button
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "button_click", {
+        event_category: "User Interaction",
+        event_label: `Step Clicked: ${step.title}`,
+      });
+    }
+
+    // Call the original step click handler
+    handleStepClick(step);
+  }}
+>
+  <div className="text-2xl mb-2">{step.icon}</div>
+  {step.title}
+</button>
+
               {activeStep.title === step.title && (
                 <div
                   className="absolute left-1/2 transform -translate-x-1/2 top-full w-[10%] h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-400 hidden md:block"

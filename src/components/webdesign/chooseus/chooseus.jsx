@@ -75,13 +75,25 @@ const   ChooseUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <motion.button
-              className="px-6 py-3 bg-[#4A9BD3] text-white font-semibold hover:bg-white hover:text-black transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Talk to Us
-            </motion.button>
+          <motion.button
+  onClick={() => {
+    // GA4 custom event when the "Talk to Us" button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "talk_to_us_button_click", {
+        event_category: "Button",
+        event_label: "Talk to Us Button Clicked",
+      });
+    }
+
+    // Optionally, handle your original logic here (e.g., opening a modal or navigating to a page)
+  }}
+  className="px-6 py-3 bg-[#4A9BD3] text-white font-semibold hover:bg-white hover:text-black transition-all"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Talk to Us
+</motion.button>
+
           </motion.div>
         </motion.div>
 
@@ -94,27 +106,39 @@ const   ChooseUs = () => {
           transition={{ duration: 0.5 }}
         >
           {cardData.map((card, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2, duration: 0.5 }}
-            >
-              <h3 className="text-xl font-bold text-[#4A9BD3] mb-3">
-                {card.title}
-              </h3>
-              <ul className="text-gray-700 space-y-2">
-                {card.points.map((point, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-blue-600">&#9656;</span>
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
+          <motion.div
+          key={index}
+          className="bg-white shadow-lg rounded-lg p-6 transition-transform transform hover:scale-105"
+          whileHover={{
+            scale: 1.05,
+            // Track hover event when the user hovers over this card
+            onHoverStart: () => {
+              if (typeof window !== "undefined" && typeof gtag === "function") {
+                gtag("event", "card_hover", {
+                  event_category: "User Interaction",
+                  event_label: `Card Hovered: ${card.title}`,
+                });
+              }
+            },
+          }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: index * 0.2, duration: 0.5 }}
+        >
+          <h3 className="text-xl font-bold text-[#4A9BD3] mb-3">
+            {card.title}
+          </h3>
+          <ul className="text-gray-700 space-y-2">
+            {card.points.map((point, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="text-blue-600">&#9656;</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+        
           ))}
         </motion.div>
       </div>

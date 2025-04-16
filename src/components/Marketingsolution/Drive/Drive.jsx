@@ -67,12 +67,25 @@ const Drive = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start">
-            <button
-              onClick={handleWhatsAppClick}
-              className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-lg transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
-            >
-              Speak With Us
-            </button>
+          <button
+  onClick={() => {
+    // GA4 custom event tracking
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "click", {
+        event_category: "Button",
+        event_label: "Speak With Us Button", // Custom label for tracking
+        value: 1, // You can set this to any number or logic you prefer
+      });
+    }
+
+    // Your existing handleWhatsAppClick logic
+    handleWhatsAppClick();
+  }}
+  className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-lg transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
+>
+  Speak With Us
+</button>
+
           </div>
         </div>
 

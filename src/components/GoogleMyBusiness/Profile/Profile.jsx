@@ -68,14 +68,26 @@ const Profile = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <motion.button
-              onClick={handleWhatsAppClick}
-              className="px-4 sm:px-6 py-2 sm:py-3 bg-[#4A9BD3] text-white shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Talk to Us
-            </motion.button>
+          <motion.button
+  onClick={() => {
+    // Track GA4 event when button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "button_click", {
+        event_category: "User Interaction",
+        event_label: "Talk to Us Button Clicked",
+      });
+    }
+
+    // Call the original WhatsApp click handler
+    handleWhatsAppClick();
+  }}
+  className="px-4 sm:px-6 py-2 sm:py-3 bg-[#4A9BD3] text-white shadow hover:bg-[#3A82B2] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Talk to Us
+</motion.button>
+
           </motion.div>
         </motion.div>
       </div>

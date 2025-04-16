@@ -66,12 +66,24 @@ const Hero = () => {
               placeholder="Enter Your Website"
               className="w-full py-3 px-4 sm:py-4 sm:px-5 pr-32 md:pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500 text-sm sm:text-base"
             />
-            <button
-              onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-3 sm:px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 text-sm sm:text-base"
-            >
-              Request a Audit
-            </button>
+          <button
+  onClick={() => {
+    // Track GA4 event when button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "button_click", {
+        event_category: "User Interaction",
+        event_label: "Request a Audit Button Clicked",
+      });
+    }
+
+    // Call the original WhatsApp click handler
+    handleWhatsAppClick();
+  }}
+  className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-3 sm:px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2 text-sm sm:text-base"
+>
+  Request a Audit
+</button>
+
           </motion.div>
         </motion.div>
 

@@ -65,13 +65,26 @@ const Important = () => {
             animate={inView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-            <motion.button
-              className="px-6 py-2 text-[#4A9BD3] font-semibold border border-[#4A9BD3] hover:bg-blue-100 transition-transform"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Request a Audit
-            </motion.button>
+          <motion.button
+  onClick={() => {
+    // GA4 custom event when the "Request a Audit" button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "request_audit_button_click", {
+        event_category: "Button",
+        event_label: "Request a Audit Button Clicked",
+      });
+    }
+
+    // Optionally, handle the original function here if you have one
+    // For example, you can navigate or trigger an action when the button is clicked
+  }}
+  className="px-6 py-2 text-[#4A9BD3] font-semibold border border-[#4A9BD3] hover:bg-blue-100 transition-transform"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Request a Audit
+</motion.button>
+
           </motion.div>
         </div>
       </div>

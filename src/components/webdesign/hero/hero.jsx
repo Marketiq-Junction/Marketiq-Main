@@ -37,11 +37,23 @@ const HeroSection = () => {
               className="w-full py-4 px-5 pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <button
-              onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
-            >
-              Request a Audit
-            </button>
+  onClick={() => {
+    // GA4 custom event when the "Request a Audit" button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "audit_request_click", {
+        event_category: "Button",
+        event_label: "Request a Audit Button Clicked",
+      });
+    }
+
+    // Original function call (e.g., handleWhatsAppClick)
+    handleWhatsAppClick();
+  }}
+  className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-teal-500 text-white px-4 py-2 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-offset-2"
+>
+  Request a Audit
+</button>
+
           </div>
         </div>
 

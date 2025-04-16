@@ -58,15 +58,28 @@ const SEOProcess = () => {
         <div className="flex flex-wrap justify-center gap-4 mb-16 relative">
           {steps.map((step) => (
             <div key={step.id} className="relative">
-              <button
-                className={`bg-[#50C3C6] text-black font-semibold text-center py-6 px-4 rounded-lg shadow-md w-48 transition-all duration-200 ${
-                  activeStep.id === step.id ? "bg-blue-400 text-black" : ""
-                }`}
-                onClick={() => handleStepClick(step)}
-              >
-                <div className="text-2xl mb-2">{step.icon}</div>
-                {step.title}
-              </button>
+            <button
+  className={`bg-[#50C3C6] text-black font-semibold text-center py-6 px-4 rounded-lg shadow-md w-48 transition-all duration-200 ${
+    activeStep.id === step.id ? "bg-blue-400 text-black" : ""
+  }`}
+  onClick={() => {
+    // GA4 custom event tracking
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "step_click", {
+        event_category: "Step Interaction",
+        event_label: `Step Clicked: ${step.title}`,
+        value: step.id, // You can also send the step's id or other details if needed
+      });
+    }
+
+    // Existing functionality: Handle the step click
+    handleStepClick(step);
+  }}
+>
+  <div className="text-2xl mb-2">{step.icon}</div>
+  {step.title}
+</button>
+
               {activeStep.id === step.id && (
                 <div
                   className="absolute left-1/2 transform -translate-x-1/2 top-full w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-blue-400 hidden md:block"

@@ -69,22 +69,32 @@ const Offers = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white text-black p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-[#4A9BD3] hover:to-[#50C3C6] hover:text-white"
-            >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <ul className="text-sm mb-6 list-disc list-inside">
-                {service.description.map((point, idx) => (
-                  <li key={idx}>{point}</li>
-                ))}
-              </ul>
-              <hr className="border-t border-gray-300 mb-4" />
-              <h4 className="text-lg font-semibold">{service.title}</h4>
-            </div>
-          ))}
-        </div>
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="bg-white text-black p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-[#4A9BD3] hover:to-[#50C3C6] hover:text-white"
+      onMouseEnter={() => {
+        // Track GA4 event when service item is hovered over
+        if (typeof window !== "undefined" && typeof gtag === "function") {
+          gtag("event", "hover", {
+            event_category: "Service Interaction",
+            event_label: `Service Hovered: ${service.title}`,
+          });
+        }
+      }}
+    >
+      <div className="text-4xl mb-4">{service.icon}</div>
+      <ul className="text-sm mb-6 list-disc list-inside">
+        {service.description.map((point, idx) => (
+          <li key={idx}>{point}</li>
+        ))}
+      </ul>
+      <hr className="border-t border-gray-300 mb-4" />
+      <h4 className="text-lg font-semibold">{service.title}</h4>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );

@@ -95,12 +95,24 @@ const WebsiteAudit = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-12">
-          <button
-            onClick={handleWhatsAppClick}
-            className="bg-white text-black py-3 px-6 border-2 border-[#4A9BD3] shadow-lg hover:bg-[#50C3C6] transition duration-300"
-          >
-            Request a Audit
-          </button>
+        <button
+  onClick={() => {
+    // GA4 custom event tracking
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "whatsapp_audit_request", {
+        event_category: "CTA",
+        event_label: "Request a Audit Button Click",
+      });
+    }
+
+    // Existing function: Handle WhatsApp click
+    handleWhatsAppClick();
+  }}
+  className="bg-white text-black py-3 px-6 border-2 border-[#4A9BD3] shadow-lg hover:bg-[#50C3C6] transition duration-300"
+>
+  Request a Audit
+</button>
+
         </div>
       </div>
     </section>

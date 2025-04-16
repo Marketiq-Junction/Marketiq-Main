@@ -81,13 +81,25 @@ const Responsive = () => {
             transition={{ delay: 0.8, duration: 0.5 }}
           >
             <motion.button
-              onClick={handleWhatsAppClick}
-              className="bg-[#4A9BD3] text-white px-6 py-3 font-semibold hover:bg-[#50C3C6] transition-transform duration-300 relative overflow-hidden"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Request a Free Audit
-            </motion.button>
+  onClick={() => {
+    // GA4 custom event when the "Request a Free Audit" button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "audit_request_click", {
+        event_category: "Button",
+        event_label: "Request a Free Audit Button Clicked",
+      });
+    }
+
+    // Original function call (e.g., handleWhatsAppClick)
+    handleWhatsAppClick();
+  }}
+  className="bg-[#4A9BD3] text-white px-6 py-3 font-semibold hover:bg-[#50C3C6] transition-transform duration-300 relative overflow-hidden"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Request a Free Audit
+</motion.button>
+
           </motion.div>
         </motion.div>
 

@@ -89,12 +89,22 @@ const Ourprocess = () => {
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row justify-center mt-12 space-y-4 sm:space-y-0 sm:space-x-4">
-        <button
-          onClick={() => handleWhatsAppClick("Hello, I would like to contact you for more information.")}
-          className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
-        >
-          Speak With Us
-        </button>
+      <button
+  onClick={() => {
+    handleWhatsAppClick("Hello, I would like to contact you for more information.");
+
+    // Send event to GA4
+    gtag('event', 'speak_with_us_click', {
+      event_category: 'button',
+      event_label: 'Speak With Us Button',
+      value: 1,
+    });
+  }}
+  className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"
+>
+  Speak With Us
+</button>
+
         {/* <button
           onClick={() => handleWhatsAppClick("Hello, I would like to get a quote for your services.")}
           className="bg-[#FFFFFF] text-[#4A9BD3] px-6 py-3 font-bold rounded-md border-2 border-[#FFFFFF] hover:bg-[#4A9BD3] hover:text-white transition"

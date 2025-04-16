@@ -38,12 +38,22 @@ const ContactUs = () => {
 
       {/* Button */}
       <div className="mt-8 flex justify-center">
-        <button
-          onClick={handleWhatsAppClick}
-          className="bg-white text-[#4A9BD3] font-semibold px-8 py-3 shadow-md hover:bg-[#50C3C6] hover:text-black transition"
-        >
-          Contact Our Team
-        </button>
+      <button
+  onClick={() => {
+    handleWhatsAppClick(); // Your existing function
+
+    // Send event to GA4
+    gtag('event', 'contact_our_team_click', {
+      event_category: 'button',
+      event_label: 'Contact Our Team Button',
+      value: 1,
+    });
+  }}
+  className="bg-white text-[#4A9BD3] font-semibold px-8 py-3 shadow-md hover:bg-[#50C3C6] hover:text-black transition"
+>
+  Contact Our Team
+</button>
+
       </div>
     </div>
   );

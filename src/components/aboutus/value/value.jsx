@@ -154,12 +154,22 @@ const ValuesAndCulture = () => {
         >
           Request A Quote
         </button> */}
-        <button
-          onClick={() => handleWhatsAppClick("Hello, I would like to get in touch regarding your services.")}
-          className="bg-gray-800 text-white px-8 py-3 text-lg hover:bg-gray-900 transition duration-300 transform   hover:scale-105"
-        >
-          Communicate with Us
-        </button>
+      <button
+  onClick={() => {
+    handleWhatsAppClick("Hello, I would like to get in touch regarding your services."); // Your existing function
+
+    // Send event to GA4
+    gtag('event', 'communicate_with_us_click', {
+      event_category: 'button',
+      event_label: 'Communicate with Us Button',
+      value: 1,
+    });
+  }}
+  className="bg-gray-800 text-white px-8 py-3 text-lg hover:bg-gray-900 transition duration-300 transform hover:scale-105"
+>
+  Communicate with Us
+</button>
+
       </motion.div>
     </section>
   );

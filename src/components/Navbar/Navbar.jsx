@@ -138,16 +138,25 @@ const Navbar = () => {
 
         {/* Let's Talk Button */}
         <div className="hidden md:flex">
-          <Link
-            href="https://wa.me/9920892689"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-black text-white rounded-2xl transition-all duration-500 ease-in-out hover:bg-[#4A9BD3]"
-          >
-            <span className="text-[1.2vw] font-syne-bold font-bold">Let's Talk</span>
-            <BsArrowRight />
-          </Link>
-        </div>
+  <Link
+    href="https://wa.me/9920892689"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-black text-white rounded-2xl transition-all duration-500 ease-in-out hover:bg-[#4A9BD3]"
+    onClick={() => {
+      if (typeof window !== "undefined" && typeof gtag === "function") {
+        gtag("event", "whatsapp_click", {
+          event_category: "Engagement",
+          event_label: "Let's Talk WhatsApp",
+        });
+      }
+    }}
+  >
+    <span className="text-[1.2vw] font-syne-bold font-bold">Let's Talk</span>
+    <BsArrowRight />
+  </Link>
+</div>
+
 
         {/* Mobile Hamburger Icon */}
         <div className="md:hidden">

@@ -58,57 +58,81 @@ const DigitalAgency = () => {
 
       {/* Cards */}
       <div className="flex flex-col md:flex-row justify-center gap-6 mb-12">
+      <div
+  className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+    activeCard === "mission"
+      ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+      : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
+  }`}
+  onClick={() => {
+    setActiveCard("mission"); // Existing functionality
+
+    // Send event to GA4
+    gtag('event', 'card_click', {
+      event_category: 'card',
+      event_label: 'Mission Card',
+      value: 1,
+    });
+  }}
+>
+  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4">
+    <RocketLaunchIcon className="text-3xl text-[#4A9BD3]" />
+  </div>
+  <div className="text-lg md:text-2xl font-bold">
+    Mission
+  </div>
+</div>
+
+<div
+  className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+    activeCard === "vision"
+      ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+      : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
+  }`}
+  onClick={() => {
+    setActiveCard("vision"); // Existing functionality
+
+    // Send event to GA4
+    gtag('event', 'card_click', {
+      event_category: 'card',
+      event_label: 'Vision Card',
+      value: 1,
+    });
+  }}
+>
+  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4">
+    <VisibilityIcon className="text-3xl text-[#4A9BD3]" />
+  </div>
+  <div className="text-lg md:text-2xl font-bold">
+    Vision
+  </div>
+</div>
+
         <div
-          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "mission"
-              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
-              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
-          }`}
-          onClick={() => setActiveCard("mission")}
-        >
-          <div
-            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
-          >
-            <RocketLaunchIcon className="text-3xl text-[#4A9BD3]" />
-          </div>
-          <div className="text-lg md:text-2xl font-bold">
-            Mission
-          </div>
-        </div>
-        <div
-          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "vision"
-              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
-              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
-          }`}
-          onClick={() => setActiveCard("vision")}
-        >
-          <div
-            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
-          >
-            <VisibilityIcon className="text-3xl text-[#4A9BD3]" />
-          </div>
-          <div className="text-lg md:text-2xl font-bold">
-            Vision 
-          </div>
-        </div>
-        <div
-          className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
-            activeCard === "goals"
-              ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
-              : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
-          }`}
-          onClick={() => setActiveCard("goals")}
-        >
-          <div
-            className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4"
-          >
-            <CenterFocusStrongIcon className="text-3xl text-[#4A9BD3]" />
-          </div>
-          <div className="text-lg md:text-2xl font-bold">
-            Goals
-          </div>
-        </div>
+  className={`cursor-pointer flex items-center p-6 rounded-lg shadow-lg transition-transform transform ${
+    activeCard === "goals"
+      ? "scale-105 bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] text-white"
+      : "bg-[#A2DFE1] text-black hover:scale-105 hover:bg-gradient-to-r from-[#A2DFE1] to-[#4A9BD3] hover:text-white"
+  }`}
+  onClick={() => {
+    setActiveCard("goals"); // Existing functionality
+
+    // Send event to GA4
+    gtag('event', 'card_click', {
+      event_category: 'card',
+      event_label: 'Goals Card',
+      value: 1,
+    });
+  }}
+>
+  <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white mr-4">
+    <CenterFocusStrongIcon className="text-3xl text-[#4A9BD3]" />
+  </div>
+  <div className="text-lg md:text-2xl font-bold">
+    Goals
+  </div>
+</div>
+
       </div>
 
       {/* Active Content Section */}

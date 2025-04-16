@@ -61,20 +61,30 @@ const Advertising = () => {
         <div className="flex flex-col gap-4 w-full lg:w-1/3">
           {services.map((service, index) => (
             <motion.button
-              key={service.id}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-              className={`flex items-center gap-4 text-left p-4 rounded-lg shadow-md border-l-4 ${
-                activeService === service.id
-                  ? "border-[#4A9BD3] bg-[#A2DFE1] text-black"
-                  : "border-gray-200 bg-white text-gray-700 hover:bg-[#EAF6F6]"
-              }`}
-              onClick={() => setActiveService(service.id)}
-            >
-              <span className="text-2xl text-[#4A9BD3]">{service.icon}</span>
-              <span className="text-lg font-medium">{service.title}</span>
-            </motion.button>
+            key={service.id}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+            className={`flex items-center gap-4 text-left p-4 rounded-lg shadow-md border-l-4 ${
+              activeService === service.id
+                ? "border-[#4A9BD3] bg-[#A2DFE1] text-black"
+                : "border-gray-200 bg-white text-gray-700 hover:bg-[#EAF6F6]"
+            }`}
+            onClick={() => {
+              setActiveService(service.id); // Existing functionality
+          
+              // Send event to GA4
+              gtag('event', 'select_service', {
+                event_category: 'service_button',
+                event_label: service.title, // You can include the service title or any other label
+                value: 1,
+              });
+            }}
+          >
+            <span className="text-2xl text-[#4A9BD3]">{service.icon}</span>
+            <span className="text-lg font-medium">{service.title}</span>
+          </motion.button>
+          
           ))}
         </div>
 

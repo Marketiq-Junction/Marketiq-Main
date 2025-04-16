@@ -69,12 +69,22 @@ const Hero = () => {
               onChange={(e) => setWebsite(e.target.value)}
               className="w-full py-3 px-4 pr-36 border border-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500"
             />
-            <button
-              onClick={handleWhatsAppClick}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-4 py-2 hover:bg-[#4A9BD3] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
-            >
-              Request a Audit
-            </button>
+          <button
+  onClick={() => {
+    handleWhatsAppClick(); // Your existing function
+
+    // Send event to GA4
+    gtag('event', 'request_audit_click', {
+      event_category: 'button',
+      event_label: 'Request a Audit Button',
+      value: 1,
+    });
+  }}
+  className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-[#50C3C6] text-white px-4 py-2 hover:bg-[#4A9BD3] focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2"
+>
+  Request a Audit
+</button>
+
           </div>
         </motion.div>
 

@@ -102,12 +102,22 @@ const Benefits = () => {
       </div>
 
       <div className="text-center mt-8">
-        <button
-          onClick={handleWhatsAppClick}
-          className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300"
-        >
-          Request a Free Audit
-        </button>
+      <button
+  onClick={() => {
+    handleWhatsAppClick(); // Your existing function
+
+    // Send event to GA4
+    gtag('event', 'request_free_audit_click', {
+      event_category: 'button',
+      event_label: 'Request a Free Audit Button',
+      value: 1,
+    });
+  }}
+  className="bg-[#FFFFFF] border-[#4A9BD3] border-2 text-[#000000] px-6 py-2 md:px-8 md:py-3 hover:bg-[#4A9BD3] hover:text-white transition-colors duration-300"
+>
+  Request a Free Audit
+</button>
+
       </div>
     </section>
   );

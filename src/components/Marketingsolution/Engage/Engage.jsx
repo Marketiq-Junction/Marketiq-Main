@@ -79,12 +79,21 @@ const Engage = () => {
 
           {/* Button */}
           <div className="flex justify-center lg:justify-start">
-            <button
-              onClick={handleWhatsAppClick}
-              className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-md transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
-            >
-              Get in Contact
-            </button>
+          <button
+  onClick={() => {
+    handleWhatsAppClick(); // Your existing function
+    // Send event to GA4
+    gtag('event', 'click', {
+      event_category: 'button',
+      event_label: 'Get in Contact Button',
+      value: 1,
+    });
+  }}
+  className="bg-[#4A9BD3] border-[#50C3C6] border-2 text-white px-8 py-3 shadow-md transition-all duration-300 hover:bg-[#50C3C6] hover:text-black hover:scale-105"
+>
+  Get in Contact
+</button>
+
           </div>
         </div>
       </div>

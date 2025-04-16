@@ -84,18 +84,26 @@ const Clienthero = () => {
 
           {/* Buttons */}
           <div className="flex justify-center lg:justify-start mt-6">
-            <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "#3863F5" }}
-              transition={{ duration: 0.3 }}
-              onClick={() =>
-                handleWhatsAppClick(
-                  "Hello, I would like to book a meeting to discuss your services."
-                )
-              }
-              className="bg-[#4A9BD3] text-white px-6 py-3 shadow-md transition-all"
-            >
-              Book A Meeting
-            </motion.button>
+          <motion.button
+  whileHover={{ scale: 1.05, backgroundColor: "#3863F5" }}
+  transition={{ duration: 0.3 }}
+  onClick={() => {
+    handleWhatsAppClick(
+      "Hello, I would like to book a meeting to discuss your services."
+    );
+    
+    // Send event to GA4
+    gtag('event', 'book_meeting_click', {
+      event_category: 'button',
+      event_label: 'Book A Meeting Button',
+      value: 1,
+    });
+  }}
+  className="bg-[#4A9BD3] text-white px-6 py-3 shadow-md transition-all"
+>
+  Book A Meeting
+</motion.button>
+
           </div>
         </div>
       </div>

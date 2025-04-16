@@ -71,13 +71,26 @@ const SaveTime = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.5 }}
           >
-            <motion.button
-              className="bg-[#4A9BD3] text-white font-semibold px-6 py-2 hover:bg-[#3a82b2] transition-transform duration-200"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Contact Us
-            </motion.button>
+           <motion.button
+  onClick={() => {
+    // GA4 custom event when the "Contact Us" button is clicked
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "contact_us_button_click", {
+        event_category: "Button",
+        event_label: "Contact Us Button Clicked",
+      });
+    }
+
+    // Optionally, handle the original function here if you have one
+    // For example, you can navigate or open a modal here
+  }}
+  className="bg-[#4A9BD3] text-white font-semibold px-6 py-2 hover:bg-[#3a82b2] transition-transform duration-200"
+  whileHover={{ scale: 1.1 }}
+  whileTap={{ scale: 0.95 }}
+>
+  Contact Us
+</motion.button>
+
             {/* <motion.button
               className="border border-[#4A9BD3] text-[#4A9BD3] font-semibold px-6 py-2 rounded-md hover:bg-[#4A9BD3] hover:text-white transition duration-200"
               whileHover={{ scale: 1.1 }}

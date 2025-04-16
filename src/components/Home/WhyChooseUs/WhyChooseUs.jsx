@@ -56,11 +56,23 @@ const WhyChooseUs = () => {
 
         {/* Button */}
         <button
-          onClick={handleWhatsAppClick}
-          className="mt-6 px-6 py-3 bg-[#50C3C6] text-white text-lg font-semibold hover:bg-[#3aa1a4] transition"
-        >
-          Let's Chat
-        </button>
+  onClick={() => {
+    // GA4 custom event when user clicks the button
+    if (typeof window !== "undefined" && typeof gtag === "function") {
+      gtag("event", "whatsapp_button_click", {
+        event_category: "CTA",
+        event_label: "Let's Chat - WhatsApp",
+      });
+    }
+
+    // Call the original function to handle WhatsApp click
+    handleWhatsAppClick();
+  }}
+  className="mt-6 px-6 py-3 bg-[#50C3C6] text-white text-lg font-semibold hover:bg-[#3aa1a4] transition"
+>
+  Let's Chat
+</button>
+
       </div>
     </section>
   );

@@ -52,21 +52,38 @@ const WhyUs = () => {
 
         {/* Cards Section */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-br-3xl rounded-tl-3xl border-4 border-black shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
-            >
-              <div className="flex justify-center mb-4">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
-        </div>
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="bg-white p-6 rounded-br-3xl rounded-tl-3xl border-4 border-black shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:scale-105"
+      onClick={() => {
+        if (typeof window !== "undefined" && typeof gtag === "function") {
+          gtag("event", "service_card_click", {
+            event_category: "Engagement",
+            event_label: `Service Clicked - ${service.title}`,
+          });
+        }
+      }}
+      onMouseEnter={() => {
+        if (typeof window !== "undefined" && typeof gtag === "function") {
+          gtag("event", "service_card_hover", {
+            event_category: "Engagement",
+            event_label: `Service Hovered - ${service.title}`,
+          });
+        }
+      }}
+    >
+      <div className="flex justify-center mb-4">
+        {service.icon}
+      </div>
+      <h3 className="text-xl font-bold text-gray-800 mb-2">
+        {service.title}
+      </h3>
+      <p className="text-gray-600">{service.description}</p>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );

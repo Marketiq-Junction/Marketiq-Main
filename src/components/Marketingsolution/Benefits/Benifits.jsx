@@ -101,19 +101,29 @@ const Benefits = () => {
 
       {/* Call-to-Action */}
       <div className="text-center mt-10">
-        <motion.button
-          onClick={handleWhatsAppClick}
-          whileHover={{
-            scale: 1.1,
-            backgroundColor: "#4A9BD3",
-            color: "#FFFFFF",
-            borderColor: "#4A9BD3",
-          }}
-          transition={{ duration: 0.3 }}
-          className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 shadow-md hover:text-white transition-all"
-        >
-          Request a Audit
-        </motion.button>
+      <motion.button
+  onClick={() => {
+    handleWhatsAppClick(); // Your existing function
+
+    // Send event to GA4
+    gtag('event', 'request_audit_click', {
+      event_category: 'button',
+      event_label: 'Request a Audit Button',
+      value: 1,
+    });
+  }}
+  whileHover={{
+    scale: 1.1,
+    backgroundColor: "#4A9BD3",
+    color: "#FFFFFF",
+    borderColor: "#4A9BD3",
+  }}
+  transition={{ duration: 0.3 }}
+  className="bg-white border-[#4A9BD3] border-2 text-black px-8 py-3 shadow-md hover:text-white transition-all"
+>
+  Request a Audit
+</motion.button>
+
       </div>
     </div>
   );

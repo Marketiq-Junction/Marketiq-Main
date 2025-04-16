@@ -1,6 +1,6 @@
 import React from "react";
 import "./globals.css";
-
+import Script from "next/script";
 export const metadata = {
   title: "Marketiq | Revolutionizing Business Intelligence",
   description:
@@ -11,6 +11,15 @@ export default function RootLayout({ children }) {
   return ( 
     <html lang="en">
       <head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XWLB2Y5BHZ"></Script>
+      <Script id="gtag-init" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XWLB2Y5BHZ');
+  `}
+</Script>
         {/* Basic Metadata */}
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />

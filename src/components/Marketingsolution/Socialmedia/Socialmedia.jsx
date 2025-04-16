@@ -79,20 +79,29 @@ function Socialmedia() {
             },
           ].map((social, index) => (
             <motion.a
-              key={index}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className={`flex items-center justify-center w-16 h-16 ${
-                social.color.includes("from")
-                  ? `bg-gradient-to-br ${social.color}`
-                  : social.color
-              } rounded-lg shadow-lg`}
-            >
-              <i className={`fab fa-${social.name} text-white text-3xl`}></i>
-            </motion.a>
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className={`flex items-center justify-center w-16 h-16 ${
+              social.color.includes("from") ? `bg-gradient-to-br ${social.color}` : social.color
+            } rounded-lg shadow-lg`}
+            onClick={() => {
+              // GA4 custom event tracking
+              if (typeof window !== "undefined" && typeof gtag === "function") {
+                gtag("event", "social_click", {
+                  event_category: "Social Media",
+                  event_label: `${social.name} Click`, // dynamic label for the social media platform
+                  value: 1,
+                });
+              }
+            }}
+          >
+            <i className={`fab fa-${social.name} text-white text-3xl`}></i>
+          </motion.a>
+          
           ))}
         </div>
       </section>
