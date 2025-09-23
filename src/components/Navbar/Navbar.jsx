@@ -158,13 +158,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`mobile-menu fixed top-0 right-0 h-full w-4/5 sm:w-2/3 bg-gray-900 text-white z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`mobile-menu fixed top-0 right-0 h-full w-4/5 sm:w-2/3 bg-white text-black z-50 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close Button */}
         <button
-          className="absolute top-4 right-4 text-3xl text-white focus:outline-none"
+          className="absolute top-4 right-4 text-3xl text-black focus:outline-none"
           onClick={toggleMobileMenu}
         >
           <HiX />
@@ -207,7 +207,7 @@ const Navbar = () => {
             </button>
 
             {isMobileDropdownOpen && (
-              <div className="bg-gray-800 rounded-lg px-4 py-3 space-y-2 mt-2">
+              <div className="bg-gray-100 rounded-lg px-4 py-3 space-y-2 mt-2">
                 {[
                   { name: "Website Management", link: "/webdesign" },
                   { name: "Google My Business", link: "/GoogleMyBusiness" },
@@ -242,15 +242,13 @@ const Navbar = () => {
           >
             About Us
           </Link>
-        </div>
 
-        {/* Let's Talk Button (Fixed Bottom in Mobile) */}
-        <div className="absolute bottom-6 left-0 w-full flex justify-center">
+          {/* Let's Talk Button (Now just below About Us) */}
           <Link
             href="https://wa.me/9920892689"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 bg-[#4A9BD3] text-white text-lg rounded-lg hover:bg-teal-600 flex items-center gap-3"
+            className="mt-2 px-6 py-3 bg-[#4A9BD3] text-white text-lg rounded-lg hover:bg-teal-600 flex items-center justify-center gap-3"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Let's Talk <BsArrowRight />
