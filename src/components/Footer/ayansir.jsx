@@ -12,7 +12,7 @@ const Ayansir = () => {
           <div className="flex items-center gap-4 md:gap-6">
             <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
               <Image
-                src="/people/1.jpg" // Replace with the actual image URL
+                src="/Aayan.jpeg" // Replace with the actual image URL
                 alt="Person"
                 width={80}
                 height={80}
@@ -20,12 +20,8 @@ const Ayansir = () => {
               />
             </div>
             <div>
-              <p className=" md:text-mb">
-                Talk to a Growth Expert
-              </p>
-              <p className="text-sm md:text-sm mt-2">
-                +91 9920892689
-              </p>
+              <p className=" md:text-mb">Talk to a Growth Expert</p>
+              <p className="text-sm md:text-sm mt-2">+91 9920892689</p>
             </div>
           </div>
 
@@ -75,9 +71,7 @@ const Ayansir = () => {
 
           {/* Right Section: Reviews */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-            <p className=" text-sm md:text-mb lg:text-mb">
-              REVIEWED ON -
-            </p>
+            <p className=" text-sm md:text-mb lg:text-mb">REVIEWED ON -</p>
             <p className="mt-2 text-xs md:text-sm lg:text-base">
               Google My Business
             </p>
