@@ -1,6 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGlobe, FaChartLine, FaArrowsAlt, FaPencilAlt, FaComments, FaChartPie } from "react-icons/fa";
+import {
+  FaGlobe,
+  FaChartLine,
+  FaArrowsAlt,
+  FaPencilAlt,
+  FaComments,
+  FaChartPie,
+} from "react-icons/fa";
 
 const Why = () => {
   const listVariants = {
@@ -60,19 +67,21 @@ const Why = () => {
               className="flex items-start text-xl"
               variants={listItemVariants}
             >
-              <span className="mr-4 text-blue-500">
+              <span className="mr-4 text-teal-500">
                 <FaGlobe className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              We enhance your content’s visibility using targeted keywords, effective video descriptions, and relevant tags.
+              We enhance your content's visibility using targeted keywords,
+              effective video descriptions, and relevant tags.
             </motion.li>
             <motion.li
               className="flex items-start text-xl"
               variants={listItemVariants}
             >
-              <span className="mr-4 text-green-500">
+              <span className="mr-4 text-cyan-500">
                 <FaChartLine className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              Our SEO strategy improves channel rankings, making your content easier for audiences to find.
+              Our SEO strategy improves channel rankings, making your content
+              easier for audiences to find.
             </motion.li>
             <motion.li
               className="flex items-start text-xl"
@@ -81,7 +90,8 @@ const Why = () => {
               <span className="mr-4 text-purple-500">
                 <FaArrowsAlt className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              Organic SEO ensures consistent reach and audience engagement without reliance on paid ads.
+              Organic SEO ensures consistent reach and audience engagement
+              without reliance on paid ads.
             </motion.li>
           </ul>
         </motion.div>
@@ -116,19 +126,21 @@ const Why = () => {
               className="flex items-start text-xl"
               variants={listItemVariants}
             >
-              <span className="mr-4 text-blue-500">
+              <span className="mr-4 text-teal-500">
                 <FaPencilAlt className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              We design organic methods to create content that resonates with your audience, based on trends.
+              We design organic methods to create content that resonates with
+              your audience, based on trends.
             </motion.li>
             <motion.li
               className="flex items-start text-xl"
               variants={listItemVariants}
             >
-              <span className="mr-4 text-green-500">
+              <span className="mr-4 text-cyan-500">
                 <FaComments className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              Through comment interaction, prompts, and end screens, we foster genuine viewer engagement.
+              Through comment interaction, prompts, and end screens, we foster
+              genuine viewer engagement.
             </motion.li>
             <motion.li
               className="flex items-start text-xl"
@@ -137,7 +149,8 @@ const Why = () => {
               <span className="mr-4 text-purple-500">
                 <FaChartPie className="text-xl hover:scale-110 transition-transform mt-4" />
               </span>
-              We continuously monitor your channel's performance and optimize based on organic metrics.
+              We continuously monitor your channel's performance and optimize
+              based on organic metrics.
             </motion.li>
           </ul>
         </motion.div>

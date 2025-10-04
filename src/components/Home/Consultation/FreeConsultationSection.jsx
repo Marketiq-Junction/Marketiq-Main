@@ -167,7 +167,7 @@ const FreeConsultationSection = () => {
   };
 
   return (
-    <section className="w-full bg-[#4A9BD3] text-white flex flex-col lg:flex-row items-center justify-center py-10 lg:py-20 gap-8">
+    <section className="w-full bg-gradient-to-br from-teal-500 to-cyan-600 text-white flex flex-col lg:flex-row items-center justify-center py-10 lg:py-20 gap-8">
       {/* Left Section */}
       <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start px-6 lg:px-24">
         <motion.h1
@@ -204,7 +204,7 @@ const FreeConsultationSection = () => {
               viewport={{ once: true }}
             >
               <div className="w-10 h-10 flex items-center justify-center bg-white rounded-full flex-shrink-0">
-                <TiTick className="text-black text-2xl md:text-3xl lg:text-xl" />
+                <TiTick className="text-teal-600 text-2xl md:text-3xl lg:text-xl" />
               </div>
               <p className="text-[3.5vw] sm:text-[3vw] md:text-[2vw] lg:text-[1rem] leading-snug">
                 {text}
@@ -221,7 +221,7 @@ const FreeConsultationSection = () => {
             Get your free audit
           </h2>
           <div className="w-full h-[4px] md:h-[6px] rounded-lg bg-black mb-6">
-            <div className="w-1/2 h-full bg-[#50C3C6]"></div>
+            <div className="w-1/2 h-full bg-gradient-to-r from-teal-400 to-cyan-500"></div>
           </div>
 
           <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
@@ -230,12 +230,12 @@ const FreeConsultationSection = () => {
               placeholder="Company Name"
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
-              className="px-5 md:px-10 h-12 md:h-14 lg:h-12 rounded-2xl border-2 border-black text-black outline-none text-[1rem] sm:text-[1.1rem]"
+              className="px-5 md:px-10 h-12 md:h-14 lg:h-12 rounded-2xl border-2 border-black text-black outline-none text-[1rem] sm:text-[1.1rem] focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all"
             />
             <input
               type="submit"
               value="Send"
-              className="h-12 md:h-14 lg:h-12 rounded-2xl bg-black text-white text-[1rem] sm:text-[1.1rem] font-semibold hover:bg-[#50C3C6] hover:text-black hover:scale-105 transition-all cursor-pointer"
+              className="h-12 md:h-14 lg:h-12 rounded-2xl bg-black text-white text-[1rem] sm:text-[1.1rem] font-semibold hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:text-black hover:scale-105 transition-all cursor-pointer shadow-lg hover:shadow-cyan-400/40"
               onClick={() => {
                 if (
                   typeof window !== "undefined" &&

@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,6 +9,7 @@ import {
   FaPhone,
   FaLinkedin,
   FaYoutube,
+  FaHeart, // ✅ Added Heart icon
 } from "react-icons/fa";
 import Ayansir from "@/components/Footer/ayansir";
 
@@ -32,7 +32,7 @@ const Footer = () => {
     },
     {
       icon: <FaYoutube className="text-red-600 text-xl" />,
-      link: "https://www.youtube.com/channel/yourchannelid",
+      link: "https://www.youtube.com/@marketiqjunction",
       label: "YouTube Link",
     },
     {
@@ -80,25 +80,29 @@ const Footer = () => {
             });
           }}
         >
-          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 hover:shadow-blue-400/50 transition-transform">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-r from-teal-400 to-cyan-500 flex items-center justify-center rounded-full shadow-lg hover:scale-110 hover:shadow-teal-400/50 transition-transform">
             <FaPhone className="text-2xl sm:text-3xl text-white transform rotate-90" />
           </div>
         </Link>
       </div>
 
       {/* Main Footer */}
-      <section className="w-full bg-gradient-to-r from-[#3F85B5] to-[#2C6A91] text-white pt-12 pb-6 px-5 md:px-12">
+      <section className="w-full bg-gradient-to-r from-teal-500 to-cyan-600 text-white pt-12 pb-6 px-5 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 border-b border-white/20 pb-10">
           {/* Logo + Description */}
           <div>
-            <div className="flex justify-center md:justify-start bg-white p-2 rounded-lg shadow-md">
-              <Image
-                src="/images/navbar/logonav.webp"
-                alt="Logo"
-                width={150}
-                height={75}
-              />
+            <div className="flex justify-center md:justify-start bg-white p-4 rounded-lg shadow-md ">
+              <div className="relative w-[220px] h-[110px] md:w-[280px] md:h-[140px]">
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
+
             <p className="mt-4 text-sm leading-relaxed opacity-90">
               We provide smart and affordable digital marketing solutions
               tailored to your business needs.
@@ -122,7 +126,7 @@ const Footer = () => {
                 <Link
                   key={index}
                   href={service.link}
-                  className="flex items-center gap-2 hover:underline hover:text-blue-200 transition-colors"
+                  className="flex items-center gap-2 hover:underline hover:text-cyan-200 transition-colors"
                 >
                   <IoIosArrowForward /> <span>{service.name}</span>
                 </Link>
@@ -145,21 +149,21 @@ const Footer = () => {
                 },
                 { name: "Contact Us", link: "/Knowmore/Contact" },
                 { name: "Privacy Policy", link: "/Knowmore/PrivacyPolicy" },
-                { name: "Product Pricing", link: "/Knowmore/ProductPricing" },
+                // { name: "Product Pricing", link: "/Knowmore/ProductPricing" },
                 { name: "Refund Policy", link: "/Knowmore/RefundPolicy" },
                 {
                   name: "Cancellation Policy",
                   link: "/Knowmore/CancellationPolicy",
                 },
-                {
-                  name: "Shipping and Delivery Policy",
-                  link: "/Knowmore/ShippingAndDelivery",
-                },
+                // {
+                //   name: "Shipping and Delivery Policy",
+                //   link: "/Knowmore/ShippingAndDelivery",
+                // },
               ].map((item, index) => (
                 <Link
                   key={index}
                   href={item.link}
-                  className="flex items-center gap-2 hover:underline hover:text-blue-200 transition-colors"
+                  className="flex items-center gap-2 hover:underline hover:text-cyan-200 transition-colors"
                 >
                   <IoIosArrowForward /> <span>{item.name}</span>
                 </Link>
@@ -176,9 +180,9 @@ const Footer = () => {
             <p className="text-sm opacity-90">
               <strong>ADDRESS:</strong> <br />
               <Link
-                href="https://maps.app.goo.gl/urRvT3ZEqC2UgkoH9"
+                href="https://maps.app.goo.gl/jK4i6v86vQxo6Dwa9"
                 target="_blank"
-                className="text-blue-200 hover:underline"
+                className="text-cyan-200 hover:underline"
               >
                 Off BKC Mumbai, India, 400070
               </Link>
@@ -187,7 +191,7 @@ const Footer = () => {
               <strong>EMAIL:</strong> <br />
               <Link
                 href="mailto:marketiqjunction@gmail.com"
-                className="text-blue-200 hover:underline"
+                className="text-cyan-200 hover:underline"
               >
                 marketiqjunction@gmail.com
               </Link>
@@ -196,7 +200,7 @@ const Footer = () => {
               <strong>PHONE:</strong> <br />
               <Link
                 href="tel:+919920892689"
-                className="text-blue-200 hover:underline"
+                className="text-cyan-200 hover:underline"
               >
                 +91 99208 92689
               </Link>
@@ -206,7 +210,7 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h2 className="text-lg font-semibold mb-4 relative inline-block">
-              Let’s Socialize
+              Let's Socialize
               <span className="block w-12 h-0.5 bg-white mt-1"></span>
             </h2>
             <div className="flex items-center gap-4">
@@ -227,7 +231,7 @@ const Footer = () => {
                     )
                   }
                 >
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full hover:scale-110 hover:shadow-lg hover:shadow-blue-400/40 transition-transform bg-white">
+                  <div className="w-10 h-10 flex items-center justify-center rounded-full hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/40 transition-transform bg-white">
                     {social.icon}
                   </div>
                 </Link>
@@ -236,9 +240,29 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="max-w-7xl mx-auto text-center text-sm text-white/80 mt-6">
-          © {new Date().getFullYear()} Marketiq Junction. All Rights Reserved.
+        {/* Bottom Footer */}
+        <div className="relative z-10 border-t border-slate-200/50 bg-white/60 backdrop-blur-sm select-none">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 text-center">
+              <p className="text-slate-600 text-sm flex items-center order-2 sm:order-1">
+                Built with <FaHeart className="text-red-500 mx-1 h-4 w-4" /> and
+                passion by{" "}
+                <a
+                  href="https://code4bharat.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-1 text-blue-600 hover:text-blue-500 font-semibold transition-colors duration-200"
+                >
+                  Code4Bharat
+                </a>
+              </p>
+              <div className="hidden sm:block w-px h-4 bg-slate-300/50 mx-6"></div>
+              <p className="text-slate-600 text-sm order-1 sm:order-2 mt-1 sm:mt-0">
+                &copy; 2011 – {new Date().getFullYear()} Marketiq Junction. All
+                rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

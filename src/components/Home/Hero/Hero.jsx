@@ -30,13 +30,13 @@ const Hero = () => {
         muted
         className="absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/5.mp4" type="video/mp4" />
+        <source src="/3.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Overlay to Darken the Video */}
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-      
+
       {/* Content Section */}
       <motion.div
         className="z-20 flex flex-col items-center text-center px-5 lg:px-0"
@@ -51,7 +51,13 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-         <span className="text-[#4A9BD3]">Digital Marketing </span><br /> That Drives <br /><span className="text-[#50C3C6]">Revenue</span>
+          <span className="bg-gradient-to-r from-teal-400 to-cyan-500 bg-clip-text text-transparent">
+            Digital Marketing{" "}
+          </span>
+          <br /> That Drives <br />
+          <span className="bg-gradient-to-r from-teal-300 to-cyan-400 bg-clip-text text-transparent">
+            Revenue
+          </span>
         </motion.h1>
 
         {/* Form */}
@@ -65,14 +71,14 @@ const Hero = () => {
           <input
             type="text"
             placeholder="Enter your message"
-            className="w-full text-lg px-4 py-3 border-2 border-gray-300 focus:ring-2 focus:ring-blue-300 outline-none"
+            className="w-full text-lg px-4 py-3 border-2 border-gray-300 focus:ring-2 focus:ring-cyan-200 outline-none"
             value={whatsappMessage}
             onChange={(e) => setWhatsappMessage(e.target.value)}
           />
           <input
             type="submit"
             value="Send"
-            className="w-32 py-2 lg:ml-40 text-lg bg-[#50C3C6] text-white cursor-pointer transition-all duration-300 hover:bg-[#4A9BD3]"
+            className="w-32 py-2 lg:ml-40 text-lg bg-gradient-to-r from-teal-400 to-cyan-500 text-white cursor-pointer transition-all duration-300 hover:from-teal-500 hover:to-cyan-600 hover:scale-105 hover:shadow-cyan-400/40"
           />
         </motion.form> */}
       </motion.div>

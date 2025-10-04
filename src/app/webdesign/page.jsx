@@ -15,6 +15,8 @@ import Development from '@/components/webdesign/webdevelopment/development';
 import Support from '@/components/webdesign/support/support';
 import WhyUs from '@/components/webdesign/whyus/whyus';
 import GetInTouch from '@/components/webdesign/getintouch/getintouch';
+import SEOAuditWebsite from '@/components/webdesign/seoaudit/seoaudit';
+ 
 function page() {
     return (
       < >
@@ -32,6 +34,7 @@ function page() {
         <Support/>
         {/* <WhyUs/> */}
         {/* <GetInTouch/> */}
+        <SEOAuditWebsite/>
         <Footer />
       </>
     );

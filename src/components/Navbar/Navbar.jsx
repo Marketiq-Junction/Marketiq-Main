@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
@@ -40,103 +39,103 @@ const Navbar = () => {
   return (
     <div className="w-full h-[10vh] z-50 sticky top-0 bg-white shadow-md">
       {/* Desktop Navbar */}
-      <nav className="w-full h-full flex items-center justify-between px-4 md:px-20 lg:px-28 xl:px-36 relative">
-        {/* Logo */}
-        <div className="logo relative">
+      <nav className="w-full h-full flex items-center justify-between px-4 sm:px-6 lg:px-8">
+        {/* Logo - left aligned */}
+        <div className="flex-shrink-0 relative w-[200px] h-[60px] sm:w-[280px] sm:h-[80px] md:w-[550px] md:h-[160px] lg:w-[650px] lg:h-[180px] xl:w-[700px] xl:h-[200px]">
           <Image
-            src="/images/navbar/logonav.webp"
-            width={150}
-            height={75}
+            src="/logo.png"
             alt="Logo"
-            className="w-[150px] h-[75px] md:w-[200px] md:h-[100px]"
+            fill
+            className="object-contain object-left"
+            priority
           />
         </div>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex navlinks items-center gap-8 lg:gap-12 xl:gap-16">
-          <Link
-            href="/"
-            className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${
-              isActive("/") ? "text-[#4A9BD3] underline" : ""
-            }`}
-          >
-            <span className="group-hover:text-[#4A9BD3] group-hover:underline group-hover:animate-bounce">
-              Home
-            </span>
-          </Link>
-
-          {/* Dropdown */}
-          <div className="relative dropdown group">
-            <button
-              className={`text-[1.1vw] font-syne-bold font-semibold cursor-pointer flex items-center gap-2 transition-all duration-300 ${
-                [
-                  "/webdesign",
-                  "/GoogleMyBusiness",
-                  "/seo",
-                  "/marketingsolution",
-                  "/youtube",
-                ].some((path) => isActive(path))
-                  ? "text-[#4A9BD3] underline"
-                  : ""
+        {/* Desktop Links - right side */}
+        <div className="hidden md:flex items-center gap-6 lg:gap-8 xl:gap-10">
+          <div className="flex navlinks items-center gap-6 lg:gap-8 xl:gap-10">
+            <Link
+              href="/"
+              className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${
+                isActive("/") ? "text-teal-500 underline" : ""
               }`}
-              onClick={toggleDropdown}
             >
-              <span className="group-hover:text-[#4A9BD3] group-hover:underline">
-                Marketing Solution
+              <span className="group-hover:text-teal-500 group-hover:underline group-hover:animate-bounce">
+                Explore
               </span>
-              {isDropdownOpen ? (
-                <FiChevronUp className="text-lg" />
-              ) : (
-                <FiChevronDown className="text-lg" />
-              )}
-            </button>
+            </Link>
 
-            {/* Dropdown Menu */}
-            {isDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-lg w-56 lg:w-64 z-50">
-                {[
-                  { name: "Website Management", link: "/webdesign" },
-                  { name: "Google My Business", link: "/GoogleMyBusiness" },
-                  { name: "SEO", link: "/seo" },
-                  {
-                    name: "Social Media Marketing",
-                    link: "/marketingsolution",
-                  },
-                  { name: "YouTube Marketing", link: "/youtube" },
-                ].map((item, index) => (
-                  <Link
-                    href={item.link}
-                    key={index}
-                    className={`block px-4 py-2 text-gray-700 hover:bg-[#4A9BD3] hover:text-white text-sm ${
-                      isActive(item.link) ? "text-[#4A9BD3]" : ""
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
-            )}
+            {/* Dropdown */}
+            <div className="relative dropdown group">
+              <button
+                className={`text-[1.1vw] font-syne-bold font-semibold cursor-pointer flex items-center gap-2 transition-all duration-300 ${
+                  [
+                    "/webdesign",
+                    "/GoogleMyBusiness",
+                    "/seo",
+                    "/marketingsolution",
+                    "/youtube",
+                  ].some((path) => isActive(path))
+                    ? "text-teal-500 underline"
+                    : ""
+                }`}
+                onClick={toggleDropdown}
+              >
+                <span className="group-hover:text-teal-500 group-hover:underline">
+                  Marketing Solution
+                </span>
+                {isDropdownOpen ? (
+                  <FiChevronUp className="text-lg" />
+                ) : (
+                  <FiChevronDown className="text-lg" />
+                )}
+              </button>
+
+              {/* Dropdown Menu */}
+              {isDropdownOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-lg w-56 lg:w-64 z-50">
+                  {[
+                    { name: "Website Management", link: "/webdesign" },
+                    { name: "Google My Business", link: "/GoogleMyBusiness" },
+                    { name: "SEO", link: "/seo" },
+                    {
+                      name: "Social Media Marketing",
+                      link: "/marketingsolution",
+                    },
+                    { name: "YouTube Marketing", link: "/youtube" },
+                  ].map((item, index) => (
+                    <Link
+                      href={item.link}
+                      key={index}
+                      className={`block px-4 py-2 text-gray-700 hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:text-white text-sm transition-all duration-300 ${
+                        isActive(item.link) ? "text-teal-500 font-semibold" : ""
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/aboutus"
+              className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${
+                isActive("/aboutus") ? "text-teal-500 underline" : ""
+              }`}
+            >
+              <span className="group-hover:text-teal-500 group-hover:underline group-hover:animate-bounce">
+                Behind the Brand
+              </span>
+            </Link>
           </div>
 
-          <Link
-            href="/aboutus"
-            className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${
-              isActive("/aboutus") ? "text-[#4A9BD3] underline" : ""
-            }`}
-          >
-            <span className="group-hover:text-[#4A9BD3] group-hover:underline group-hover:animate-bounce">
-              About Us
-            </span>
-          </Link>
-        </div>
-
-        {/* Let's Talk Button (Desktop) */}
-        <div className="hidden md:flex">
+          {/* Let's Talk Button (Desktop) */}
           <Link
             href="https://wa.me/9920892689"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-black text-white rounded-2xl transition-all duration-500 ease-in-out hover:bg-[#4A9BD3]"
+            className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white rounded-2xl transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105"
           >
             <span className="text-[1.2vw] font-syne-bold font-bold">
               Let's Talk
@@ -175,7 +174,7 @@ const Navbar = () => {
           <Link
             href="/"
             className={`group text-xl font-semibold cursor-pointer transition-all duration-300 ${
-              isActive("/") ? "text-[#4A9BD3] underline" : ""
+              isActive("/") ? "text-teal-500 underline" : ""
             }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
@@ -193,7 +192,7 @@ const Navbar = () => {
                   "/marketingsolution",
                   "/youtube",
                 ].some((path) => isActive(path))
-                  ? "text-[#4A9BD3] underline"
+                  ? "text-teal-500 underline"
                   : ""
               }`}
               onClick={toggleMobileDropdown}
@@ -207,7 +206,7 @@ const Navbar = () => {
             </button>
 
             {isMobileDropdownOpen && (
-              <div className="bg-gray-100 rounded-lg px-4 py-3 space-y-2 mt-2">
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg px-4 py-3 space-y-2 mt-2">
                 {[
                   { name: "Website Management", link: "/webdesign" },
                   { name: "Google My Business", link: "/GoogleMyBusiness" },
@@ -221,8 +220,8 @@ const Navbar = () => {
                   <Link
                     href={item.link}
                     key={index}
-                    className={`block text-base font-medium cursor-pointer hover:bg-[#4A9BD3] hover:text-white px-4 py-2 rounded-md ${
-                      isActive(item.link) ? "text-[#4A9BD3]" : ""
+                    className={`block text-base font-medium cursor-pointer hover:bg-gradient-to-r hover:from-teal-400 hover:to-cyan-500 hover:text-white px-4 py-2 rounded-md transition-all duration-300 ${
+                      isActive(item.link) ? "text-teal-500 font-semibold" : ""
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
@@ -236,19 +235,19 @@ const Navbar = () => {
           <Link
             href="/aboutus"
             className={`group text-xl font-semibold cursor-pointer transition-all duration-300 ${
-              isActive("/aboutus") ? "text-[#4A9BD3] underline" : ""
+              isActive("/aboutus") ? "text-teal-500 underline" : ""
             }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About Us
           </Link>
 
-          {/* Let's Talk Button (Now just below About Us) */}
+          {/* Let's Talk Button (Mobile) */}
           <Link
             href="https://wa.me/9920892689"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 px-6 py-3 bg-[#4A9BD3] text-white text-lg rounded-lg hover:bg-teal-600 flex items-center justify-center gap-3"
+            className="mt-2 px-6 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white text-lg rounded-lg hover:shadow-lg hover:scale-105 flex items-center justify-center gap-3 transition-all duration-300"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Let's Talk <BsArrowRight />
