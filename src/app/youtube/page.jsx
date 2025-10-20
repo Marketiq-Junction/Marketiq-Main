@@ -7,11 +7,13 @@ import Why from '@/components/Youtube/why/why';
 import Benefits from '@/components/Youtube/Benefits/Benefits';
 // import Services from '@/components/Youtube/Services1/Services';
 import Ourprocess from '@/components/Youtube/Ourprocess/Ourprocess';
+// import YouTubeMarketingAudit from '@/components/Youtube/seo/seoaudit';
 function page ()
 {
     return (
         <>
         <Navbar />
+        {/* <YouTubeMarketingAudit /> */}
         <Hero />
         <Why />
         <Benefits />

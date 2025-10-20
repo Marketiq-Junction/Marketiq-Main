@@ -8,12 +8,14 @@ import Process from '@/components/GoogleMyBusiness/Process/Process';
 import Reputation from '@/components/GoogleMyBusiness/Help/Reputation';
 import Benefits from '@/components/GoogleMyBusiness/Benifits/Benefits';
 import Footer from '@/components/Footer/Footer';
+// import GMBAuditWebsite from '@/components/GoogleMyBusiness/seogmd/seoauditgooglemybusiness';
 function page ()
 {
     return (
         <>
         <Navbar />
         <Hero />
+        {/* <GMBAuditWebsite /> */}
         <Profile />
         <Databaner />
         <Process />

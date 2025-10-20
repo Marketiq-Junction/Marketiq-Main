@@ -22,6 +22,7 @@ function page() {
       < >
         <Navbar />
         <HeroSection/>
+        <SEOAuditWebsite/>
         <Responsive/>
         <OurServices/>
         <SaveTime/>
@@ -34,7 +35,7 @@ function page() {
         <Support/>
         {/* <WhyUs/> */}
         {/* <GetInTouch/> */}
-        <SEOAuditWebsite/>
+        
         <Footer />
       </>
     );

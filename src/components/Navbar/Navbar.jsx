@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-[10vh] z-50 sticky top-0 bg-white shadow-md">
       {/* Desktop Navbar */}
-      <nav className="w-full h-full flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="w-full h-full flex items-center justify-between px-4 sm:px-6 lg:px-8 ">
         {/* Logo - left aligned */}
         <div className="flex-shrink-0 relative w-[200px] h-[60px] sm:w-[280px] sm:h-[80px] md:w-[550px] md:h-[160px] lg:w-[650px] lg:h-[180px] xl:w-[700px] xl:h-[200px]">
           <Image
@@ -131,16 +131,17 @@ const Navbar = () => {
           </div>
 
           {/* Let's Talk Button (Desktop) */}
+
           <Link
-            href="https://wa.me/9920892689"
+            href="/contactus"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 cursor-pointer px-10 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white rounded-2xl transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105"
+            className="group flex items-center justify-center gap-3 cursor-pointer px-6 py-2 bg-gradient-to-r from-teal-400 to-cyan-500 text-white rounded-xl transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105"
           >
-            <span className="text-[1.2vw] font-syne-bold font-bold">
+            <span className="text-base font-bold font-syne-bold">
               Let's Talk
             </span>
-            <BsArrowRight />
+            <BsArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
 
@@ -244,10 +245,10 @@ const Navbar = () => {
 
           {/* Let's Talk Button (Mobile) */}
           <Link
-            href="https://wa.me/9920892689"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 px-6 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white text-lg rounded-lg hover:shadow-lg hover:scale-105 flex items-center justify-center gap-3 transition-all duration-300"
+            href="/contactus"
+            className={`group text-xl font-semibold cursor-pointer transition-all duration-300 ${
+              isActive("/aboutus") ? "text-teal-500 underline" : ""
+            }`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Let's Talk <BsArrowRight />
