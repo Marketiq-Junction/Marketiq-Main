@@ -23,9 +23,14 @@ const Ayansir = () => {
               <p className="text-base md:text-lg lg:text-xl font-semibold text-gray-800">
                 Talk to a Growth Expert
               </p>
-              <p className="text-sm md:text-base lg:text-lg mt-1 font-medium text-teal-500">
+              <a 
+                href="https://wa.me/919920892689" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm md:text-base lg:text-lg mt-1 font-medium text-teal-500 hover:text-teal-600 transition-colors cursor-pointer inline-block"
+              >
                 +91 9920892689
-              </p>
+              </a>
             </div>
           </div>
 
@@ -66,9 +71,12 @@ const Ayansir = () => {
               No. 3, Buddha Colony, Kurla West, Mumbai, Maharashtra 400070,
               India
             </p>
-            <p className="text-xs md:text-sm lg:text-base font-medium text-center lg:text-left text-teal-500">
+            <a 
+              href="mailto:marketiqjunction@gmail.com"
+              className="text-xs md:text-sm lg:text-base font-medium text-center lg:text-left text-teal-500 hover:text-teal-600 transition-colors cursor-pointer"
+            >
               marketiqjunction@gmail.com
-            </p>
+            </a>
           </div>
 
           {/* Right Section: Reviews */}

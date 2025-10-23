@@ -75,6 +75,7 @@ const Navbar = () => {
                     "/seo",
                     "/marketingsolution",
                     "/youtube",
+                    "/videoediting"
                   ].some((path) => isActive(path))
                     ? "text-teal-500 underline"
                     : ""
@@ -103,6 +104,7 @@ const Navbar = () => {
                       link: "/marketingsolution",
                     },
                     { name: "YouTube Marketing", link: "/youtube" },
+                    {name:"Video Editing" , link :"/videoediting"}
                   ].map((item, index) => (
                     <Link
                       href={item.link}
@@ -118,7 +120,7 @@ const Navbar = () => {
               )}
             </div>
 
-            <Link
+            {/* <Link
               href="/aboutus"
               className={`group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300 ${
                 isActive("/aboutus") ? "text-teal-500 underline" : ""
@@ -127,7 +129,7 @@ const Navbar = () => {
               <span className="group-hover:text-teal-500 group-hover:underline group-hover:animate-bounce">
                 Behind the Brand
               </span>
-            </Link>
+            </Link> */}
           </div>
 
           {/* Let's Talk Button (Desktop) */}
@@ -192,6 +194,7 @@ const Navbar = () => {
                   "/seo",
                   "/marketingsolution",
                   "/youtube",
+                  "/videoediting"
                 ].some((path) => isActive(path))
                   ? "text-teal-500 underline"
                   : ""
@@ -217,6 +220,7 @@ const Navbar = () => {
                     link: "/marketingsolution",
                   },
                   { name: "YouTube Marketing", link: "/youtube" },
+                  {name:"Video Editing" , link :"/videoediting"}
                 ].map((item, index) => (
                   <Link
                     href={item.link}
@@ -233,7 +237,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link
+          {/* <Link
             href="/aboutus"
             className={`group text-xl font-semibold cursor-pointer transition-all duration-300 ${
               isActive("/aboutus") ? "text-teal-500 underline" : ""
@@ -241,7 +245,7 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About Us
-          </Link>
+          </Link> */}
 
           {/* Let's Talk Button (Mobile) */}
           <Link

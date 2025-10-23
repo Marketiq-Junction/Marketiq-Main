@@ -96,7 +96,7 @@ const Socialmedia = () => {
             {
               name: "linkedin",
               color: "bg-blue-700",
-              url: "https://www.linkedin.com",
+              url: "https://www.linkedin.com/company/marketiq-junction/",
             },
           ].map((social, index) => (
             <motion.a

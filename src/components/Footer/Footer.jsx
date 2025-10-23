@@ -122,6 +122,7 @@ const Footer = () => {
                 { name: "SEO", link: "/seo" },
                 { name: "Social Media Marketing", link: "/marketingsolution" },
                 { name: "YouTube Marketing", link: "/youtube" },
+                {name:"Video Editing" , link :"/videoediting"}
               ].map((service, index) => (
                 <Link
                   key={index}
