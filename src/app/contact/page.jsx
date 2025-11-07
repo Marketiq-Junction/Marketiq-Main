@@ -8,6 +8,7 @@ export default function page() {
             <Navbar />
             {/* <Contact /> */}
             <ContactPage/>
+            
             <Footer />  
         </>
     )
