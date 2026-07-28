@@ -130,6 +130,17 @@ const Navbar = () => {
                 Behind the Brand
               </span>
             </Link> */}
+
+            <Link
+              href="https://portfolio.marketiqjunction.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group text-[1.1vw] font-syne-bold font-semibold cursor-pointer transition-all duration-300"
+            >
+              <span className="group-hover:text-teal-500 group-hover:underline group-hover:animate-bounce">
+                Marketiq Portfolio
+              </span>
+            </Link>
           </div>
 
           {/* Let's Talk Button (Desktop) */}
@@ -246,6 +257,16 @@ const Navbar = () => {
           >
             About Us
           </Link> */}
+
+          <Link
+            href="https://portfolio.marketiqjunction.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group text-xl font-semibold cursor-pointer transition-all duration-300"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Marketiq Portfolio
+          </Link>
 
           {/* Let's Talk Button (Mobile) */}
           <Link
